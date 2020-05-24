@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Card = ({data:{image, cardData}})=>(
   
-    <div className='col-md-6 col-sm-12 col-xl-4 p-0 m-0'>
+    <div className='col-md-6 col-sm-12 col-xl-4 '>
      <div className="tarjeta ">
         <CardImage image = {image} />
         <CardInfo cardData = {cardData} />
