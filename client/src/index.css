@@ -1,27 +1,27 @@
-:root{
+:root {
   --primary: #2175f5;
 }
 
-html{
+html {
   /* box-sizing: border-box; */
 
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
   font-family: 'Poppins', sans-serif;
-  font-size: 62.5%; 
+  font-size: 62.5%;
 }
 
-body{
+body {
   background-color: #ffffff;
 }
 
 /*Header*/
 
-.site-header{
+.site-header {
   display: flex;
   background-image: url(../src/assets/img/GreenLogo-Hero2.png);
   height: 100vh;
@@ -31,35 +31,35 @@ body{
 }
 
 
-.redes-sociales{
+.redes-sociales {
   text-align: left;
   margin: 8rem 7rem;
   display: flex;
   flex-direction: column;
-  
+
 }
 
-.redes-sociales a{
+.redes-sociales a {
   color: #246a40;
   font-size: 5.5rem;
   align-items: center;
 }
 
-.redes-sociales a:last-child{
+.redes-sociales a:last-child {
   margin-right: 0;
 }
 
-.barra{
+.barra {
   background-color: #adcc3b;
   padding: 1.5rem 0;
   margin-top: 3px;
   position: sticky;
-  z-index:4;
-  top:0;
+  z-index: 4;
+  top: 0;
 }
 
 /*--Registro--*/
-.registro{
+.registro {
   font-size: 1.5rem;
 }
 
@@ -69,16 +69,16 @@ body{
   margin: 2rem 0 0 0;
 }
 
-.registro label{
+.registro label {
   margin-bottom: .5rem;
   font-weight: bold;
 }
 
-.fixed{
+.fixed {
   position: sticky;
   width: 100%;
   top: 0;
-  left:0;
+  left: 0;
   z-index: 2;
 }
 
@@ -87,12 +87,15 @@ body{
   justify-content: space-between;
   align-items: center;
 }
-.logo{
+
+.logo {
   width: 15%;
 }
-.logo img{
+
+.logo img {
   width: 100%;
 }
+
 /* 
 @media (min-width: 768px) {
   .logo{
@@ -105,15 +108,15 @@ body{
 margin-left: 4rem;
 }*/
 
-.navegacion-principal{
+.navegacion-principal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  display: none;    
+  display: none;
 }
 
-.navegacion-principal a{
-  font-family:'Roboto', sans-serif;
+.navegacion-principal a {
+  font-family: 'Roboto', sans-serif;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -123,26 +126,27 @@ margin-left: 4rem;
   text-align: center;
 }
 
-.navegacion-principal a:hover{
+.navegacion-principal a:hover {
   background-color: #246a40;
 }
 
-.navegacion-principal a:last-child{
-  border: 2px solid  #246a40;
-  color:  #246a40;
+.navegacion-principal a:last-child {
+  border: 2px solid #246a40;
+  color: #246a40;
 }
 
-.navegacion-principal a:last-child:hover{
+.navegacion-principal a:last-child:hover {
   color: white;
 }
 
 @media (min-width: 768px) {
-  .navegacion{
+  .navegacion {
     display: flex;
     justify-content: space-between;
-    align-items: center;      
+    align-items: center;
   }
-  .navegacion-principal{
+
+  .navegacion-principal {
     font-size: 3.5rem;
     margin-left: 30rem;
     display: block;
@@ -150,33 +154,33 @@ margin-left: 4rem;
     padding-bottom: 4px;
   }
 
-  .navegacion-principal a{
+  .navegacion-principal a {
     margin-right: 10px;
     margin-bottom: .5rem;
-    
+
   }
 
-  .navegacion-principal a:last-child{
+  .navegacion-principal a:last-child {
     margin-right: 0;
   }
-  
+
 }
 
 
-.seccion{
+.seccion {
   padding: 3rem 0;
 }
 
-.tamanoh2{
+.tamanoh2 {
   font-size: 3.4rem;
   margin: auto;
 }
 
-.seccion p{
+.seccion p {
   font-size: 1.4rem;
 }
 
-.separador{
+.separador {
   margin: -8px auto 40px;
   height: 2rem;
   width: 10rem;
@@ -184,7 +188,7 @@ margin-left: 4rem;
 }
 
 
-.container{
+.container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -193,45 +197,45 @@ margin-left: 4rem;
   overflow: hidden;
 }
 
-.background{
+.background {
   position: relative;
   width: 68%;
   height: 30rem;
   box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
-  0 -15px 35px rgba(0, 0, 0, 0.1),
-  0 15px 35px rgba(0, 0, 0, 0.1);
+    0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.petImage{
+.petImage {
   position: absolute;
   align-content: center;
   width: 100%;
   align-items: center;
   bottom: 0;
   right: 0;
-  vertical-align:middle;
+  vertical-align: middle;
 }
 
 
 
 
-.name{
+.name {
   padding: 0 0 10px 0;
 }
 
-.name div{
+.name div {
   display: flex;
   align-items: center;
 }
 
-.name div .big{
+.name div .big {
   margin-right: 10px;
   font-size: 2.5rem;
   color: #333;
   line-height: 1;
 }
 
-.name div .new{
+.name div .new {
   background-color: var(--primary);
   text-transform: uppercase;
   color: #fff;
@@ -240,7 +244,7 @@ margin-left: 4rem;
   transition: .5s;
 }
 
-.name .small{
+.name .small {
   font-weight: 500;
   color: #444;
   margin-top: 3px;
@@ -249,15 +253,18 @@ margin-left: 4rem;
   font-size: 1.5rem;
 }
 
-.name, .description, .color-container, .size-container{
+.name,
+.description,
+.color-container,
+.size-container {
   border-bottom: 1px solid #dadada;
 }
 
-.description{
+.description {
   padding: 10px 0;
 }
 
-.title{
+.title {
   color: #3a3a3a;
   font-weight: 600;
   font-size: 1.2rem;
@@ -265,49 +272,49 @@ margin-left: 4rem;
   text-align: left;
 }
 
-.text{
+.text {
   color: #555;
   font-size: 17px;
   text-align: left;
 }
 
 
-.info{
+.info {
   width: 68%;
   background-color: #fff;
   z-index: 1;
   padding: 20px 40px;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
-  0 100px 65px rgba(0, 0, 0, 0),
-  0 20px 10px rgba(0, 0, 0, 0.1);
+    0 100px 65px rgba(0, 0, 0, 0),
+    0 20px 10px rgba(0, 0, 0, 0.1);
 }
 
 
-.price{
+.price {
   color: #333;
   display: flex;
   align-items: flex-start;
 }
 
-.price h1{
+.price h1 {
   font-size: 2.1rem;
   font-weight: 600;
   line-height: 1;
 }
 
-.price i{
+.price i {
   font-size: 1.4rem;
   margin-right: 1px;
 }
 
-.adopt-terms{
+.adopt-terms {
   padding-top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.adopt{
+.adopt {
   padding: .7rem 1rem;
   background-color: var(--primary);
   text-decoration: none;
@@ -319,32 +326,30 @@ margin-left: 4rem;
   transition: .5s;
 }
 
-.adopt:hover{
+.adopt:hover {
   transform: scale(1.1);
 }
 
-.tarjeta{
+.tarjeta {
   justify-content: center !important;
   align-items: center !important;
   flex-direction: column !important;
   width: 43.9rem;
-<<<<<<< HEAD
-  margin-top: 5.5rem;
-=======
   margin-top: 1.5rem;
-  margin-bottom: 5rem;;
->>>>>>> f4fd2b59b4f32e890fd0187b9eb341989b2a0123
+  margin-bottom: 5rem;
+  ;
 }
-.tarjeta-list{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem;
-    width: 100%;
-  }
 
-  
-.tarjeta-list li{
-    width: 33.3%;
-    padding-bottom: 2rem;
-  }
+.tarjeta-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 100%;
+}
+
+
+.tarjeta-list li {
+  width: 33.3%;
+  padding-bottom: 2rem;
+}
