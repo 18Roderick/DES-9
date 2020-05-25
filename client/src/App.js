@@ -1,20 +1,21 @@
 import React from 'react';
-import Merch from './components/Merch/index';
-import News from './components/News/index';
-import Header from './components/Hero/Hero';
-import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+
+import Header from './components/Hero/Hero';
+
+import NavBar from './components/Navbar/NavBar';
+
+import Switcher from './components/Switch'
+
 
 function App() {
   return (
-    <div className="">
-      <div className="container-fluid"></div>
+    <Router>
       <Header></Header>
       <NavBar></NavBar>
-      <News></News>
-      <Merch></Merch>
-    </div>
+      <Switcher></Switcher>
+    </Router>
   );
 }
 
