@@ -12,7 +12,7 @@ const datas = [
       name: 'Shinobu',
       type: 'Loli',
       description: 'Mi Loli legal Favorita',
-      info: 'Totalmente legal prro',
+      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
     price:'300.00'
   },
@@ -23,7 +23,7 @@ const datas = [
       name: 'Taiga',
       type: 'Loli',
       description: 'Loli no tan legal',
-      info: 'Totalmente legal prro',
+      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
     price:'750.00'
   },
@@ -34,7 +34,7 @@ const datas = [
       name: 'Yue',
       type: 'Loli',
       description: 'Loli no tan legal',
-      info: 'Totalmente legal prro',
+      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
     price:'200.00'
   },
@@ -45,7 +45,7 @@ const datas = [
       name: 'Shirayuki',
       type: 'Loli',
       description: 'Loli no tan legal',
-      info: 'Totalmente legal prro',
+      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
     price:'500.00'
   },

@@ -1,6 +1,7 @@
 import React from 'react';
 // import './../../style.css';
 import PropTypes from 'prop-types';
+import {utils} from './../../../../utils/Helpers';
 
 const CardInfo = ({ cardData:{ name, type, description, info } }) => (
   <div className="info">
@@ -12,7 +13,7 @@ const CardInfo = ({ cardData:{ name, type, description, info } }) => (
     </div>
     <div className ="description">
       <h3 className ="title">{description}</h3>
-      <p className ="text">{info}</p>
+      <p className ="text">{`${utils.truncateText(info,55)}`}<a href='#' className='leermas'>Leer mas...</a></p>
     </div>
   </div>
 );
