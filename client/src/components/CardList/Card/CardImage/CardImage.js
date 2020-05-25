@@ -1,7 +1,7 @@
 import React from 'react';
 // import './../../style.css';
 import PropTypes from 'prop-types';
-const hat = require ('../../../../assets/img/ORH82L0.jpg');
+const hat = require ('../../../../assets/img/loli.png');
 
 const CardImage = ({img})=>(
     <div  className="background">       

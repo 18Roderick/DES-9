@@ -14,6 +14,7 @@ const datas = [
       description: 'Mi Loli legal Favorita',
       info: 'Totalmente legal prro',
     },
+    price:'300.00'
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const datas = [
       description: 'Loli no tan legal',
       info: 'Totalmente legal prro',
     },
+    price:'750.00'
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const datas = [
       description: 'Loli no tan legal',
       info: 'Totalmente legal prro',
     },
+    price:'200.00'
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ const datas = [
       description: 'Loli no tan legal',
       info: 'Totalmente legal prro',
     },
+    price:'500.00'
   },
 ];
 
@@ -65,7 +69,7 @@ hide() {
 }
   render() {
     return (
-      <div className='row'>
+      <div className='row tarjeta-list'>
         {arrToComponent(datas)}
       </div>
     );
