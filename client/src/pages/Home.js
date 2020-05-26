@@ -17,4 +17,5 @@ const MerchPages = () => {
   );
 };
 
+
 export default MerchPages;
