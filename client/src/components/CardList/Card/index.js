@@ -6,6 +6,7 @@ import InfoButton from './InfoButton/InfoButton'
 import PropTypes from 'prop-types';
 
 const Card = ({data:{image, cardData, price}})=>(
+  // justify-content-xl-center
   
     <div className='col-md-6 col-sm-12 col-xl-4 '>
      <div className="tarjeta ">

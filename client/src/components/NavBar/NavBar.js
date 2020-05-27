@@ -3,8 +3,7 @@ const LogoNombre = require('./../../assets/img/LogoNombre.png');
 
 const NavBar = () => (
 
-  <div className="barra">
-    <div className="contenedor bar">
+  <div className="barra col-12">
       <div className="navegacion-desktop">
         <div className="navegacion-movil">
           <div className="logo">
@@ -26,7 +25,6 @@ const NavBar = () => (
           <a href="registro.html">Donaciones</a>
         </nav>
       </div>
-    </div>
   </div>
 );
 
