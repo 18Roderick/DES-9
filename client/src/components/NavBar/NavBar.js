@@ -1,27 +1,33 @@
 import React from 'react';
 const LogoNombre = require('./../../assets/img/LogoNombre.png');
 
+const NavBar = () => (
 
-const NavBar = ()=>(
+  <div className="barra">
+    <div className="contenedor bar">
+      <div className="navegacion-desktop">
+        <div className="navegacion-movil">
+          <div className="logo">
+            <img src={LogoNombre} alt="logo barra" />
+          </div>
 
-    <div class="barra">
-      <div class="contenedor bar">
-        <div class="navegacion">
-              <div className ="logo">
-                <img src= {LogoNombre} alt="logo barra"/>
-              </div >
-          
-              <nav class="navegacion-principal clearfix">
-                <a href="">Sobre Nosotros</a>
-                <a href="">Noticias</a>
-                <a href="">Mercancia</a>
-                <a href="">Metas</a>
-                <a href="registro.html">Donaciones</a>
-              </nav>
+          <div className="menu-movil">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
+
+        <nav class="navegacion-principal clearfix">
+          <a href="">Sobre Nosotros</a>
+          <a href="">Noticias</a>
+          <a href="">Mercancia</a>
+          <a href="">Metas</a>
+          <a href="registro.html">Donaciones</a>
+        </nav>
       </div>
     </div>
-
+  </div>
 );
 
 export default NavBar;
