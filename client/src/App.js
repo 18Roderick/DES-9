@@ -1,13 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Header from './components/Hero/Hero';
 
 import NavBar from './components/NavBar/NavBar';
 
-import Switcher from './components/Switch'
-
+import Switcher from './components/Switch';
 
 function App() {
   return (

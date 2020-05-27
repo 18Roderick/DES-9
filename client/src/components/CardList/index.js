@@ -3,7 +3,6 @@ import Card from './Card/index';
 // import './style.css';
 import 'rodal/lib/rodal.css';
 
-
 const datas = [
   {
     id: 1,
@@ -12,9 +11,10 @@ const datas = [
       name: 'Shinobu',
       type: 'Loli',
       description: 'Mi Loli legal Favorita',
-      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
+      info:
+        'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
-    price:'300.00'
+    price: '300.00',
   },
   {
     id: 2,
@@ -23,9 +23,10 @@ const datas = [
       name: 'Taiga',
       type: 'Loli',
       description: 'Loli no tan legal',
-      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
+      info:
+        'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
-    price:'750.00'
+    price: '750.00',
   },
   {
     id: 3,
@@ -34,9 +35,10 @@ const datas = [
       name: 'Yue',
       type: 'Loli',
       description: 'Loli no tan legal',
-      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
+      info:
+        'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
-    price:'200.00'
+    price: '200.00',
   },
   {
     id: 4,
@@ -45,34 +47,30 @@ const datas = [
       name: 'Shirayuki',
       type: 'Loli',
       description: 'Loli no tan legal',
-      info: 'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
+      info:
+        'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
     },
-    price:'500.00'
+    price: '500.00',
   },
 ];
 
-const arrToComponent = (datas) => datas.map((data) => <Card  key={data.id} data={data} />);
+const arrToComponent = (datas) => datas.map((data) => <Card key={data.id} data={data} />);
 
 class CardList extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = { visible: false };
   }
 
   show() {
     this.setState({ visible: true });
-}
+  }
 
-hide() {
+  hide() {
     this.setState({ visible: false });
-}
+  }
   render() {
-    return (
-      <div className='row tarjeta-list'>
-        {arrToComponent(datas)}
-      </div>
-    );
+    return <div className="row tarjeta-list">{arrToComponent(datas)}</div>;
   }
 }
 
