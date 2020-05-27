@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // import './../CardList/style.css';
 
 const Merch = () => (
-  <div className="seccion ">
+  <div className="">
     <h2 className="text-center tamanoh2">Mercancia</h2>
     <Separador></Separador>
     <CardList></CardList>

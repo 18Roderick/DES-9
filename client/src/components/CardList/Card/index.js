@@ -6,7 +6,7 @@ import InfoButton from './InfoButton/InfoButton';
 import PropTypes from 'prop-types';
 
 const Card = ({ data: { image, cardData, price } }) => (
-  <div className="col-md-4 col-sm-12 col-lg-3 col-xl-3 ">
+  <div className="col-md-6 col-sm-12 col-xl-4 ">
     <div className="tarjeta ">
       <CardImage image={image} />
       <CardInfo cardData={cardData} />
