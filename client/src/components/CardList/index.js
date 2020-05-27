@@ -52,6 +52,18 @@ const datas = [
     },
     price: '500.00',
   },
+  {
+    id: 5,
+    image: 'loli4',
+    cardData: {
+      name: 'Shirayuki',
+      type: 'Loli',
+      description: 'Loli no tan legal',
+      info:
+        'Totalmente legal prro Totalmente legal prro Totalmente legal prro Totalmente legal prro',
+    },
+    price: '500.00',
+  },
 ];
 
 const arrToComponent = (datas) => datas.map((data) => <Card key={data.id} data={data} />);
@@ -70,7 +82,7 @@ class CardList extends Component {
     this.setState({ visible: false });
   }
   render() {
-    return <div className="row tarjeta-list">{arrToComponent(datas)}</div>;
+    return <div className="row tarjeta-list ">{arrToComponent(datas)}</div>;
   }
 }
 
