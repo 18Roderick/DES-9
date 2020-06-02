@@ -1,5 +1,5 @@
 import React from 'react';
-const separador = require ('./../../assets/img/separador.png');
+const separador = require ('../../assets/img/separador.png');
 
 
 const Separador = ()=>(

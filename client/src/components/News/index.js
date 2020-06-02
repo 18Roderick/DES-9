@@ -1,6 +1,6 @@
 import React from "react";
 import CardList from "../CardList/index";
-import Separador from "./../Separador/Separador";
+import Separador from "../Separador/Separador";
 import PropTypes from "prop-types";
 // import './../CardList/style.css';
 
