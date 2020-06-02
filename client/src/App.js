@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+
 //
 import Header from './components/Hero/Hero';
 
@@ -9,11 +9,11 @@ import Switcher from './components/Switch';
 
 function App() {
   return (
-    <Router>
+    <React.Fragment>
       <Header></Header>
       <NavBar></NavBar>
       <Switcher></Switcher>
-    </Router>
+    </React.Fragment>
   );
 }
 
