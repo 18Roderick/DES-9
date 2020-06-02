@@ -1,5 +1,5 @@
 import React from 'react';
-const LogoNombre = require('./../../assets/img/LogoNombre.png');
+const LogoNombre = require('../../assets/img/LogoNombre.png');
 
 const NavBar = () => (
 
