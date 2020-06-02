@@ -2,9 +2,11 @@ import React from 'react';
 
 import { Form } from 'react-bootstrap';
 
+import './index.css'
+
 const Contact = () => {
   return (
-    <div>
+    <div className='font-size-test'>
       <Form>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Email address</Form.Label>
