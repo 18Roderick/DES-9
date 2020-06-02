@@ -5,7 +5,7 @@ const separador = require ('./../../assets/img/separador.png');
 const Separador = ()=>(
   
     <div >
-        <img className="separador" src = {separador}></img>   
+        <img className="separador" src = {separador} alt='Separator'></img>   
     </div>
 
 
