@@ -7,7 +7,7 @@ import News from '../components/News';
 const MerchPages = () => {
   return (
     <React.Fragment>
-      <div className="container-fluid">
+      <div className="">
         <News></News>
         <Merch></Merch>
       </div>
