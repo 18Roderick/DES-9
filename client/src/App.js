@@ -7,12 +7,15 @@ import NavBar from './components/NavBar/NavBar';
 
 import Switcher from './components/Switch';
 
+import InicioSesion from './components/InicioSesion/InicioSesion';
+
 function App() {
   return (
     <Fragment>
       <Header></Header>
       <NavBar></NavBar>
       <Switcher></Switcher>
+      <InicioSesion></InicioSesion>
     </Fragment>
   );
 }
