@@ -7,16 +7,16 @@ html{
 
 }
 
-button,
+/* button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 1.5rem; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
+  font-family: inherit;
+  font-size: 1.5rem; 
+  line-height: 1.15; 
+  margin: 0;
+} */
 
 *{
   margin: 0;
@@ -61,7 +61,7 @@ body{
 
 .redes-sociales a{
   color: #246a40;
-  font-size: 5.5rem;
+  font-size: 3.5rem;
   align-items: center;
 }
 
@@ -110,7 +110,7 @@ body{
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: all .5s ease;
   width: 100%;
   text-align: center;
@@ -362,9 +362,8 @@ body{
 }
 
 .separador{
-  margin: -8px auto 40px;
+  margin: -8px auto 30px;
   height: 2rem;
-  width: 10rem;
   display: block;
 }
 
@@ -380,11 +379,34 @@ body{
 
 .background{
   position: relative;
-  width: 68%;
+  /* width: 68%; */
+  width: calc((100vw / 3) - 50%);
   height: 18rem;
   box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
   0 -15px 35px rgba(0, 0, 0, 0.1),
   0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .background{
+    position: relative;
+    width: 68%;
+    height: 18rem;
+    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+    0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 500px) {
+  .background{
+    position: relative;
+    width: 75%;
+    height: 18rem;
+    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+    0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .petImage{
@@ -478,13 +500,38 @@ body{
 
 
 .info{
-  width: 68%;
+  /* width: 68%; */
+  width: calc((100vw / 3) - 50%);
   background-color: #fff;
   z-index: 1;
   padding: 10px 20px;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
   0 100px 65px rgba(0, 0, 0, 0),
   0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .info{
+    width: 68%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px 20px;
+    box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+    0 100px 65px rgba(0, 0, 0, 0),
+    0 20px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 500px) {
+  .info{
+    width: 75%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px 20px;
+    box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+    0 100px 65px rgba(0, 0, 0, 0),
+    0 20px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 
@@ -509,7 +556,7 @@ body{
 .adopt-terms{
   padding-top: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -517,7 +564,7 @@ body{
   .adopt-terms{
     padding-top: 0px;
     display: block;
-    justify-content: space-between;
+    justify-content: space-between;    
     align-items: center;
   }
 
@@ -525,7 +572,7 @@ body{
     display: none;
   }
 
-  /* .adopt{
+  .adopt{
     padding: .7rem 1rem;
     background-color: var(--primary);
     text-decoration: none;
@@ -537,7 +584,7 @@ body{
     transition: .5s;
     display: block;
     text-align: center;
-  } */
+  }
 }
 
 .adopt{
@@ -615,21 +662,21 @@ body{
   }
 
   .iniciosesion-formulario img{
-    width: 20rem;
+    width: 10rem;
     display: block;
     margin: 3rem auto;
   }
 
   fieldset {
-    padding: 0.1rem 7.75rem 0.625rem;
+    padding: 0.1rem 2.75rem 0.625rem;
     /* transform: translateY(-50%); */
   }
 
   .iniciosesion-label{
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-family: 'Oswald', sans-serif;
     display: block;
-    margin-top: 10%;
+    margin-top: 5%;
     }
 
   input[type="radio"]{
@@ -639,18 +686,18 @@ body{
   input:not([type="submit"]),
 textarea,
 select{
-    padding: 1.5rem;
+    padding: 0.7rem;
     display: block;
     width: 100%;
     background-color: rgba(231, 231, 231, 0.5);
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     border: none;
     border-radius: 0.3rem;
 }
 
 .buttom{
   background-color: #246a40;
-  padding: 1.5rem 6rem;
+  padding: 0.5rem 5rem;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -671,6 +718,6 @@ select{
 }
 
 .iniciosesion-link{
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-top: 10%
 }
