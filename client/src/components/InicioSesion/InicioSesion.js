@@ -10,11 +10,12 @@ const InicioSesion = () => (
       <form>
         <fieldset className = 'fieldset'>
           <img src={logonombre} />
-          <label className="iniciosesion-label">Nombre</label>
-          <input className = 'iniciosesion-input'></input>
+          <label for = 'email' className="iniciosesion-label">Correo</label>
+          <input id = 'email' className = 'iniciosesion-input'></input>
 
-          <label className="iniciosesion-label">Apellido</label>
-          <input className = 'iniciosesion-input'></input>
+          <label for = 'password' className="iniciosesion-label">Contraseña</label>
+          <input id = 'password' className = 'iniciosesion-input'></input>
+
           <button className = 'buttom hollow'>Iniciar</button>
           <div className = 'flex'>
               <a href = '#' className = 'iniciosesion-link'>¿Olvido su contraseña?</a>
