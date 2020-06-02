@@ -59,16 +59,8 @@ body{
   padding: 0.8rem 0;
   margin-top: 3px;
   position: sticky;
-  z-index:4;
+  z-index:2;
   top:0;
-}
-
-.fixed{
-  position: sticky;
-  width: 100%;
-  top: 0;
-  left:0;
-  z-index: 2;
 }
 
 .logo{
@@ -505,6 +497,33 @@ body{
   align-items: center;
 }
 
+@media (max-width: 500px) {
+  .adopt-terms{
+    padding-top: 0px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price{
+    display: none;
+  }
+
+  .adopt{
+    padding: .7rem 1rem;
+    background-color: var(--primary);
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: .5s;
+    display: block;
+    text-align: center;
+  }
+}
+
 .adopt{
   padding: .7rem 1rem;
   background-color: var(--primary);
@@ -528,16 +547,15 @@ body{
   flex-direction: column;
   width: 43.9rem;
   margin-top: -2.5rem;
-  margin-bottom: 5rem;;
+  margin-bottom: 5rem;
+  margin: auto;
+  padding-bottom: 35px;
 
 }
 .tarjeta-list{
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem; */
     padding: 2rem;
     width: 100%;
+    margin: 0;
   }
 
 /*   

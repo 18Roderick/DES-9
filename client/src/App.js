@@ -1,21 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
-
-
+import Merch from './components/Merch/index';
+import News from './components/News/index';
 import Header from './components/Hero/Hero';
-
 import NavBar from './components/NavBar/NavBar';
 
-import Switcher from './components/Switch'
-
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Header></Header>
+    <div className="">
+      <header className=""></header>
+
+      <div className="container-fluid"></div>
+      {/* <Header></Header> */}
       <NavBar></NavBar>
-      <Switcher></Switcher>
-    </Router>
+      <News></News>
+      <Merch></Merch>
+ 
+    </div>
   );
 }
 
