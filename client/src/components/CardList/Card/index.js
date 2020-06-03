@@ -1,14 +1,17 @@
-import React, { Component } from "react";
-import CardImage from "./CardImage/CardImage";
-import CardInfo from "./CardInfo/CardInfo";
-import InfoButton from "./InfoButton/InfoButton";
+import React, { Component } from 'react';
+import CardImage from './CardImage/CardImage';
+import CardInfo from './CardInfo/CardInfo';
+import InfoButton from './InfoButton/InfoButton';
+import Grid from '@material-ui/core/Grid';
 // import './../style.css';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class Card extends Component {
   constructor(props) {
     super(props);
-    const {data: { image, cardData, price }} = props;
+    const {
+      data: { image, cardData, price },
+    } = props;
     this.state = {
       data: {
         image,
@@ -19,19 +22,17 @@ class Card extends Component {
   }
 
   render() {
-    const {handleOnShow} = this.props;
-    const {data: { image, cardData, price }} = this.state;
+    const {
+      data: { image, cardData, price },
+    } = this.state;
     return (
-      <div
-        className="col-md-6 col-sm-12 col-xl-4 p-0 m-0"
-        onClick={handleOnShow}
-      >
-        <div className="tarjeta col-12 ">
+      <Grid item xs={12} md={4}>
+        <div className="tarjeta">
           <CardImage image={image} />
           <CardInfo cardData={cardData} />
           <InfoButton price={price} />
         </div>
-      </div>
+      </Grid>
     );
   }
 }

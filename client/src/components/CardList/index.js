@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import Card from "./Card/index";
+import React, { Component } from 'react';
+import Card from './Card/index';
 // import './style.css';
+import Grid from '@material-ui/core/Grid';
+
 import 'rodal/lib/rodal.css';
 
 const datas = [
   {
     id: 1,
-    image: "loli1",
+    image: 'loli1',
     cardData: {
       name: 'Shinobu',
       type: 'Loli',
@@ -18,7 +20,7 @@ const datas = [
   },
   {
     id: 2,
-    image: "loli2",
+    image: 'loli2',
     cardData: {
       name: 'Taiga',
       type: 'Loli',
@@ -30,7 +32,7 @@ const datas = [
   },
   {
     id: 3,
-    image: "loli2",
+    image: 'loli2',
     cardData: {
       name: 'Yue',
       type: 'Loli',
@@ -42,7 +44,7 @@ const datas = [
   },
   {
     id: 4,
-    image: "loli4",
+    image: 'loli4',
     cardData: {
       name: 'Shirayuki',
       type: 'Loli',
@@ -54,7 +56,7 @@ const datas = [
   },
   {
     id: 5,
-    image: "loli4",
+    image: 'loli4',
     cardData: {
       name: 'Shirayuki',
       type: 'Loli',
@@ -84,7 +86,11 @@ class CardList extends Component {
     this.setState({ visible: false });
   }
   render() {
-    return <div className="row tarjeta-list ">{arrToComponent(datas)}</div>;
+    return (
+      <Grid container direction="row"  spacing={2} justify="center" alignItems="center">
+        {arrToComponent(datas)}
+      </Grid>
+    );
   }
 }
 
