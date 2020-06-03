@@ -3,7 +3,7 @@ import React from 'react';
 
 import Merch from '../components/Merch';
 import News from '../components/News';
-import Contact from '../components/Contact'
+
 
 const MerchPages = () => {
   return (
@@ -11,7 +11,6 @@ const MerchPages = () => {
       <div className="">
         <News></News>
         <Merch></Merch>
-        <Contact/>
       </div>
     </React.Fragment>
   );
