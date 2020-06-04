@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/NavBar';
 
 import Switcher from './components/Switch';
 
+
 function App() {
   return (
     <Fragment>

@@ -2,16 +2,15 @@
 import React from 'react';
 
 import Merch from '../components/Merch';
+import IniciarSesion from '../components/InicioSesion/InicioSesion';
 import News from '../components/News';
-import Contact from '../components/Contact'
 
 const MerchPages = () => {
   return (
     <React.Fragment>
-      <div className="">
-        <News></News>
+      <div className="container-fluid">
+        <IniciarSesion />
         <Merch></Merch>
-        <Contact/>
       </div>
     </React.Fragment>
   );
