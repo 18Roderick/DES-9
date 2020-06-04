@@ -628,10 +628,43 @@ body{
   } */
 
 
-  /*----------Inicio Sesion----------*/
-  .iniciosesion{
+/*----------Inicio Sesion----------*/
+.iniciosesion{
+  display: flex;
+  width: 60%; 
+  max-width: 120rem;
+  margin: 2rem auto;
+  padding: 1px;
+  box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+  0 100px 65px rgba(0, 0, 0, 0),
+  0 20px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+
+}
+
+.iniciosesion-imagen{
+  flex-basis: 50%;
+  background-image: url(./assets/img/Login.jpg);
+  background-size: cover;
+  height: 75vh;
+  background-position: center;
+  padding: 1rem;
+  
+}
+
+.iniciosesion-imagen img{
+  max-width: 100%;
+  padding-bottom: 2rem;
+ }
+
+ @media (max-width: 950px) {
+  .iniciosesion-imagen{
+    display: none!important;
+   }
+
+   .iniciosesion{
     display: flex;
-    width: 60%; 
+    width: min-content; 
     max-width: 120rem;
     margin: 2rem auto;
     padding: 1px;
@@ -641,83 +674,147 @@ body{
     border-radius: 2px;
 
   }
+ }
 
-  .iniciosesion-imagen{
-    flex-basis: 50%;
-    background-image: url(./assets/img/Login.jpg);
-    background-size: cover;
-    height: 75vh;
-    background-position: center;
-    padding: 1rem;
-    
+ @supports (object-fit: cover) {
+  .iniciosesion-imagen img {
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  }
   }
 
-  .iniciosesion-imagen img{
-    max-width: 100%;
-    padding-bottom: 2rem;
-   }
-
-  .iniciosesion-formulario{
-    flex-basis: 50%;
-  }
-
-  .iniciosesion-formulario img{
-    width: 10rem;
-    display: block;
-    margin: 3rem auto;
-  }
-
-  fieldset {
-    padding: 0.1rem 2.75rem 0.625rem;
-    /* transform: translateY(-50%); */
-  }
-
-  .iniciosesion-label{
-    font-size: 1rem;
-    font-family: 'Oswald', sans-serif;
-    display: block;
-    margin-top: 5%;
-    }
-
-  input[type="radio"]{
-    width: auto;
-    margin: 0;
+.iniciosesion-formulario{
+  flex-basis: 50%;
+  display: flex;    
+  align-items: center;
 }
-  input:not([type="submit"]),
+
+.iniciosesion-form{
+
+  width: 100%;
+}
+
+.iniciosesion-formulario img{
+  width: 10rem;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+.fieldset {
+  padding: 0.1rem 2.75rem 0.625rem;
+  /* transform: translateY(-50%); */
+
+  
+
+
+}
+
+.iniciosesion-label{
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif;
+  display: block;
+  margin-top: 5%;
+  }
+
+input[type="radio"]{
+  width: auto;
+  margin: 0;
+}
+input:not([type="submit"]),
 textarea,
 select{
-    padding: 0.7rem;
-    display: block;
-    width: 100%;
-    background-color: rgba(231, 231, 231, 0.5);
-    margin-bottom: 10%;
-    border: none;
-    border-radius: 0.3rem;
+  padding: 0.7rem;
+  display: block;
+  width: 100%;
+  background-color: rgba(231, 231, 231, 0.5);
+  border: none;
+  border-radius: 0.3rem;
 }
 
 .buttom{
-  background-color: #246a40;
-  padding: 0.5rem 5rem;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Oswald', sans-serif;
-  text-decoration: none;
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  display: block;
-  border: 2px solid;
-  margin: auto;
+background-color: #246a40;
+padding: 0.5rem 5rem;
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+font-family: 'Oswald', sans-serif;
+text-decoration: none;
+font-size: 1.3rem;
+margin-top: 2rem;
+display: block;
+border: 2px solid;
+margin: 2rem auto 0;
 }
 
 .buttom.hollow,
 .buttom.hollow:hover{
-  background-color: white;
-  color: #246a40;
-  
+background-color: white;
+color: #246a40;
+
 }
 
 .iniciosesion-link{
-  font-size: 1rem;
-  margin-top: 10%
+font-size: 1rem;
+margin-top: 10%
 }
+
+/*----------Perfil Usuario----------*/
+.perfilusuario{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  width: 85%;
+  margin: 1rem auto;
+  padding: 5px;
+  box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+  0 100px 65px rgba(0, 0, 0, 0),
+  0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfilusuario-banner{
+  /* background-color: blue; */
+  flex-basis: 50%;
+}
+
+.perfilusuario-banner img{
+  width: 100%;
+  height: 80%;
+}
+
+@supports(object-fit: cover){
+  .perfilusuario-banner img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+.perfilusuario-info{
+  /* background-color: red; */
+  flex-basis: 50%;
+}
+
+.perfilusuario-info img{
+  margin: -100px 40px;
+  border-radius: 50%;
+}
+
+.perfilusuario-contenedor{
+  width: 50%;
+  margin: auto;
+}
+
+.perfilusuario-labels{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.perfilusuario-info label{
+  align-items: center;
+  font-size: 2rem;
+}
+

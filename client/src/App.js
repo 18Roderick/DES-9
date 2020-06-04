@@ -9,6 +9,8 @@ import Switcher from './components/Switch';
 
 import InicioSesion from './components/InicioSesion/InicioSesion';
 
+import PerfilUsuario from './components/PerfilUsuario/PerfilUsuario';
+
 function App() {
   return (
     <Fragment>
@@ -16,6 +18,7 @@ function App() {
       <NavBar></NavBar>
       <Switcher></Switcher>
       <InicioSesion></InicioSesion>
+      <PerfilUsuario></PerfilUsuario>
     </Fragment>
   );
 }

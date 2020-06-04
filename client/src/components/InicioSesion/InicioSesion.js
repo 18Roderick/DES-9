@@ -7,13 +7,13 @@ const InicioSesion = () => (
     <div className="iniciosesion-imagen"></div>
 
     <div className="iniciosesion-formulario">
-      <form>
-        <fieldset className = 'fieldset'>
+      <form className = 'iniciosesion-form'>
+        <div className = 'fieldset'>
           <img src={logonombre} />
-          <label for = 'email' className="iniciosesion-label">Correo</label>
+          <label htmlFor = 'email' className="iniciosesion-label">Correo</label>
           <input id = 'email' className = 'iniciosesion-input'></input>
 
-          <label for = 'password' className="iniciosesion-label">Contraseña</label>
+          <label htmlFor = 'password' className="iniciosesion-label">Contraseña</label>
           <input id = 'password' className = 'iniciosesion-input'></input>
 
           <button className = 'buttom hollow'>Iniciar</button>
@@ -21,7 +21,7 @@ const InicioSesion = () => (
               <a href = '#' className = 'iniciosesion-link'>¿Olvido su contraseña?</a>
               <a href = '#' className = 'iniciosesion-link'>Registrarse</a>
           </div>
-        </fieldset>
+        </div>
       </form>
     </div>
   </div>
