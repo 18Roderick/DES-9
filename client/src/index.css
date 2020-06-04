@@ -679,7 +679,9 @@ body{
     margin-top: 5%;
     }
 
-  input[type="radio"]{
+    
+
+/*   input[type="radio"]{
     width: auto;
     margin: 0;
 }
@@ -693,7 +695,7 @@ select{
     margin-bottom: 10%;
     border: none;
     border-radius: 0.3rem;
-}
+} */
 
 .buttom{
   background-color: #246a40;
