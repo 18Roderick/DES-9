@@ -11,6 +11,8 @@ import InicioSesion from './components/InicioSesion/InicioSesion';
 
 import RecuperarContrasena from './components/InicioSesion/RecuperarContrasena/RecuperarContrasena';
 
+import Registro from './components/InicioSesion/Registro/Registro';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <Switcher></Switcher>
       <InicioSesion></InicioSesion>
       <RecuperarContrasena></RecuperarContrasena>
+      <Registro></Registro>
     </Fragment>
   );
 }
