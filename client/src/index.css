@@ -742,18 +742,18 @@ select{
 }
 
 .recuperarContrasena-formulario img{
-  width: 20rem;
+  width: 15rem;
   display: block;
   margin: 3rem auto;
 }
 
 .fieldset2 {
-  padding: 0.1rem 26.75rem 0.625rem;
+  padding: 0.1rem 14.75rem 0.625rem;
   /* transform: translateY(-50%); */
 }
 
 .recuperarContrasena-label{
-  font-size: 1.8rem;
+  font-size: 1.0rem;
   font-family: 'Oswald', sans-serif;
   display: block;
   margin-top: 10%;
@@ -777,7 +777,7 @@ select{
 
 .buttom{
 background-color: #246a40;
-padding: 1.5rem 6rem;
+padding: 1.0rem 6rem;
 color: white;
 text-transform: uppercase;
 font-weight: bold;
@@ -802,4 +802,6 @@ font-size: 1.3rem;
 margin-top: 10%
 }
 */
+
+/*----------------------------Registro-----------------*/
 
