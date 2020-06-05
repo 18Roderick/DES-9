@@ -4,14 +4,27 @@ import imgbanner from './../../assets/img/smite.png';
 
 const PerfilUsuario = () => (
   <div className="perfilusuario">
-    <div className="perfilusuario-banner"></div>
+    <div className="perfilusuario-banner">
+      <img src={imgbanner}></img>
+    </div>
     <div className="perfilusuario-info">
-      <img src={imgperfil} />
+      <div className="imgperfil-wrapper">
+        <img src={imgperfil} />
+      </div>
 
       <div className="perfilusuario-contenedor">
-        <div className="perfilusuario-labels">
-          <label>Roderick Romero</label>
-          <label>Panamá</label>
+        <div className="pu-contenedorinfo">
+          <div className="perfilusuario-labels">
+            <label className="pulNombre">Roderick Romero</label>
+            <label className="pulPais">Panamá</label>
+            <ul className="pu-ul">
+              <li>Panamá</li>
+              <li>San Miguelito</li>
+              <li>Samaria</li>
+            </ul>
+            <label>soymanco@roderick.com</label>
+            <label>6544-8578</label>
+          </div>
         </div>
       </div>
     </div>
