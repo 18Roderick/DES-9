@@ -1,32 +1,47 @@
 import React from 'react';
 import imgperfil from './../../assets/img/roderick.jpg';
 import imgbanner from './../../assets/img/smite.png';
+import RecompensaDonaciones from '../RecompensaDonaciones/RecompensaDonaciones';
 
-const PerfilUsuario = () => (
+const PerfilUsuario = ({
+  infoUsuario: {
+    userBanner,
+    userImgPerfil,
+    userNombre: { nombre, apellido },
+    userPais,
+    userDireccion: { provincia, distrito, barrio },
+    userCorreo,
+    userTelefono,
+  },
+}) => (
   <div className="perfilusuario">
     <div className="perfilusuario-banner">
       <img src={imgbanner}></img>
     </div>
     <div className="perfilusuario-info">
       <div className="imgperfil-wrapper">
-        <img src={imgperfil} />
+        <img className='pu-imagenPerfil' src={imgperfil} />
       </div>
 
       <div className="perfilusuario-contenedor">
         <div className="pu-contenedorinfo">
           <div className="perfilusuario-labels">
-            <label className="pulNombre">Roderick Romero</label>
-            <label className="pulPais">Panamá</label>
+            <label className="pulNombre">{`${nombre} ${apellido}`}</label>
+            <label className="pulPais">{userPais}</label>
             <ul className="pu-ul">
-              <li>Panamá</li>
-              <li>San Miguelito</li>
-              <li>Samaria</li>
+              <li>{provincia}</li>
+              <li>{distrito}</li>
+              <li>{barrio}</li>
             </ul>
-            <label>soymanco@roderick.com</label>
-            <label>6544-8578</label>
+            <label>{userCorreo}</label>
+            <label>{userTelefono}</label>
           </div>
         </div>
+        <div className ='pu-contenedorRecompensas'>
+            <RecompensaDonaciones></RecompensaDonaciones>
+        </div>
       </div>
+    
     </div>
   </div>
 );
