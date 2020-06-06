@@ -9,20 +9,26 @@ import Switcher from './components/Switch';
 
 import InicioSesion from './components/InicioSesion/InicioSesion';
 
-import RecuperarContrasena from './components/InicioSesion/RecuperarContrasena/RecuperarContrasena';
-
-import Registro from './components/InicioSesion/Registro/Registro';
-
+import PerfilUsuario from './components/PerfilUsuario/PerfilUsuario';
 
 function App() {
+
+  const infoUsuario = {
+      userBanner: '',
+      userImgPerfil:'',
+      userNombre: {nombre:'Roderick',apellido:'Romero'},
+      userPais:'Panamá',
+      userDireccion: {provincia:'Panamá',distrito:'San Miguelito',barrio:'Samaria'},
+      userCorreo: 'soymanco@roderick.com',
+      userTelefono: '6458-7896',
+  }
   return (
     <Fragment>
       <Header></Header>
       <NavBar></NavBar>
       <Switcher></Switcher>
       <InicioSesion></InicioSesion>
-      <RecuperarContrasena></RecuperarContrasena>
-      <Registro></Registro>
+      <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
     </Fragment>
   );
 }
