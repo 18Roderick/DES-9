@@ -12,7 +12,7 @@ const InicioSesion = () => (
           <img src={loginimg} className="img-fluid"></img>
         </Col>
         <Col sm={12} md={6}>
-          <Form className="justify-content-md-center">
+          <Form className="justify-content-md-center p-4 border rounded">
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email</Form.Label>
