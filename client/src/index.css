@@ -1,5 +1,6 @@
 :root{
   --primary: #2175f5;
+  --primarygreen: #246a40;
 }
 
 html{
@@ -748,6 +749,7 @@ margin: 2rem auto 0;
 }
 
 .buttom.hollow,
+.buttom-direcciones.hollow,
 .buttom.hollow:hover{
 background-color: white;
 color: #246a40;
@@ -819,6 +821,22 @@ margin-top: 10%
   margin: -57px 40px;
 }
 
+.buttom-perfil{
+  color: var(--primarygreen);
+  padding: 6px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: block;
+  border: 1px solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 87%;
+
+}
+
 .perfilusuario-contenedor{
   width: auto;
   margin: auto 40px ;
@@ -833,6 +851,9 @@ margin-top: 10%
 .pu-contenedorRecompensas{
   flex-basis: 70%;
   border-radius: 2px;
+}
+.descripcionTitulo{
+  font-size: 1.5rem;
 }
 
 .perfilusuario-labels{
@@ -858,13 +879,76 @@ margin-top: 10%
     font-weight: 400;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1147px) {
   .pu-ul{
     list-style: none;
-    display: inline;
     margin-bottom: 5px!important;
   }
+
+  .pu-contenedorRecompensas{
+    /* display: none!important; */
+  }
+
+  .pu-contenedorinfo{
+    flex-basis: 100%;
+  }
 }
+
+@media (max-width: 1139px) {
+  .rdProducto{
+    display: none;
+  }
+}
+
+@media (max-width: 722px) {
+  .pu-ul{
+    display: inline;
+  }
+  .perfilusuario-labels{
+    margin-top: 8px;
+  }
+
+  .pu-ul :not(:last-child)::after{
+    content: none;
+  }
+
+  .informacionDescripcion{
+    display: none!important;
+  }
+
+  .rdInformacionSellos{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sellosRecompensas{
+    margin-bottom: 4px!important;
+  }
+
+  .descripcionTitulo{
+    font-size: 25px;
+  }
+
+  .rdInformacion{
+    align-items: center!important;
+  }
+
+  .rdContenedor{
+    box-shadow: 3px 4px 7px -1px rgba(0,0,0,0.28)!important;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .descripcionTitulo{
+    font-size: 18px;
+  }
+
+  .rdContenedor{
+    box-shadow: 3px 4px 7px -1px rgba(0,0,0,0.28)!important;
+  }
+}
+
 
 /*----------RecompensaUsuario----------*/
 
@@ -946,15 +1030,13 @@ margin-top: 10%
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
   0 100px 65px rgba(0, 0, 0, 0),
   0 5px 3px rgba(0, 0, 0, 0.1);
-  /* box-shadow: 5px 2px 14px -2px rgba(0,0,0,0.57); */
   width: 85%;
   height: auto;
   display: flex;
-  flex-direction: column;
   padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
 
 .dirUsuario{
   list-style: none;
@@ -968,6 +1050,21 @@ margin-top: 10%
   color: #000;
   font-weight: 400;
 }
+
+.buttom-direcciones{
+background-color: #246a40;
+padding: 6px 10px;
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+font-family: 'Oswald', sans-serif;
+text-decoration: none;
+font-size: 0.8rem;
+display: block;
+border: 2px solid;
+border-radius: 3px;
+}
+
 
 
 
