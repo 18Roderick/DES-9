@@ -1,5 +1,6 @@
 :root{
   --primary: #2175f5;
+  --primarygreen: #246a40;
 }
 
 html{
@@ -7,23 +8,22 @@ html{
 
 }
 
-button,
+/* button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 1.5rem; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
+  font-family: inherit;
+  font-size: 1.5rem; 
+  line-height: 1.15; 
+  margin: 0;
+} */
 
 *{
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
   font-family: 'Poppins', sans-serif;
-  font-size: 62.5%; 
 }
 
 body{
@@ -62,7 +62,7 @@ body{
 
 .redes-sociales a{
   color: #246a40;
-  font-size: 5.5rem;
+  font-size: 3.5rem;
   align-items: center;
 }
 
@@ -84,7 +84,7 @@ body{
   float: left;
 }
 .logo img{
-  width: 55%;
+  width: 50%;
 }
 
 @media (min-width: 768px) {
@@ -111,7 +111,7 @@ body{
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   transition: all .5s ease;
   width: 100%;
   text-align: center;
@@ -363,9 +363,8 @@ body{
 }
 
 .separador{
-  margin: -8px auto 40px;
+  margin: -8px auto 30px;
   height: 2rem;
-  width: 10rem;
   display: block;
 }
 
@@ -381,11 +380,34 @@ body{
 
 .background{
   position: relative;
-  width: 68%;
-  height: 30rem;
+  /* width: 68%; */
+  width: calc((100vw / 3) - 50%);
+  height: 18rem;
   box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
   0 -15px 35px rgba(0, 0, 0, 0.1),
   0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .background{
+    position: relative;
+    width: 68%;
+    height: 18rem;
+    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+    0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 500px) {
+  .background{
+    position: relative;
+    width: 75%;
+    height: 18rem;
+    box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
+    0 -15px 35px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .petImage{
@@ -418,7 +440,7 @@ body{
 
 
 .name{
-  padding: 0 0 10px 0;
+  padding: 0 0 0px 0;
 }
 
 .name div{
@@ -428,7 +450,7 @@ body{
 
 .name div .big{
   margin-right: 10px;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #333;
   line-height: 1;
 }
@@ -445,10 +467,10 @@ body{
 .name .small{
   font-weight: 500;
   color: #444;
-  margin-top: -3px;
+  margin-top: -10px;
   text-transform: capitalize;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .name, .description, .color-container, .size-container{
@@ -456,13 +478,13 @@ body{
 }
 
 .description{
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .title{
   color: #3a3a3a;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   text-align: left;
 }
@@ -479,13 +501,38 @@ body{
 
 
 .info{
-  width: 68%;
+  /* width: 68%; */
+  width: calc((100vw / 3) - 50%);
   background-color: #fff;
   z-index: 1;
-  padding: 20px 40px;
+  padding: 10px 20px;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
   0 100px 65px rgba(0, 0, 0, 0),
   0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .info{
+    width: 68%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px 20px;
+    box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+    0 100px 65px rgba(0, 0, 0, 0),
+    0 20px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 500px) {
+  .info{
+    width: 75%;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px 20px;
+    box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+    0 100px 65px rgba(0, 0, 0, 0),
+    0 20px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 
@@ -496,20 +543,21 @@ body{
 }
 
 .price h1{
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1;
+  margin-top: 6px;
 }
 
 .price i{
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-right: 1px;
 }
 
 .adopt-terms{
   padding-top: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -517,7 +565,7 @@ body{
   .adopt-terms{
     padding-top: 0px;
     display: block;
-    justify-content: space-between;
+    justify-content: space-between;    
     align-items: center;
   }
 
@@ -533,7 +581,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 0.6rem;
     transition: .5s;
     display: block;
     text-align: center;
@@ -548,7 +596,7 @@ body{
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.6rem;
   transition: .5s;
 }
 
@@ -581,103 +629,8 @@ body{
   } */
 
 
-  /*----------Inicio Sesion----------*/
-  .iniciosesion{
-    display: flex;
-    width: 60%; 
-    max-width: 120rem;
-    margin: 2rem auto;
-    padding: 1px;
-    box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
-    0 100px 65px rgba(0, 0, 0, 0),
-    0 20px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-
-  }
-
-  .iniciosesion-imagen{
-    flex-basis: 50%;
-    background-image: url(./assets/img/Login.jpg);
-    background-size: cover;
-    height: 75vh;
-    background-position: center;
-    padding: 1rem;
-    
-  }
-
-  .iniciosesion-imagen img{
-    max-width: 100%;
-    padding-bottom: 2rem;
-   }
-
-  .iniciosesion-formulario{
-    flex-basis: 50%;
-  }
-
-  .iniciosesion-formulario img{
-    width: 20rem;
-    display: block;
-    margin: 3rem auto;
-  }
-
-  fieldset {
-    padding: 0.1rem 7.75rem 0.625rem;
-    /* transform: translateY(-50%); */
-  }
-
-  .iniciosesion-label{
-    font-size: 1.8rem;
-    font-family: 'Oswald', sans-serif;
-    display: block;
-    margin-top: 10%;
-    }
-
-  input[type="radio"]{
-    width: auto;
-    margin: 0;
-}
-  input:not([type="submit"]),
-textarea,
-select{
-    padding: 1.5rem;
-    display: block;
-    width: 100%;
-    background-color: rgba(231, 231, 231, 0.5);
-    margin-bottom: 20%;
-    border: none;
-    border-radius: 0.3rem;
-}
-
-.buttom{
-  background-color: #246a40;
-  padding: 1.5rem 6rem;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Oswald', sans-serif;
-  text-decoration: none;
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  display: block;
-  border: 2px solid;
-  margin: auto;
-}
-
-.buttom.hollow,
-.buttom.hollow:hover{
-  background-color: white;
-  color: #246a40;
-  
-}
-
-.iniciosesion-link{
-  font-size: 1.3rem;
-  margin-top: 10%
-}
-
-/*---------------Recuperar Contrasena-------------*/
-
-.recuperarContrasena{
+/*----------Inicio Sesion----------*/
+.iniciosesion{
   display: flex;
   width: 60%; 
   max-width: 120rem;
@@ -690,26 +643,79 @@ select{
 
 }
 
-.recuperarContrasena-formulario{
+.iniciosesion-imagen{
   flex-basis: 50%;
+  background-image: url(./assets/img/Login.jpg);
+  background-size: cover;
+  height: 75vh;
+  background-position: center;
+  padding: 1rem;
+  
 }
 
-.recuperarContrasena-formulario img{
-  width: 20rem;
+.iniciosesion-imagen img{
+  max-width: 100%;
+  padding-bottom: 2rem;
+ }
+
+ @media (max-width: 950px) {
+  .iniciosesion-imagen{
+    display: none!important;
+   }
+
+   .iniciosesion{
+    display: flex;
+    width: min-content; 
+    max-width: 120rem;
+    margin: 2rem auto;
+    padding: 1px;
+    box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+    0 100px 65px rgba(0, 0, 0, 0),
+    0 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+
+  }
+ }
+
+ @supports (object-fit: cover) {
+  .iniciosesion-imagen img {
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  }
+  }
+
+.iniciosesion-formulario{
+  flex-basis: 50%;
+  display: flex;    
+  align-items: center;
+}
+
+.iniciosesion-form{
+
+  width: 100%;
+}
+
+.iniciosesion-formulario img{
+  width: 10rem;
   display: block;
-  margin: 3rem auto;
+  margin: 1rem auto 0;
 }
 
-.fieldset2 {
-  padding: 0.1rem 26.75rem 0.625rem;
+.fieldset {
+  padding: 0.1rem 2.75rem 0.625rem;
   /* transform: translateY(-50%); */
+
+  
+
+
 }
 
-.recuperarContrasena-label{
-  font-size: 1.8rem;
+.iniciosesion-label{
+  font-size: 1rem;
   font-family: 'Oswald', sans-serif;
   display: block;
-  margin-top: 10%;
+  margin-top: 5%;
   }
 
 input[type="radio"]{
@@ -719,18 +725,17 @@ input[type="radio"]{
 input:not([type="submit"]),
 textarea,
 select{
-  padding: 1.5rem;
+  padding: 0.7rem;
   display: block;
   width: 100%;
   background-color: rgba(231, 231, 231, 0.5);
-  margin-bottom: 20%;
   border: none;
   border-radius: 0.3rem;
 }
 
 .buttom{
 background-color: #246a40;
-padding: 1.5rem 6rem;
+padding: 0.5rem 5rem;
 color: white;
 text-transform: uppercase;
 font-weight: bold;
@@ -740,18 +745,327 @@ font-size: 1.3rem;
 margin-top: 2rem;
 display: block;
 border: 2px solid;
-margin: auto;
+margin: 2rem auto 0;
 }
 
 .buttom.hollow,
+.buttom-direcciones.hollow,
 .buttom.hollow:hover{
 background-color: white;
 color: #246a40;
 
 }
-/*
+
 .iniciosesion-link{
-font-size: 1.3rem;
+font-size: 1rem;
 margin-top: 10%
 }
-*/
+
+/*----------Perfil Usuario----------*/
+.perfilusuario{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  width: 85%;
+  margin: 1rem auto;
+  box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+  0 100px 65px rgba(0, 0, 0, 0),
+  0 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.perfilusuario-banner{
+  flex-basis: 45%;
+  position: relative;
+}
+
+.perfilusuario-banner img{
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  z-index: -1;
+}
+
+@supports(object-fit: cover){
+  .perfilusuario-banner img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+
+.perfilusuario-info{
+  /* background-color: red; */
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgperfil-wrapper{
+  width: 12%;
+  height: 47%;
+  box-sizing: border-box;
+  border: 0 solid transparent;
+  border-radius: 50%;
+  background-color: #ADCC3B;
+  margin: -70px 40px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pu-imagenPerfil{
+  border-radius: 50%;
+  width: 10%;
+  margin: -57px 40px;
+}
+
+.buttom-perfil{
+  color: var(--primarygreen);
+  padding: 6px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: block;
+  border: 1px solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 87%;
+
+}
+
+.perfilusuario-contenedor{
+  width: auto;
+  margin: auto 40px ;
+  padding-top: 65px;
+  display: flex;
+}
+
+.pu-contenedorinfo{
+  flex-basis: 30%;
+}
+
+.pu-contenedorRecompensas{
+  flex-basis: 70%;
+  border-radius: 2px;
+}
+.descripcionTitulo{
+  font-size: 1.5rem;
+}
+
+.perfilusuario-labels{
+  display: flex;
+  flex-direction: column;  
+}
+
+.pulNombre{
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.pu-ul{
+  list-style: none;
+  display: flex;
+  margin-bottom: 5px!important;
+}
+.pu-ul :not(:last-child)::after{
+    content: "\00B7";
+    margin: 0;
+    padding: 0 4px;
+    color: #000;
+    font-weight: 400;
+}
+
+@media (max-width: 1147px) {
+  .pu-ul{
+    list-style: none;
+    margin-bottom: 5px!important;
+  }
+
+  .pu-contenedorRecompensas{
+    /* display: none!important; */
+  }
+
+  .pu-contenedorinfo{
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1139px) {
+  .rdProducto{
+    display: none;
+  }
+}
+
+@media (max-width: 722px) {
+  .pu-ul{
+    display: inline;
+  }
+  .perfilusuario-labels{
+    margin-top: 8px;
+  }
+
+  .pu-ul :not(:last-child)::after{
+    content: none;
+  }
+
+  .informacionDescripcion{
+    display: none!important;
+  }
+
+  .rdInformacionSellos{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sellosRecompensas{
+    margin-bottom: 4px!important;
+  }
+
+  .descripcionTitulo{
+    font-size: 25px;
+  }
+
+  .rdInformacion{
+    align-items: center!important;
+  }
+
+  .rdContenedor{
+    box-shadow: 3px 4px 7px -1px rgba(0,0,0,0.28)!important;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .descripcionTitulo{
+    font-size: 18px;
+  }
+
+  .rdContenedor{
+    box-shadow: 3px 4px 7px -1px rgba(0,0,0,0.28)!important;
+  }
+}
+
+
+/*----------RecompensaUsuario----------*/
+
+.rdContenedor{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  -webkit-box-shadow: 7px 9px 7px -6px rgba(0,0,0,0.38);
+  -moz-box-shadow: 7px 9px 7px -6px rgba(0,0,0,0.38);
+  box-shadow: 7px 9px 7px -6px rgba(0,0,0,0.38);
+}
+
+.rdInformacion{
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: auto 15px;
+}
+
+.rdInformacionDescripcion{
+  flex-basis: 50%;
+}
+.rdInformacionSellos{
+  flex-basis: 50%;
+  display: flex;
+}
+
+.sellosRecompensas{
+  width: 50px;
+  height: 50px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  /* background: #adcc3b; */
+  margin: auto 15px;
+  border: black 1px dashed;
+}
+
+.sellosRecompensas img{
+  width: 100%;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@supports(object-fit: cover){
+  .sellosRecompensas img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.rdProducto{
+  flex-basis: 30%;
+  position: relative;
+}
+
+.rdProducto img {
+  height:100%;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+  position:absolute;
+  top:0%;
+  bottom:0%;
+  left:0%;
+  right:0%;
+  display:block;
+  object-fit: contain;
+}
+
+/*----------Direcciones Usuarios----------*/
+.direccionesUsuarios{
+  margin: 1rem auto;
+  box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+  0 100px 65px rgba(0, 0, 0, 0),
+  0 5px 3px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  height: auto;
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dirUsuario{
+  list-style: none;
+  display: flex;
+}
+
+.dirUsuario :not(:last-child)::after{
+  content: "\00B7";
+  margin: 0;
+  padding: 0 4px;
+  color: #000;
+  font-weight: 400;
+}
+
+.buttom-direcciones{
+background-color: #246a40;
+padding: 6px 10px;
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+font-family: 'Oswald', sans-serif;
+text-decoration: none;
+font-size: 0.8rem;
+display: block;
+border: 2px solid;
+border-radius: 3px;
+}
+
+
+
+
+

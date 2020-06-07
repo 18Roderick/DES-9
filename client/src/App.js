@@ -9,17 +9,29 @@ import Switcher from './components/Switch';
 
 import InicioSesion from './components/InicioSesion/InicioSesion';
 
-import RecuperarContrasena from './components/InicioSesion/RecuperarContrasena/RecuperarContrasena';
+import PerfilUsuario from './components/PerfilUsuario/PerfilUsuario';
 
+import DireccionesUsuario from './components/DireccionesUsuario/DireccionesUsuario';
 
 function App() {
+
+  const infoUsuario = {
+      userBanner: '',
+      userImgPerfil:'',
+      userNombre: {nombre:'Roderick',apellido:'Romero'},
+      userPais:'Panamá',
+      userDireccion: {provincia:'Panamá',distrito:'San Miguelito',barrio:'Samaria'},
+      userCorreo: 'soymanco@roderick.com',
+      userTelefono: '6458-7896',
+  }
   return (
     <Fragment>
       <Header></Header>
       <NavBar></NavBar>
       <Switcher></Switcher>
       <InicioSesion></InicioSesion>
-      <RecuperarContrasena></RecuperarContrasena>
+      <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
+      <DireccionesUsuario></DireccionesUsuario>
     </Fragment>
   );
 }

@@ -7,20 +7,21 @@ const InicioSesion = () => (
     <div className="iniciosesion-imagen"></div>
 
     <div className="iniciosesion-formulario">
-      <form>
-        <fieldset className = 'fieldset'>
+      <form className = 'iniciosesion-form'>
+        <div className = 'fieldset'>
           <img src={logonombre} />
-          <label className="iniciosesion-label">Nombre</label>
-          <input className = 'iniciosesion-input'></input>
+          <label htmlFor = 'email' className="iniciosesion-label">Correo</label>
+          <input id = 'email' className = 'iniciosesion-input'></input>
 
-          <label className="iniciosesion-label">Apellido</label>
-          <input className = 'iniciosesion-input'></input>
+          <label htmlFor = 'password' className="iniciosesion-label">Contraseña</label>
+          <input id = 'password' className = 'iniciosesion-input'></input>
+
           <button className = 'buttom hollow'>Iniciar</button>
           <div className = 'flex'>
               <a href = '#' className = 'iniciosesion-link'>¿Olvido su contraseña?</a>
               <a href = '#' className = 'iniciosesion-link'>Registrarse</a>
           </div>
-        </fieldset>
+        </div>
       </form>
     </div>
   </div>
