@@ -19,9 +19,9 @@ const PerfilUsuario = ({
       <img src={imgbanner}></img>
     </div>
     <div className="perfilusuario-info">
-      <div className="imgperfil-wrapper">
+
         <img className='pu-imagenPerfil' src={imgperfil} />
-      </div>
+
 
       <div className="perfilusuario-contenedor">
         <div className="pu-contenedorinfo">

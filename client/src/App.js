@@ -11,6 +11,8 @@ import InicioSesion from './components/InicioSesion/InicioSesion';
 
 import PerfilUsuario from './components/PerfilUsuario/PerfilUsuario';
 
+import DireccionesUsuario from './components/DireccionesUsuario/DireccionesUsuario';
+
 function App() {
 
   const infoUsuario = {
@@ -29,6 +31,7 @@ function App() {
       <Switcher></Switcher>
       <InicioSesion></InicioSesion>
       <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
+      <DireccionesUsuario></DireccionesUsuario>
     </Fragment>
   );
 }

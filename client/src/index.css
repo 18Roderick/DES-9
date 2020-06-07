@@ -769,7 +769,7 @@ margin-top: 10%
   margin: 1rem auto;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
   0 100px 65px rgba(0, 0, 0, 0),
-  0 20px 10px rgba(0, 0, 0, 0.1);
+  0 5px 3px rgba(0, 0, 0, 0.1);
 }
 
 .perfilusuario-banner{
@@ -815,7 +815,8 @@ margin-top: 10%
 
 .pu-imagenPerfil{
   border-radius: 50%;
-  width: 89%;
+  width: 10%;
+  margin: -57px 40px;
 }
 
 .perfilusuario-contenedor{
@@ -855,6 +856,14 @@ margin-top: 10%
     padding: 0 4px;
     color: #000;
     font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .pu-ul{
+    list-style: none;
+    display: inline;
+    margin-bottom: 5px!important;
+  }
 }
 
 /*----------RecompensaUsuario----------*/
@@ -936,8 +945,28 @@ margin-top: 10%
   margin: 1rem auto;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
   0 100px 65px rgba(0, 0, 0, 0),
-  0 20px 10px rgba(0, 0, 0, 0.1);
-  background-color: red;
+  0 5px 3px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 5px 2px 14px -2px rgba(0,0,0,0.57); */
+  width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+
+
+.dirUsuario{
+  list-style: none;
+  display: flex;
+}
+
+.dirUsuario :not(:last-child)::after{
+  content: "\00B7";
+  margin: 0;
+  padding: 0 4px;
+  color: #000;
+  font-weight: 400;
 }
 
 
