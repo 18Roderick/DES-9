@@ -5,7 +5,7 @@ const RecuperarConstrasena = () => (
   <div className="recuperarContrasena">
     
     <div className="recuperarContrasena-formulario">
-      <form>
+      <form className="recuperarContrasena-form">
         <fieldset className="fieldset2">
           <img src={logonombre} />
           <label className="recuperarContrasena-label">Nueva contraseña</label>

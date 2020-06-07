@@ -11,6 +11,12 @@ import InicioSesion from './components/InicioSesion/InicioSesion';
 
 import PerfilUsuario from './components/PerfilUsuario/PerfilUsuario';
 
+import Registro from './components/InicioSesion/Registro/Registro';
+
+import RecuperarContrasena from './components/InicioSesion/RecuperarContrasena/RecuperarContrasena';
+
+import Contacto from './components/Contact/index';
+
 function App() {
 
   const infoUsuario = {
@@ -28,7 +34,10 @@ function App() {
       <NavBar></NavBar>
       <Switcher></Switcher>
       <InicioSesion></InicioSesion>
+      <Registro></Registro>
+      <RecuperarContrasena></RecuperarContrasena>
       <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
+      <Contacto></Contacto>
     </Fragment>
   );
 }
