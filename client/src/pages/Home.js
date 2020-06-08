@@ -4,14 +4,12 @@ import React from 'react';
 import Merch from '../components/Merch';
 import News from '../components/News';
 
+import Navbar from '../Admin/components/Navbar'
 
 const MerchPages = () => {
   return (
     <React.Fragment>
-      <div className="">
-        <News></News>
-        <Merch></Merch>
-      </div>
+      <Navbar/>
     </React.Fragment>
   );
 };
