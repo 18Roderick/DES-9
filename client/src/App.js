@@ -26,8 +26,8 @@ function App() {
   }
   return (
     <Fragment>
-      <Header></Header>
       <NavBar></NavBar>
+      <Header></Header>      
       <Switcher></Switcher>
       <InicioSesion></InicioSesion>
       <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
