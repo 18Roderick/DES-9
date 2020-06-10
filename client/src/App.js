@@ -10,6 +10,8 @@ import Switcher from './components/Switch';
 
 import PerfilUsuario from './components/PerfilUsuario/PerfilUsuario';
 
+import DireccionesUsuario from './components/DireccionesUsuario/DireccionesUsuario';
+
 function App() {
 
   const infoUsuario = {
@@ -23,10 +25,11 @@ function App() {
   }
   return (
     <Fragment>
-      <Header></Header>
       <NavBar></NavBar>
+      <Header></Header>      
       <Switcher></Switcher>
       <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
+      <DireccionesUsuario></DireccionesUsuario>
     </Fragment>
   );
 }

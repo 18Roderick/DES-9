@@ -1,5 +1,7 @@
 :root{
   --primary: #2175f5;
+  --primarygreen: #246a40;
+  --secondarygreen:#adcc3b;
 }
 
 html{
@@ -38,24 +40,49 @@ body{
 
 .site-header{
   display: flex;
-  background-image: url(../src/assets/img/GreenLogo-Hero2.png);
-  background-position: top center;
   height: 100vh;
-  background-size: cover;
+  /* background-image: url(../src/assets/img/GreenLogo-Hero2.png); */
+  /* background-position: top center;
   padding: 1px;
-  /* position: relative;
-  top: 30px;
-  left: 90px; */
+  object-fit: cover;
+  justify-content: start; */
+  position: relative;
+}
+
+.imagenhero{
+  height: 100vh;
+  object-fit: contain;
+  width: 100%;
 }
 
 
 .redes-sociales{
   text-align: left;
-  margin: 8rem 7rem;
+  margin: 6rem 7rem;
   display: flex;
-  flex-direction: column;
-  /* position: absolute;
-  top: 1px; */
+  flex-direction: column;  
+  position: absolute;
+}
+
+@media (max-width: 919px) {
+  .redes-sociales{
+    margin: auto;
+    display: flex;
+    flex-direction: row;  
+    top: 40px;
+    display: block!important;
+    text-align: center;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .redes-sociales a{
+    color: #246a40;
+    font-size: 2rem!important;
+    align-items: center;
+    margin-right: 1rem;
+  }
   
 }
 
@@ -72,7 +99,6 @@ body{
 .barra{
   background-color: #adcc3b;
   padding: 0.8rem 0;
-  margin-top: 3px;
   position: sticky;
   z-index:2;
   top:0;
@@ -119,16 +145,17 @@ body{
 }
 
 .navegacion-principal a:hover{
-  background-color: #246a40;
+  color: #246a40;
 }
 
 .navegacion-principal a:last-child{
-  border: 2px solid  #246a40;
-  color:  #246a40;
+  color:  white;
+  background-color: var(--secondarygreen);
+  font-size: 2rem;
 }
 
 .navegacion-principal a:last-child:hover{
-  color: white;
+  color: var(--primarygreen);
 }
 
 @media (min-width: 1200px) {
@@ -138,7 +165,7 @@ body{
   }
   .navegacion-principal{
     width: 67%;
-    margin-left: 100px;
+    margin-left: 30px;
     text-align: right;
     font-size: 1.5rem;
     display: block;
@@ -190,7 +217,7 @@ body{
 
 /*Menu Movil*/
 .menu-movil{
-  width: 6rem;
+  width: 5rem;
   display: block;
   text-align: right;
   margin-top: 2rem;
@@ -748,6 +775,7 @@ margin: 2rem auto 0;
 }
 
 .buttom.hollow,
+.buttom-direcciones.hollow,
 .buttom.hollow:hover{
 background-color: white;
 color: #246a40;
@@ -769,7 +797,7 @@ margin-top: 10%
   margin: 1rem auto;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
   0 100px 65px rgba(0, 0, 0, 0),
-  0 20px 10px rgba(0, 0, 0, 0.1);
+  0 5px 3px rgba(0, 0, 0, 0.1);
 }
 
 .perfilusuario-banner{
@@ -815,7 +843,24 @@ margin-top: 10%
 
 .pu-imagenPerfil{
   border-radius: 50%;
-  width: 89%;
+  width: 10%;
+  margin: -57px 40px;
+}
+
+.buttom-perfil{
+  color: var(--primarygreen);
+  padding: 6px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: block;
+  border: 1px solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 87%;
+
 }
 
 .perfilusuario-contenedor{
@@ -832,6 +877,9 @@ margin-top: 10%
 .pu-contenedorRecompensas{
   flex-basis: 70%;
   border-radius: 2px;
+}
+.descripcionTitulo{
+  font-size: 1.5rem;
 }
 
 .perfilusuario-labels{
@@ -856,6 +904,50 @@ margin-top: 10%
     color: #000;
     font-weight: 400;
 }
+
+@media (max-width: 1147px) {
+  .pu-ul{
+    list-style: none;
+    margin-bottom: 5px!important;
+  }
+
+  .pu-contenedorRecompensas{
+    /* display: none!important; */
+  }
+
+  .pu-contenedorinfo{
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1139px) {
+  .perfilusuario-contenedor{
+    display: block;
+  }
+  .rdInformacion{
+    margin: auto!important;
+  }
+
+  .rdInformacionSellos{
+    padding-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .rdContenedor{
+    box-shadow: none !important;
+  }
+
+  .perfilusuario-info{
+    padding-top: 10px;
+  }
+
+  .pu-imagenPerfil{
+    width: 15%;
+  }
+}
+
 
 /*----------RecompensaUsuario----------*/
 
@@ -936,9 +1028,42 @@ margin-top: 10%
   margin: 1rem auto;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
   0 100px 65px rgba(0, 0, 0, 0),
-  0 20px 10px rgba(0, 0, 0, 0.1);
-  background-color: red;
+  0 5px 3px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  height: auto;
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.dirUsuario{
+  list-style: none;
+  display: flex;
+}
+
+.dirUsuario :not(:last-child)::after{
+  content: "\00B7";
+  margin: 0;
+  padding: 0 4px;
+  color: #000;
+  font-weight: 400;
+}
+
+.buttom-direcciones{
+background-color: #246a40;
+padding: 6px 10px;
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+font-family: 'Oswald', sans-serif;
+text-decoration: none;
+font-size: 0.8rem;
+display: block;
+border: 2px solid;
+border-radius: 3px;
+}
+
 
 
 
