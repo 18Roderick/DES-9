@@ -12,20 +12,35 @@ const NavBar = () => {
           <ul>
             <li>
               <a class="s-sidebar__nav-link" href="#0">
+              <i class="fas fa-cart-plus"></i>
+                <em>Mercancia</em>
+              </a>
+            </li>
+            <li>
+              <a class="s-sidebar__nav-link" href="#0">
                 <i class="fa fa-home"></i>
-                <em>Home</em>
+                <em>Metas</em>
+              </a>
+            </li>        <li>
+              <a class="s-sidebar__nav-link" href="#0">
+                <i class="fa fa-home"></i>
+                <em>Noticias</em>
+              </a>
+            </li>        <li>
+              <a class="s-sidebar__nav-link" href="#0">
+                <i class="fa fa-home"></i>
+                <em>Recompensa</em>
+              </a>
+            </li>        <li>
+              <a class="s-sidebar__nav-link" href="#0">
+                <i class="fa fa-home"></i>
+                <em>Usuario</em>
               </a>
             </li>
             <li>
               <a class="s-sidebar__nav-link" href="#0">
-                <i class="fa fa-user"></i>
-                <em>My Profile</em>
-              </a>
-            </li>
-            <li>
-              <a class="s-sidebar__nav-link" href="#0">
-                <i class="fa fa-camera"></i>
-                <em>Camera</em>
+                <i class="fa fa-home"></i>
+                <em>Texto</em>
               </a>
             </li>
           </ul>
