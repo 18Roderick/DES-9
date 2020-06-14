@@ -13,10 +13,10 @@ const InicioSesion = () => (
         <div className = 'fieldset'>
           <img src={logonombre} />
           <label htmlFor = 'email' className="iniciosesion-label">Correo</label>
-          <input id = 'email' className = 'iniciosesion-input'></input>
+          <input id = 'email' className = 'iniciosesion-input ' type='email' autoFocus  placeholder='seeds@ejemplo.com'></input>
 
           <label htmlFor = 'password' className="iniciosesion-label">Contraseña</label>
-          <input id = 'password' className = 'iniciosesion-input'></input>
+          <input id = 'password' className = 'iniciosesion-input' type='password' placeholder='*******'></input>
 
           <button className = 'buttom hollow'>Iniciar</button>
           <div className = 'flex'>
