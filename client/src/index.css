@@ -23,7 +23,7 @@ textarea {
 *{
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -36,37 +36,128 @@ body{
   justify-content: space-between;
 }
 
+
+
+/*----------NavBarPrueba----------*/
+
+
+ul.menu {
+  display: inline-block;
+  list-style-type: none;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+}
+li.menu_list {
+  height: 85px;
+  width: 100%;
+  position: relative;
+}
+li.menu_list .front,
+a.side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .5s ease-out;
+}
+li.menu_list .front {
+  background-color:var(--secondarygreen);
+  color: white;
+  transform-origin: 0 0 0;
+}
+a.side {
+  background-color: var(--primarygreen);
+  color: white;
+  transform-origin: 0 0 70px;
+  transform: rotateX(90deg);
+  font-size: 13px;
+}
+li.menu_list:hover a.side {
+  transform: rotateX(0deg);
+}
+li.menu_list:hover .front {
+  transform: rotateX(-90deg);
+}
+
+li.menu_list:first-child:not(hover) .front {
+  transform: none;
+  padding: 30px 0;
+}
+
+
+@media (max-width: 850px) {
+
+  li.menu_list {
+  height: 75px!important;
+  width: 100%!important;
+  margin-right: -1px;
+}
+a.side {
+  transform-origin: 0 0 65px;
+  font-size: 10px;
+  transform: none;
+  display: none;
+}
+li.menu_list:hover a.side {
+  transform: none;
+}
+li.menu_list:hover .front {
+  transform: none;
+}
+
+li.menu_list .front,
+a.side {
+  height: 40px;
+}
+
+}
+
+@media (max-width: 540px) {
+  .logo{
+    width: 100%!important;
+  }
+}
+
+
+
+
 /*Header*/
 
 .site-header{
   display: flex;
-  height: 100vh;
-  /* background-image: url(../src/assets/img/GreenLogo-Hero2.png); */
-  /* background-position: top center;
-  padding: 1px;
-  object-fit: cover;
-  justify-content: start; */
+  height: 80vh;
   position: relative;
+  /* margin-top: -36rem; */
 }
 
 .imagenhero{
-  height: 100vh;
+  height: 84vh;
   object-fit: contain;
   width: 100%;
 }
 
 
 .redes-sociales{
-  text-align: left;
-  margin: 6rem 7rem;
+  text-align: center;
+  margin: 1rem 4rem;
   display: flex;
   flex-direction: column;  
   position: absolute;
+  right: 0;
 }
 
 @media (max-width: 919px) {
   .redes-sociales{
-    margin: auto;
+    margin: 15px auto 0;
     display: flex;
     flex-direction: row;  
     top: 40px;
@@ -105,16 +196,20 @@ body{
 }
 
 .logo{
-  width: 80%;
+  width: 100%;
   float: left;
 }
 .logo img{
   width: 50%;
 }
 
-@media (min-width: 768px) {
+@media (max-width:919px) {
   .logo{
     width: 70%;
+  }
+
+  .logo img{
+    width: 50%!important;
   }
 }
 
@@ -124,6 +219,7 @@ body{
   display: flex;
   align-content: space-between;
   align-items: center;
+  flex-basis: 25%;
 }
 
 .navegacion-principal{
@@ -136,7 +232,7 @@ body{
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 15px;
   transition: all .5s ease;
   width: 100%;
   text-align: center;
@@ -152,6 +248,7 @@ body{
   color:  white;
   background-color: var(--secondarygreen);
   font-size: 2rem;
+  padding-left: 10rem;
 }
 
 .navegacion-principal a:last-child:hover{
@@ -165,7 +262,7 @@ body{
   }
   .navegacion-principal{
     width: 67%;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     text-align: right;
     font-size: 1.5rem;
     display: block;
@@ -187,6 +284,38 @@ body{
   
 }
 
+/* @media (max-width: 1273px) {
+  .navegacion-principal a:last-child{
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1193px) {
+  .navegacion-principal a:last-child{
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1126px) {
+  .navegacion-principal a:last-child{
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 1086px) {
+  .navegacion-principal{
+    flex-basis: 150%!important;
+  }
+  .navegacion-principal a:last-child{
+    padding-left: 80px;
+  }
+
+  .logo img{
+    width: 80%!important;
+  }
+
+} */
+
 @media (min-width: 920px) {
   .navegacion-desktop{
     display: flex;
@@ -194,9 +323,10 @@ body{
   }
   .navegacion-principal{
     width: 67%;
-    text-align: right;
+    text-align: left;
     font-size: 1.5rem;
     display: block;
+    flex-basis: 75%;
   }
 
   .navegacion-principal a{
@@ -376,7 +506,7 @@ body{
 
 
 .seccion{
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
 }
 
 .tamanoh2{
@@ -643,7 +773,7 @@ body{
 
 }
 .tarjeta-list{
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     margin: 0;
   }
@@ -866,6 +996,7 @@ margin-top: 10%
 .perfilusuario-contenedor{
   width: auto;
   margin: auto 40px ;
+  height: auto;
   padding-top: 65px;
   display: flex;
 }
@@ -935,6 +1066,14 @@ margin-top: 10%
 }
 
 @media (max-width: 540px) {
+
+  .perfilusuario{
+    height: 100%;
+    width: 85%;
+  }
+  .pu-ul{
+    flex-wrap: wrap;
+    }
   .rdContenedor{
     box-shadow: none !important;
   }
@@ -943,8 +1082,29 @@ margin-top: 10%
     padding-top: 10px;
   }
 
-  .pu-imagenPerfil{
-    width: 15%;
+  .pu-contenedorinfo{
+    height: auto;
+  }
+
+  .perfilusuario-labels{
+    height: auto;
+  }
+
+  .pu-contenedorRecompensas{
+    height: auto;
+  }
+
+  .perfilusuario-banner img{
+    position:inherit;
+  }
+
+  .perfilusuario-contenedor{
+    margin: auto 30px ;
+  }
+
+  .pu-imagenPerfil {
+    margin: -57px 30px;
+    width: 20%;
   }
 }
 
@@ -974,6 +1134,27 @@ margin-top: 10%
 .rdInformacionSellos{
   flex-basis: 50%;
   display: flex;
+}
+
+@media (max-width: 540px) {
+
+  .rdInformacion{
+    flex-basis: 100%;
+  }
+  
+  .rdInformacionDescripcion{
+    flex-basis: 50%;
+    height: auto;
+  }
+  .rdInformacionSellos{
+    flex-basis: 50%;
+    display: flex;
+    height: auto;
+  }
+
+  .rdProducto{
+    display: none;
+  }
 }
 
 .sellosRecompensas{
