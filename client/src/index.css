@@ -904,17 +904,17 @@ li.menu_list:first-child:not(hover) .front {
   width: 100%;
   border: none;
   border-bottom: solid var(--primarygreen) 1px;
-
+  border-radius: 3px 3px 0px 0px
 
 }
 
 
 
 .iniciosesion-input:focus {
-  outline: 0;
+  outline: 1px;
   outline: none;
   border: solid var(--primarygreen) 1px !important;
-
+  border-radius: 3px
 }
 
 
