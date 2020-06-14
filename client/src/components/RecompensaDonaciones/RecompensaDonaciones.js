@@ -2,16 +2,17 @@ import React from 'react';
 import loli from '../../assets/img/loli.png';
 import sello from '../../assets/img/SelloRecompensa.png';
 import arbol from '../../assets/img/333.jpg';
+import producto from '../../assets/img/12737.jpg';
 
 const RecompensaDonaciones = () => (
   <div className="rdContenedor">
     <div className="rdInformacion">
       <div className="rdInformacionDescripcion">
         <div className="descripcionTitulo">
-          <div>Loli legal</div>
+          <div>Semilla de arbol de manzano</div>
         </div>
         <div className="informacionDescripcion">
-          <p>Loli 100% legal para darle amor y cariño incondicional</p>
+          <p>Semilla de arbol de manzado para iniciar la reforestacion de x lugar</p>
         </div>
       </div>
 
@@ -25,7 +26,7 @@ const RecompensaDonaciones = () => (
     </div>
 
     <div className="rdProducto">
-      <img src={loli} />
+      <img src={producto} />
     </div>
   </div>
 );

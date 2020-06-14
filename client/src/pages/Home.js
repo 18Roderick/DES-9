@@ -1,17 +1,12 @@
 ///cada page es una pagina del sitio web
 import React from 'react';
-
-import Merch from '../components/Merch';
-import News from '../components/News';
+import Hero from '../components/Hero/Hero';
 
 
 const MerchPages = () => {
   return (
     <React.Fragment>
-      <div className="">
-        <News></News>
-        <Merch></Merch>
-      </div>
+        <Hero/>
     </React.Fragment>
   );
 };
