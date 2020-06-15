@@ -3,6 +3,7 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './index.css'
 
 const Contact = () => {
@@ -39,6 +40,8 @@ const Contact = () => {
         </Form.Group>
       </Form>
 =======
+=======
+>>>>>>> 7172f72040361ecf26727e2509a95ecec0f71805
 import './index.css';
 
 const Contact = () => {
@@ -76,7 +79,10 @@ const Contact = () => {
           </Form.Group>
         </Form>
       </div>
+<<<<<<< HEAD
 >>>>>>> 7218cf28fcfc9bd5a1066f05ca933955b56046e8
+=======
+>>>>>>> 7172f72040361ecf26727e2509a95ecec0f71805
     </div>
   );
 };

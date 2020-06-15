@@ -1,17 +1,16 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 
-import { Home, Merch } from './../../pages';
+import { Home, News, Merch, Login, PanelUsuario } from './../../pages';
+import NavBar from '../NavBarPrueba/NavBarPrueba';
 
 export default function Switcher() {
   return (
     <Switch>
-      <Route path="/">
-        <Home></Home>
-      </Route>
-      <Route path="/merch">
-        <Merch></Merch>
-      </Route>
+      <Route path="/" exact component={Home}></Route>
+      <Route path="/Merch" exact component={Merch}></Route>
+      <Route path="/Login" exact component={Login}></Route>
+      <Route path="/PanelUsuario" exact component={PanelUsuario}></Route>
     </Switch>
   );
 }

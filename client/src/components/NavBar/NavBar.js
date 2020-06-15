@@ -23,6 +23,8 @@ const NavBar = () => (
           <a href="">Mercancia</a>
           <a href="">Metas</a>
           <a href="registro.html">Donaciones</a>
+          <a href="">Iniciar sesión</a>
+          <a><i class="fas fa-shopping-cart"></i></a>
         </nav>
       </div>
   </div>
