@@ -19,10 +19,8 @@ const PerfilUsuario = ({
       <img src={imgbanner}></img>
     </div>
     <div className="perfilusuario-info">
-      <div className="imgperfil-wrapper">
-        <img className='pu-imagenPerfil' src={imgperfil} />
-      </div>
-
+        <img className="pu-imagenPerfil" src={imgperfil} />
+        <button className="buttom-perfil mr-1 mt-1"><i class="fas fa-pencil-alt"></i></button>
       <div className="perfilusuario-contenedor">
         <div className="pu-contenedorinfo">
           <div className="perfilusuario-labels">
@@ -37,11 +35,10 @@ const PerfilUsuario = ({
             <label>{userTelefono}</label>
           </div>
         </div>
-        <div className ='pu-contenedorRecompensas'>
-            <RecompensaDonaciones></RecompensaDonaciones>
+        <div className="pu-contenedorRecompensas">
+          <RecompensaDonaciones></RecompensaDonaciones>
         </div>
       </div>
-    
     </div>
   </div>
 );

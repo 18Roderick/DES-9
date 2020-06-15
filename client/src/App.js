@@ -17,6 +17,8 @@ import RecuperarContrasena from './components/InicioSesion/RecuperarContrasena/R
 
 import Contacto from './components/Contact/index';
 
+import DireccionesUsuario from './components/DireccionesUsuario/DireccionesUsuario';
+
 function App() {
 
   const infoUsuario = {
@@ -36,8 +38,9 @@ function App() {
       <InicioSesion></InicioSesion>
       <Registro></Registro>
       <RecuperarContrasena></RecuperarContrasena>
-      <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
       <Contacto></Contacto>
+      <PerfilUsuario infoUsuario = {infoUsuario}></PerfilUsuario>
+      <DireccionesUsuario></DireccionesUsuario>
     </Fragment>
   );
 }

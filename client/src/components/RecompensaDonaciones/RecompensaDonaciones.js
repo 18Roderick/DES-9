@@ -8,7 +8,7 @@ const RecompensaDonaciones = () => (
     <div className="rdInformacion">
       <div className="rdInformacionDescripcion">
         <div className="descripcionTitulo">
-          <h3>Loli legal</h3>
+          <div>Loli legal</div>
         </div>
         <div className="informacionDescripcion">
           <p>Loli 100% legal para darle amor y cariño incondicional</p>
