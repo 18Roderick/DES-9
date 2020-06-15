@@ -4,9 +4,8 @@
   --secondarygreen: #adcc3b;
 }
 
-html {
-  /* box-sizing: border-box; */
-
+html{
+  box-sizing: border-box;
 }
 
 /* button,
@@ -20,7 +19,7 @@ textarea {
   margin: 0;
 } */
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -881,8 +880,6 @@ li.menu_list:first-child:not(hover) .front {
   /* transform: translateY(-50%); */
 
 
-
-
 }
 
 .iniciosesion-label {
@@ -927,6 +924,7 @@ li.menu_list:first-child:not(hover) .front {
   }
 }
 
+/*
 * .buttom {
   background-color: #246a40;
   padding: 0.5rem 5rem;
@@ -940,6 +938,21 @@ li.menu_list:first-child:not(hover) .front {
   display: block;
   border: 2px solid;
   margin: 2rem auto 0;
+}*/
+
+.buttom{
+background-color: #246a40;
+padding: 0.5rem 5rem;
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+font-family: 'Oswald', sans-serif;
+text-decoration: none;
+font-size: 1.3rem;
+margin-top: 2rem;
+display: block;
+border: 2px solid;
+margin: 2rem auto 0;
 }
 
 .buttom.hollow,
@@ -954,6 +967,55 @@ li.menu_list:first-child:not(hover) .front {
   font-size: 1rem;
   margin-top: 10%
 }
+
+/*---------------Recuperar Contrasena-------------*/
+.recuperarContrasena{
+  display: flex;
+  width: 50%; 
+  max-width: 120rem;
+  margin: 2rem auto;
+  padding: 1px;
+  box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
+  0 100px 65px rgba(0, 0, 0, 0),
+  0 20px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.recuperarContrasena-formulario{
+  flex-basis: 100%;
+  display: flex;    
+  align-items: center;
+}
+
+.recuperarContrasena-form{
+
+  width: 100%;
+}
+
+
+.recuperarContrasena-formulario img{
+  width: 10rem;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+
+.fieldset2 {
+  padding: 0.1rem 2.75rem 0.625rem;
+  /* transform: translateY(-50%); */
+
+}
+
+.recuperarContrasena-label{
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif;
+  display: block;
+  margin-top: 5%;
+  }
+
+
+/*----------------------------Registro-----------------*/
+
 
 /*----------Perfil Usuario----------*/
 .perfilusuario {
