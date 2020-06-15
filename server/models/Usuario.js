@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose
+const { Schema } = mongoose;
 const Usuario = new Schema({
   nombre: {
     type: String,
@@ -12,9 +12,14 @@ const Usuario = new Schema({
   correo: {
     type: String,
     required: true,
-    unique: true,
+    unique: true
   },
-  telefono: {},
+  telefono: {
+    type: String
+  },
+  imagen: {
+    type: String
+  },
   rol: {
     type: String,
     required: true,
@@ -25,9 +30,22 @@ const Usuario = new Schema({
     type: String,
     required: true
   },
-  direcciones: {
-      //país, provincia, teléfono
-  }
+  activo: {
+    type: Boolean,
+    default: false
+  },
+  direcciones: [
+    {
+      pais: String,
+      provincia: String,
+      ciudad: String,
+      distrito: String,
+      corregimiento: String,
+      detalles: String,
+      barriada: String,
+      telefono: String
+    }
+  ]
 });
 
 module.exports = mongoose.model('usuario', Usuario);
