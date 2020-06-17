@@ -1,24 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LogoNavBar from "../../assets/img/LogoNombre.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LogoNavBar from '../../assets/img/LogoNombre.png';
+
+const Logo = () => (
+  <span class="front">
+    <img className="logo" src={LogoNavBar} alt="" />
+  </span>
+);
 
 const NavbBarPrueba = () => (
   <ul class="menu">
     <li class="menu_list">
-      <Link to="/index.html">
-        <span class="front">
-          <img className="logo" src={LogoNavBar} />
-        </span>
-      </Link>
-      <a href="#"></a>
+      <Link to="/" component={Logo}></Link>
     </li>
 
     <li class="menu_list">
-      <Link to = '/Login'>
-        <span class="front fas fa-user-astronaut"></span>
-        <a href="#" class="side">
-          Inicio sesion
-        </a>
+      <span class="front fas fa-user-astronaut"></span>
+      <Link to="/Login" className="side">
+        Inicio sesion
       </Link>
     </li>
     <li class="menu_list">
