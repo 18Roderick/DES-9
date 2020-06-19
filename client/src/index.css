@@ -35,6 +35,10 @@ body {
   justify-content: space-between;
 }
 
+h2{
+  text-align: center;
+}
+
 
 
 /*----------NavBarPrueba----------*/
@@ -1351,3 +1355,76 @@ margin: 2rem auto 0;
   border: 2px solid;
   border-radius: 3px;
 }
+
+/*----------Sobre Nosotros----------*/
+ .contenedorSobreNosotros{
+   display: flex;
+   flex-direction: column;
+   width: 85%;
+   margin: auto;
+
+ }
+
+ .sobreNosotrosMVV{
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+ }
+
+ .MVV{
+   flex-basis: 33.3%;
+   padding: 20px;
+ }
+
+ .MVV p{
+   text-align: justify;
+ }
+
+ .MVV img{
+   width: 40%;
+ }
+
+ .sobreNosotrosContacto{
+ }
+
+.sobreNosotrosTarjetaConctacto{
+  display: flex;
+  flex-basis: 33.3%;
+  justify-content: space-between;
+}
+/*----------Tarjeta Contacto----------*/
+ .carta {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.carta img {
+  width:100%;
+}
+
+.titulo {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+

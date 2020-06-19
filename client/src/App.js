@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import Switcher from './components/Switch';
-import NavBarPrueba from './components/NavBarPrueba/NavBarPrueba'
+import NavBarPrueba from './components/NavBarPrueba/NavBarPrueba';
 
 function App() {
   return (

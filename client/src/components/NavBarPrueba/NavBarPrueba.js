@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LogoNavBar from "../../assets/img/LogoNombre.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LogoNavBar from '../../assets/img/LogoNombre.png';
 
 const NavbBarPrueba = () => (
   <ul class="menu">
@@ -14,7 +14,7 @@ const NavbBarPrueba = () => (
     </li>
 
     <li class="menu_list">
-      <Link to = '/Login'>
+      <Link to="/Login">
         <span class="front fas fa-user-astronaut"></span>
         <a href="#" class="side">
           Inicio sesion
@@ -22,10 +22,12 @@ const NavbBarPrueba = () => (
       </Link>
     </li>
     <li class="menu_list">
-      <span class="front fas fa-users"></span>
-      <a href="#" class="side">
-        Nosotros
-      </a>
+      <Link to = '/Nosotros'>
+        <span class="front fas fa-users"></span>
+        <a href="#" class="side">
+          Nosotros
+        </a>
+      </Link>
     </li>
     <li class="menu_list">
       <span class="front fas fa-newspaper"></span>
