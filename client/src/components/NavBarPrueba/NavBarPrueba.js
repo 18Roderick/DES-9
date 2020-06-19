@@ -15,46 +15,60 @@ const NavbBarPrueba = () => (
     </li>
 
     <li class="menu_list">
-      <span class="front fas fa-user-astronaut"></span>
-      <Link to="/Login" className="side">
-        Inicio sesión
+      <Link to="/Login">
+        <span class="front fas fa-user-astronaut"></span>
+        <Link to="/Login" className="side">
+          Inicio sesión
+        </Link>
       </Link>
     </li>
     <li class="menu_list">
-      <span class="front fas fa-users"></span>
-      <Link to="/nosotros" className="side">
-        Nosotros
+      <Link to="/nosotros">
+        <span class="front fas fa-users"></span>
+        <Link to="/nosotros" className="side">
+          Nosotros
+        </Link>
       </Link>
     </li>
     <li class="menu_list">
-      <span class="front fas fa-newspaper"></span>
-      <Link to="/noticias" className="side">
-        Noticias
+      <Link to="/noticias">
+        <span class="front fas fa-newspaper"></span>
+        <Link to="/noticias" className="side">
+          Noticias
+        </Link>
       </Link>
     </li>
     <li class="menu_list">
-      <span class="front fas fa-briefcase"></span>
-      <Link to="/Merch" className="side">
-        Mercancía
+      <Link to="/Merch">
+        <span class="front fas fa-briefcase"></span>
+        <Link to="/Merch" className="side">
+          Mercancía
+        </Link>
       </Link>
     </li>
 
     <li class="menu_list">
-      <span class="front fas fa-flag"></span>
-      <Link to="/metas" className="side">
-        Metas
+      <Link to="/metas">
+        <span class="front fas fa-flag"></span>
+        <Link to="/metas" className="side">
+          Metas
+        </Link>
       </Link>
     </li>
     <li class="menu_list">
-      <span class="front fas fa-hand-holding-usd"></span>
       <Link to="/donaciones" className="side">
-        Donaciones
+        <span class="front fas fa-hand-holding-usd"></span>
+        <Link to="/donaciones" className="side">
+          Donaciones
+        </Link>
       </Link>
     </li>
     <li class="menu_list">
-      <span class="front fas fa-shopping-cart"></span>
       <Link to="/carrito" className="side">
-        Carrito
+        <span class="front fas fa-shopping-cart"></span>
+        <Link to="/carrito" className="side">
+          Carrito
+        </Link>
       </Link>
     </li>
   </ul>
