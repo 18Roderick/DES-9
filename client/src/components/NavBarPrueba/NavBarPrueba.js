@@ -11,7 +11,11 @@ const Logo = () => (
 const NavbBarPrueba = () => (
   <ul class="menu">
     <li class="menu_list">
-      <Link to="/" component={Logo}></Link>
+      <Link to="/">
+        <span class="front">
+          <img className="logo" src={LogoNavBar} alt="" />
+        </span>
+      </Link>
     </li>
 
     <li class="menu_list">
