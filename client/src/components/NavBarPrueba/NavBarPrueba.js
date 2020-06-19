@@ -56,7 +56,7 @@ const NavbBarPrueba = () => (
       </Link>
     </li>
     <li class="menu_list">
-      <Link to="/donaciones" className="side">
+      <Link to="/donaciones">
         <span class="front fas fa-hand-holding-usd"></span>
         <Link to="/donaciones" className="side">
           Donaciones
@@ -64,7 +64,7 @@ const NavbBarPrueba = () => (
       </Link>
     </li>
     <li class="menu_list">
-      <Link to="/carrito" className="side">
+      <Link to="/carrito">
         <span class="front fas fa-shopping-cart"></span>
         <Link to="/carrito" className="side">
           Carrito

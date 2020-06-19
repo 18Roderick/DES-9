@@ -4,7 +4,7 @@
   --secondarygreen: #adcc3b;
 }
 
-html{
+html {
   box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@ textarea {
   margin: 0;
 } */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -902,7 +902,6 @@ li.menu_list:first-child:not(hover) .front {
   border: none;
   border-bottom: solid var(--primarygreen) 1px;
   border-radius: 3px 3px 0px 0px
-
 }
 
 
@@ -940,26 +939,33 @@ li.menu_list:first-child:not(hover) .front {
   margin: 2rem auto 0;
 }*/
 
-.buttom{
-background-color: #246a40;
-padding: 0.5rem 5rem;
-color: white;
-text-transform: uppercase;
-font-weight: bold;
-font-family: 'Oswald', sans-serif;
-text-decoration: none;
-font-size: 1.3rem;
-margin-top: 2rem;
-display: block;
-border: 2px solid;
-margin: 2rem auto 0;
+.buttom {
+  background-color: #246a40;
+  padding: 0.5rem 5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  display: block;
+  border: 2px solid;
+  border-radius: 3px;
+  margin: 2rem auto 0;
 }
 
 .buttom.hollow,
-.buttom-direcciones.hollow,
-.buttom.hollow:hover {
+.buttom-direcciones.hollow {
   background-color: white;
   color: #246a40;
+
+}
+
+
+.buttom.hollow:hover {
+  background-color: #246a40;
+  color: white;
 
 }
 
@@ -969,31 +975,31 @@ margin: 2rem auto 0;
 }
 
 /*---------------Recuperar Contrasena-------------*/
-.recuperarContrasena{
+.recuperarContrasena {
   display: flex;
-  width: 50%; 
+  width: 50%;
   max-width: 120rem;
   margin: 2rem auto;
   padding: 1px;
   box-shadow: 100px 0 0px rgba(0, 0, 0, 0),
-  0 100px 65px rgba(0, 0, 0, 0),
-  0 20px 10px rgba(0, 0, 0, 0.1);
+    0 100px 65px rgba(0, 0, 0, 0),
+    0 20px 10px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
 
-.recuperarContrasena-formulario{
+.recuperarContrasena-formulario {
   flex-basis: 100%;
-  display: flex;    
+  display: flex;
   align-items: center;
 }
 
-.recuperarContrasena-form{
+.recuperarContrasena-form {
 
   width: 100%;
 }
 
 
-.recuperarContrasena-formulario img{
+.recuperarContrasena-formulario img {
   width: 10rem;
   display: block;
   margin: 1rem auto 0;
@@ -1006,12 +1012,12 @@ margin: 2rem auto 0;
 
 }
 
-.recuperarContrasena-label{
+.recuperarContrasena-label {
   font-size: 1rem;
   font-family: 'Oswald', sans-serif;
   display: block;
   margin-top: 5%;
-  }
+}
 
 
 /*----------------------------Registro-----------------*/
