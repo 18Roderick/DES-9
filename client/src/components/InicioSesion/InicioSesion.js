@@ -1,7 +1,5 @@
 import React from 'react';
-import { Col, Row, Form, Container, Button } from 'react-bootstrap';
 
-import loginimg from '../../assets/img/Login.jpg';
 import { Link } from 'react-router-dom';
 const logonombre = require('./../../assets/img/LogoNombre.png');
 
@@ -20,7 +18,6 @@ const InicioSesion = () => (
             id="email"
             className="iniciosesion-input "
             type="email"
-            autoFocus
             placeholder="seeds@ejemplo.com"
           ></input>
 

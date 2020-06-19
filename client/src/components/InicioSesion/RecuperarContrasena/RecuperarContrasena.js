@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { Form, Button, Col, Row, Container } from 'react-bootstrap';
+import React from 'react';
+import { Form, Col } from 'react-bootstrap';
 const logonombre = require('./../../../assets/img/LogoNombre.png');
 
 const RecuperarConstrasena = () => (
@@ -8,15 +8,15 @@ const RecuperarConstrasena = () => (
       <Col sm={12} md={12}>
         <Form className="justify-content-md-center shadow p-4">
           <div className="recuperarContrasena-formulario">
-            <img src={logonombre} />
+            <img src={logonombre} alt="logo" />
           </div>
           <Form.Group>
-            <Form.Label>Nueva Contrasena</Form.Label>
+            <Form.Label>Nueva Contraseña</Form.Label>
             <Form.Control placeholder="Email" />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Repetir Contrasena</Form.Label>
-            <Form.Control placeholder="Contrasena" />
+            <Form.Label>Repetir Contraseña</Form.Label>
+            <Form.Control placeholder="Contraseña" />
           </Form.Group>
           <button className="buttom hollow">Guardar</button>
         </Form>
