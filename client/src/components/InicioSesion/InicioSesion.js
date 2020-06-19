@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Row, Form, Container, Button } from 'react-bootstrap';
 
 import loginimg from '../../assets/img/Login.jpg';
+import { Link } from 'react-router-dom';
 const logonombre = require('./../../assets/img/LogoNombre.png');
 
 const InicioSesion = () => (
@@ -35,12 +36,12 @@ const InicioSesion = () => (
 
           <button className="buttom hollow">Iniciar</button>
           <div className="flex">
-            <a href="#" className="iniciosesion-link">
-              ¿Olvido su contraseña?
-            </a>
-            <a href="#" className="iniciosesion-link">
+            <Link to="/RecuperarContrasena" className="iniciosesion-link">
+              Olvido su contraseña?
+            </Link>
+            <Link to="/RegistroUsuario" className="iniciosesion-link">
               Registrarse
-            </a>
+            </Link>
           </div>
         </div>
       </form>
