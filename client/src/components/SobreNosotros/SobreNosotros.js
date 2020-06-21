@@ -41,7 +41,7 @@ const SobreNosotros = () => (
     </div>
 
     <h2>Nuestro Equipo</h2>
-    <div className = 'sobreNosotrosTarjetaConctacto'>
+    <div className = 'sobreNosotrosTarjetaConctacto row'>
       <TarjetaContacto />
       <TarjetaContacto />
       <TarjetaContacto />

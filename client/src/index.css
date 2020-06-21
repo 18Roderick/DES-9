@@ -1371,6 +1371,14 @@ margin: 2rem auto 0;
    text-align: center;
  }
 
+ @media (max-width: 800px) {
+   
+  .sobreNosotrosMVV{
+    flex-direction: column;
+  }
+
+ }
+
  .MVV{
    flex-basis: 33.3%;
    padding: 20px;
@@ -1396,8 +1404,12 @@ margin: 2rem auto 0;
  .carta {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  margin: auto;
+  margin: 10px auto;
   text-align: center;
+}
+
+.carta a{
+  color: var(--primarygreen);
 }
 
 .carta img {
@@ -1415,7 +1427,7 @@ button {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: var(--secondarygreen);
   text-align: center;
   cursor: pointer;
   width: 100%;
