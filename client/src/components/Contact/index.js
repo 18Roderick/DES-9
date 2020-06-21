@@ -9,8 +9,8 @@ const Contact = () => (
       <Row>
         <Col sm={12} md={12}>
           <Form className="justify-content-md-center shadow p-4">
-              <h3 class="card-title text-center ">Contacto</h3>
-              <Separador></Separador>
+            <h3 class="card-title text-center ">Contacto</h3>
+            <Separador></Separador>
             <Form.Row>
               <Form.Group as={Col}>
                 <Form.Label>Nombre</Form.Label>
@@ -32,7 +32,7 @@ const Contact = () => (
               <Form.Control placeholder="Email" />
             </Form.Group>
             <div class="form-group">
-              <label for="Contacto">Contacto</label>
+              <label for="Contacto">Mensaje</label>
               <textarea class="form-control" id="Contacto" rows="3"></textarea>
             </div>
             <button className="buttom hollow">Enviar</button>
