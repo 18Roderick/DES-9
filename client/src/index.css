@@ -1357,3 +1357,44 @@ li.menu_list:first-child:not(hover) .front {
   border: 2px solid;
   border-radius: 3px;
 }
+
+
+/* CSS de Carrito */
+.carrito-container {
+  flex-wrap: wrap;
+}
+
+
+.carrito-container-item {
+  display: flex;
+}
+
+
+.carrito-container-item {
+  border-top: solid;
+  border-color: black;
+}
+
+.carrito-container-item:last-child {
+  border-bottom: solid;
+  border-style: solid .5px;
+  border-color: black;
+}
+
+.carrito-image {
+  width: 20vw;
+  height: 20vw;
+  padding: 5px 1px 10px 1px;
+  background-color: aqua;
+}
+
+.carrito-image img {
+  width: 100%;
+  margin: auto;
+  object-fit: contain;
+}
+
+.carrito-detalles {
+  background-color: brown;
+  padding: 1px 5px 10px 5px;
+}

@@ -29,6 +29,7 @@ const InicioSesion = () => (
             className="iniciosesion-input"
             type="password"
             placeholder="*******"
+            autoComplete="true"
           ></input>
 
           <button className="buttom hollow">Iniciar</button>

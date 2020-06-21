@@ -1,81 +1,96 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import LogoNavBar from '../../assets/img/LogoNombre.png';
 
-const Logo = () => (
-  <span class="front">
-    <img className="logo" src={LogoNavBar} alt="" />
-  </span>
-);
+const SpanNoticias = (route) => <span className="front fas fa-newspaper"></span>;
 
-const NavbBarPrueba = () => (
-  <ul class="menu">
-    <li class="menu_list">
-      <Link to="/">
-        <span class="front">
-          <img className="logo" src={LogoNavBar} alt="" />
-        </span>
-      </Link>
-    </li>
+const LinkWrapper = ({ children, route }) => {
+  const history = useHistory();
 
-    <li class="menu_list">
-      <Link to="/Login">
-        <span class="front fas fa-user-astronaut"></span>
-        <Link to="/Login" className="side">
-          Inicio sesión
-        </Link>
-      </Link>
-    </li>
-    <li class="menu_list">
-      <Link to="/nosotros">
-        <span class="front fas fa-users"></span>
-        <Link to="/nosotros" className="side">
-          Nosotros
-        </Link>
-      </Link>
-    </li>
-    <li class="menu_list">
-      <Link to="/noticias">
-        <span class="front fas fa-newspaper"></span>
-        <Link to="/noticias" className="side">
-          Noticias
-        </Link>
-      </Link>
-    </li>
-    <li class="menu_list">
-      <Link to="/Merch">
-        <span class="front fas fa-briefcase"></span>
-        <Link to="/Merch" className="side">
-          Mercancía
-        </Link>
-      </Link>
-    </li>
+  const click = useCallback(() => {
+    history.push(route || '/');
+  }, [route, history]);
 
-    <li class="menu_list">
-      <Link to="/metas">
-        <span class="front fas fa-flag"></span>
-        <Link to="/metas" className="side">
-          Metas
+  return (
+    <div onClick={click}>
+      {children.map((child, index) => (
+        <React.Fragment key={index}>{child}</React.Fragment>
+      ))}
+    </div>
+  );
+};
+
+const NavbBarPrueba = () => {
+  return (
+    <ul className="menu">
+      <li className="menu_list">
+        <Link to="/">
+          <span className="front">
+            <img className="logo" src={LogoNavBar} alt="" />
+          </span>
         </Link>
-      </Link>
-    </li>
-    <li class="menu_list">
-      <Link to="/donaciones">
-        <span class="front fas fa-hand-holding-usd"></span>
-        <Link to="/donaciones" className="side">
-          Donaciones
-        </Link>
-      </Link>
-    </li>
-    <li class="menu_list">
-      <Link to="/carrito">
-        <span class="front fas fa-shopping-cart"></span>
-        <Link to="/carrito" className="side">
-          Carrito
-        </Link>
-      </Link>
-    </li>
-  </ul>
-);
+      </li>
+
+      <li className="menu_list">
+        <LinkWrapper route="/Login">
+          <span className="front fas fa-user-astronaut"></span>
+
+          <Link to="/Login" className="side">
+            Inicio sesión
+          </Link>
+        </LinkWrapper>
+      </li>
+      <li className="menu_list">
+        <LinkWrapper route="/nosotros">
+          <span className="front fas fa-users"></span>
+          <Link to="/nosotros" className="side">
+            Nosotros
+          </Link>
+        </LinkWrapper>
+      </li>
+      <li className="menu_list">
+        <LinkWrapper route="/noticias">
+          <span className="front fas fa-newspaper"></span>
+          <Link to="/noticias" className="side">
+            Noticias
+          </Link>
+        </LinkWrapper>
+      </li>
+      <li className="menu_list">
+        <LinkWrapper route="/Merch">
+          <span className="front fas fa-briefcase"></span>
+          <Link to="/Merch" className="side">
+            Mercancía
+          </Link>
+        </LinkWrapper>
+      </li>
+
+      <li className="menu_list">
+        <LinkWrapper route="/metas">
+          <span className="front fas fa-flag"></span>
+          <Link to="/metas" className="side">
+            Metas
+          </Link>
+        </LinkWrapper>
+      </li>
+      <li className="menu_list">
+        <LinkWrapper route="/donaciones">
+          <span className="front fas fa-hand-holding-usd"></span>
+          <Link to="/donaciones" className="side">
+            Donaciones
+          </Link>
+        </LinkWrapper>
+      </li>
+      <li className="menu_list">
+        <LinkWrapper route="/car">
+          <span className="front fas fa-shopping-cart"></span>
+          <Link to="/car" className="side">
+            Carrito
+          </Link>
+        </LinkWrapper>
+      </li>
+    </ul>
+  );
+};
 
 export default NavbBarPrueba;
