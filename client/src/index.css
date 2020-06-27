@@ -1371,21 +1371,23 @@ li.menu_list:first-child:not(hover) .front {
 
 
 .carrito-container-item {
-  border-top: solid;
+  overflow: hidden;
+  border-bottom: solid;
+  border-style: solid .3px;
   border-color: black;
 }
 
-.carrito-container-item:last-child {
-  border-bottom: solid;
-  border-style: solid .5px;
+.carrito-container-item:first-child {
+  border-top: solid;
+  border-style: solid .3px;
   border-color: black;
 }
 
 .carrito-image {
-  width: 20vw;
-  height: 20vw;
+  width: 13vw;
+  height: 13vw;
   padding: 5px 1px 10px 1px;
-  background-color: aqua;
+  overflow: hidden;
 }
 
 .carrito-image img {
