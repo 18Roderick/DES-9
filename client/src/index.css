@@ -1371,22 +1371,20 @@ li.menu_list:first-child:not(hover) .front {
 
 
 .carrito-container-item {
-  overflow: hidden;
-  border-bottom: solid;
-  border-style: solid .3px;
-  border-color: black;
+  border-width: 1px 0px 1px 0px;
+  border-style: solid solid solid solid;
+  border-color: #000000 #ffffff #ffffff #ffffff;
 }
 
-.carrito-container-item:first-child {
-  border-top: solid;
-  border-style: solid .3px;
-  border-color: black;
-}
+/* .carrito-container-item:first-child {
+  border-width: 1px 0px 1px 0px;
+  border-style: solid solid solid solid;
+  border-color: #000000 #ffffff #000000 #ffffff;
+} */
 
 .carrito-image {
   width: 13vw;
-  height: 13vw;
-  padding: 5px 1px 10px 1px;
+  /* height: 13vw; */
   overflow: hidden;
 }
 
@@ -1400,3 +1398,57 @@ li.menu_list:first-child:not(hover) .front {
   background-color: brown;
   padding: 1px 5px 10px 5px;
 }
+
+
+
+@media (max-width: 1062px) {
+  .carrito-image {
+    width: 25vw;
+    /*  height: 20vw; */
+  }
+}
+
+@media (max-width: 768px) {
+  .carrito-image {
+    width: 45vw;
+    /*  height: 20vw; */
+  }
+}
+
+/* input select */
+.seeds-select-input {
+  position: relative;
+  font-family: 'roboto';
+  border: 1px solid #246a40;
+  border-radius: 4.5px;
+  padding: 5px;
+
+}
+
+/* .seeds-select-input:hover {
+  cursor: pointer;
+  background-color: var(--primarygreen);
+  color: white;
+}
+ */
+
+
+.seeds-select-input:focus {
+  outline: thin;
+  cursor: pointer;
+  background-color: var(--primarygreen);
+  color: white;
+}
+
+
+
+.seeds-select-input option {
+  font-weight: normal;
+}
+
+/* .seeds-select-input option:hover {
+  background-color: var(--primarygreen);
+
+} */
+
+/*  */

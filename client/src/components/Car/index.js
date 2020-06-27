@@ -6,9 +6,15 @@ const Car = () => {
     <div>
       <h1 className="text-center">SEEDS</h1>
       <div className="container-fluid">
-        <CarItem />
-
-        <CarItem />
+        <div className="row">
+          <div className="col-md-12">
+            <CarItem />
+            <CarItem />
+            <CarItem />
+            <CarItem />
+          </div>
+          <div className="col-md-12"></div>
+        </div>
       </div>
     </div>
   );
