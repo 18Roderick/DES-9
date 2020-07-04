@@ -13,6 +13,7 @@ export default function Switcher() {
       <Route path="/PanelUsuario" exact component={PanelUsuario}></Route>
       <Route path="/RegistroUsuario" exact component={RegistroUsuario}></Route>
       <Route path="/RecuperarContrasena" exact component={RecuperarContrasena}></Route>
+      <Route path="/News" exact component={News}></Route>
     </Switch>
   );
 }
