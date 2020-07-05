@@ -970,10 +970,15 @@ li.menu_list:first-child:not(hover) .front {
 
 .iniciosesion-link {
   font-size: 1rem;
-  margin-top: 10%
+  margin-top: 10%;
+  color: var(--primarygreen);
 }
 
-/*---------------Recuperar Contrasena-------------*/
+.iniciosesion-link:hover {
+  color: var(--primarygreen);
+}
+
+/*---------------Recuperar Contraseña-------------*/
 .recuperarContrasena {
   display: flex;
   width: 50%;
