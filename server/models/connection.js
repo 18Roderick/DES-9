@@ -1,25 +1,28 @@
 const mongoose = require('mongoose');
 
-let url = '';
+const { mongoConfig } = require('../config');
 
-if (process.env.NODE_ENV === 'production') {
-  url = process.env.MONGO_ATLAS_URL; //url de db local o kmongo atlas
+let url = mongoConfig.mongo_url();
+
+/* if (process.env.NODE_ENV === 'production') {
+  url = mongoConfig.mongo_url(); //url de db local o mongo atlas
 } else {
-  url = process.env.MONGO_ATLAS_URL;
-  //url = 'mongodb://localhost:27017/PetlinkDevelopment';
-}
+  url = 'mongodb://localhost:27017/escuela';
+} */
 
-mongoose.connect(url, {
+const options = {
   useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true
-});
+  useUnifiedTopology: true,
+  useCreateIndex: true
+};
+
+console.log(mongoConfig.mongo_url(), url);
+
+const connect = () => mongoose.connect(url, options);
 
 mongoose.Promise = global.Promise;
 
-const { connection } = mongoose;
-
 module.exports = {
-  mongoose,
-  connection
+  connect,
+  mongoose
 };
