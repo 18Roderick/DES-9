@@ -1371,9 +1371,10 @@ li.menu_list:first-child:not(hover) .front {
 
 
 .carrito-container-item {
+  margin-top: 0.25rem;
   border-width: 1px 0px 1px 0px;
   border-style: solid solid solid solid;
-  border-color: #000000 #ffffff #ffffff #ffffff;
+  border-color: var(--primarygreen) #ffffff #ffffff #ffffff;
 }
 
 /* .carrito-container-item:first-child {

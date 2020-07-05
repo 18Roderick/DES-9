@@ -1,15 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const apiRouter = require('./api');
-
-router.get('/', (req, res) => {
+router.use('/', (req, res) => {
   res.status(200).json({
     success: true,
-    message: 'Bienvenido a SEEDS'
+    message: 'Bienvenido a SEEDS Api'
   });
 });
 
-router.use('/api', apiRouter);
+//router.use('/api', api);
 
 module.exports = router;

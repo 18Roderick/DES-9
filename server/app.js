@@ -11,10 +11,12 @@ const helmet = require('helmet');
 const compression = require('compression');
 const cors = require('cors');
 
+const { connect } = require('./models/connection');
+
 // rutas
-//const routers = require('./routes/index');
+const routes = require('./routes');
 const error404 = require('./routes/errorRouter');
-// inicializaciones
+// initializations
 const app = express();
 
 // variables
@@ -26,7 +28,7 @@ const PUBLIC_FILES = path.join(__dirname, 'public');
 // configuraciones
 app.set('port', PORT);
 
-//direcciones estaticas
+//direcciones estáticas
 app.use('/public', express.static(PUBLIC_FILES));
 app.use(favicon(path.join(PUBLIC_FILES, 'images', 'favicon.ico')));
 
@@ -39,15 +41,24 @@ app.use(cookieParser());
 
 app.use(morgan('dev'));
 
+//rutas
+app.use(routes);
+
 app.use(error404);
 
-//capturador de errores
+//captura de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.render('error', {
+  res.status(500).json({
     title: err.message,
     message: err.message
   });
 });
 
-app.listen(PORT, () => console.log(`server ready on http://localhost:${PORT}`));
+connect()
+  .then(() => {
+    app.listen(PORT, () => console.log(`server ready on http://localhost:${PORT}`));
+  })
+  .catch(e => {
+    console.log(`Error al conectar a la base de datos `, e.message);
+  });
