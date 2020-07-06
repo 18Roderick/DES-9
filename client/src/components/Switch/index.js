@@ -5,6 +5,7 @@ import {
   Home,
   News,
   Merch,
+  Nosotros,
   Login,
   PanelUsuario,
   RegistroUsuario,
@@ -18,6 +19,7 @@ export default function Switcher() {
       <Route path="/" exact component={Home}></Route>
       <Route path="/index.html" exact component={Home}></Route>
       <Route path="/Merch" exact component={Merch}></Route>
+      <Route path="/nosotros" exact component={Nosotros}></Route>
       <Route path="/Login" exact component={Login}></Route>
       <Route path="/PanelUsuario" exact component={PanelUsuario}></Route>
       <Route path="/RegistroUsuario" exact component={RegistroUsuario}></Route>
