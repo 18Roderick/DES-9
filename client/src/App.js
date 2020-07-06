@@ -12,6 +12,7 @@ const UserPages = () => (
 );
 
 const AdminPages = () => <h2>Hola has llegado a Admin</h2>;
+//import Noticias from './components/Noticias/index';
 
 function App() {
   return (

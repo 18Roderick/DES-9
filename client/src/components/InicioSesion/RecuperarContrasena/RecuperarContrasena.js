@@ -1,27 +1,31 @@
 import React from 'react';
-import { Form, Col } from 'react-bootstrap';
+import { Form, Col, Row, Container } from 'react-bootstrap';
 const logonombre = require('./../../../assets/img/LogoNombre.png');
 
 const RecuperarConstrasena = () => (
   <React.Fragment>
-    <div style={{ width: `50%`, height: `40%`, display: `flex` }}>
-      <Col sm={12} md={12}>
-        <Form className="justify-content-md-center shadow p-4">
-          <div className="recuperarContrasena-formulario">
-            <img src={logonombre} alt="logo" />
-          </div>
-          <Form.Group>
-            <Form.Label>Nueva Contraseña</Form.Label>
-            <Form.Control placeholder="Email" />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Repetir Contraseña</Form.Label>
-            <Form.Control placeholder="Contraseña" />
-          </Form.Group>
-          <button className="buttom hollow">Guardar</button>
-        </Form>
-      </Col>
-    </div>
+    <Container fluid>
+      <Row className="justify-content-md-center">
+        <Col sm={12} md={6}>
+          <Form className="justify-content-md-center shadow p-5">
+            <div className="recuperarContrasena-formulario">
+              <img src={logonombre} />
+            </div>
+            <Form.Group>
+              <Form.Label>Nueva Contrasena</Form.Label>
+              <Form.Control placeholder="******" />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label>Repetir Contrasena</Form.Label>
+              <Form.Control placeholder="******" />
+            </Form.Group>
+
+            <button className="buttom hollow">Guardar</button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   </React.Fragment>
 );
 
