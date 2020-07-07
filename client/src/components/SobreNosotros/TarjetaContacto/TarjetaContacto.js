@@ -17,7 +17,7 @@ const TarjetaContacto = () => (
       <i class="fab fa-facebook"></i>
     </a>
     <p>
-      <button>Contacto</button>
+      <button className='buttonContacto'>Contacto</button>
     </p>
   </div>
 );

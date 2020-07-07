@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import Switcher from './components/Switch';
 import NavBarPrueba from './components/NavBarPrueba/NavBarPrueba';
+import ModalProducto from './components/ModalProducto/ModalProducto';
+
 
 const UserPages = () => (
   <React.Fragment>
@@ -21,6 +23,7 @@ function App() {
         <Route path="/" component={UserPages}></Route>
         <Route path="/admin" component={AdminPages}></Route>
       </Switch>
+      <ModalProducto/>
     </Fragment>
   );
 }
