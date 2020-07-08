@@ -553,20 +553,9 @@ div.input-group{
   width: 40%!important;
 }
 
-.tpFondo{
-  width: 1%;
-}
-.tpAyuda{
-  position: relative;
-}
-
-.tpAyudaPrecio{
-  width: 15%;
-}
-
 @media (max-width: 475px) {
   .mdCantidadComprar{
-    /* display: block!important; */
+    display: block!important;
   }
   
   div.input-group{
@@ -588,6 +577,66 @@ div.input-group{
   }
 }
 
+/* @media (max-width:950px ) {
+  .modalProducto{
+    display: block;
+
+  }
+
+  .modalImagen{
+    width: 85%;
+    margin: auto;
+  }
+
+  .modalInfo{
+    width: 73%;
+    margin: auto;
+  }
+  
+}
+
+@media (max-width:800px) {
+  
+  .mdCantidadComprar{
+    display: block!important;
+  }
+
+  .modalImagen img {
+    object-fit: contain;
+  }
+
+  .modalProducto{
+    padding: 0;
+  }
+
+  .modalInfo{
+    padding: 0 4rem!important;
+  }
+
+}
+
+@media (max-width: 600px) {
+    .modalInfo{
+      padding: 0 4rem 4rem;
+      margin-top: -3rem!important;
+    }
+}
+
+@media (max-width: 550px) {
+    .modalInfo{
+      padding: 0!important;
+    }
+}
+
+@media (max-width: 400px) {
+    .modalInfo{
+      padding: 0!important;
+    }
+
+    .modalImagen img{
+      width: 75%!important;
+    }
+} */
 
 .modal-header{
   border-bottom: none!important;
@@ -652,7 +701,16 @@ div.input-group{
   text-align: center;
 }
 
+.tpFondo{
+  width: 1%;
+}
+.tpAyuda{
+  position: relative;
+}
 
+.tpAyudaPrecio{
+  width: 15%;
+}
 
 
 /*----------Inicio Sesion----------*/
