@@ -22,7 +22,7 @@ const PanelUsuario = () => {
   return (
     <React.Fragment>
         <PerfilUsuario />
-        <DireccionesUsuario/>
+        {/* <DireccionesUsuario/> */}
     </React.Fragment>
   );
 };

@@ -1453,3 +1453,16 @@ a {
 } */
 
 /*  */
+
+/*----------Carruzel----------*/
+.caruselPersolizado{
+  margin-top: -2rem;
+}
+
+.carousel-inner{
+  height: calc(100vh - 69px);
+}
+
+.carousel-inner img{
+  object-fit: contain!important;
+}
