@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {Container} from 'react'
 import imgproducto from '../../assets/img/ORH82L0.jpg';
 import ReactTooltip from "react-tooltip";
 
 
+
 const ModalProducto = () => (
+
+
     <div className='modalProducto'>
         <div className='modalImagen'>
             <img src={imgproducto} className='' />
@@ -12,17 +15,17 @@ const ModalProducto = () => (
             <div className="">
                 <div className="">
                     <div>
-                        <h1 className="">Shirayuki</h1>
+                        <h1 className="mdTituloProducto">Shirayuki</h1>
                     </div>
                     <h3 className="">Loli</h3>
                 </div>
-                <div className="">
+                <div className="mdDescripcionProducto">
                     <h3 className="">Loli 100%legal no feik</h3>
                     <p className="">
                         Una linda loli que me acabo de inventar para hacer este maquetado, es legal para que el pendejo de roderick no se salga con sus mamadas de carcel, carcel, es especial hay que entenderlo :v
                     </p>
                 </div>
-                <div className="modalCantidadComprar">
+                <div className="mdCantidadComprar">
                     <a href="#" className="agregarCarrito" >
                         Agregar al carrito
                 </a>

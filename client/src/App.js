@@ -5,7 +5,6 @@ import Switcher from './components/Switch';
 import NavBarPrueba from './components/NavBarPrueba/NavBarPrueba';
 import ModalProducto from './components/ModalProducto/ModalProducto';
 
-
 const UserPages = () => (
   <React.Fragment>
     <NavBarPrueba />
