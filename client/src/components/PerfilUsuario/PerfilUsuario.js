@@ -5,10 +5,15 @@ import RecompensaDonaciones from '../RecompensaDonaciones/RecompensaDonaciones';
 
 
 
-  infoUsuario: {
-
-  }
-
+const infoUsuario = {
+  userBanner: '',
+  userImgPerfil:'',
+  userNombre: {nombre:'Roderick',apellido:'Romero'},
+  userPais:'Panamá',
+  userDireccion: {provincia:'Panamá',distrito:'San Miguelito',barrio:'Samaria'},
+  userCorreo: 'soymanco@roderick.com',
+  userTelefono: '6458-7896',
+}
 
 // {
 //   infoUsuario: {
@@ -32,15 +37,15 @@ const PerfilUsuario = () => (
       <div className="perfilusuario-contenedor">
         <div className="pu-contenedorinfo">
           <div className="perfilusuario-labels">
-            <label className="pulNombre">{`${nombre} ${apellido}`}</label>
-            <label className="pulPais">{userPais}</label>
+            <label className="pulNombre">{`${infoUsuario.userNombre.nombre} ${infoUsuario.userNombreapellido}`}</label>
+            <label className="pulPais">{infoUsuario.userPais}</label>
             <ul className="pu-ul">
-              <li>{provincia}</li>
-              <li>{distrito}</li>
-              <li>{barrio}</li>
+              <li>{infoUsuario.userDireccion.provincia}</li>
+              <li>{infoUsuario.userDireccion.distrito}</li>
+              <li>{infoUsuario.userDireccion.barrio}</li>
             </ul>
-            <label>{userCorreo}</label>
-            <label>{userTelefono}</label>
+            <label>{infoUsuario.userCorreo}</label>
+            <label>{infoUsuario.userTelefono}</label>
           </div>
         </div>
         <div className="pu-contenedorRecompensas">

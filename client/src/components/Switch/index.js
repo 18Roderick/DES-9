@@ -21,7 +21,7 @@ export default function Switcher() {
       <Route path="/Merch" exact component={Merch}></Route>
       <Route path="/nosotros" exact component={Nosotros}></Route>
       <Route path="/Login" exact component={Login}></Route>
-      <Route path="/PanelUsuario" exact component={PanelUsuario}></Route>
+      <Route path="/panelusuario" exact component={PanelUsuario}></Route>
       <Route path="/RegistroUsuario" exact component={RegistroUsuario}></Route>
       <Route path="/RecuperarContrasena" exact component={RecuperarContrasena}></Route>
       <Route path="/noticias" exact component={News}></Route>
