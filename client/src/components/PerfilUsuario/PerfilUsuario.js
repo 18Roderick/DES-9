@@ -3,17 +3,25 @@ import imgperfil from './../../assets/img/roderick.jpg';
 import imgbanner from './../../assets/img/smite.png';
 import RecompensaDonaciones from '../RecompensaDonaciones/RecompensaDonaciones';
 
-const PerfilUsuario = ({
+
+
   infoUsuario: {
-    userBanner,
-    userImgPerfil,
-    userNombre: { nombre, apellido },
-    userPais,
-    userDireccion: { provincia, distrito, barrio },
-    userCorreo,
-    userTelefono,
-  },
-}) => (
+
+  }
+
+
+// {
+//   infoUsuario: {
+//     userBanner,
+//     userImgPerfil,
+//     userNombre: { nombre, apellido },
+//     userPais,
+//     userDireccion: { provincia, distrito, barrio },
+//     userCorreo,
+//     userTelefono,
+//   },
+// }
+const PerfilUsuario = () => (
   <div className="perfilusuario">
     <div className="perfilusuario-banner">
       <img src={imgbanner}></img>

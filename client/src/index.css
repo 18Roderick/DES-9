@@ -530,8 +530,8 @@ li.menu_list:first-child:not(hover) .front {
   justify-content: space-between;
   width: 95%;
   height: 77vh;
-  margin: 10px auto;
-  padding: 10px 25px 25px;
+  margin: -3px auto;
+  padding: 10px 0px 25px;
 }
 
 @media (max-width: 991px) {
