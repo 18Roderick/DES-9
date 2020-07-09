@@ -26,6 +26,8 @@ textarea {
   font-family: 'Poppins', sans-serif;
 }
 
+
+
 body {
   background-color: #ffffff;
 }
@@ -482,6 +484,16 @@ li.menu_list:first-child:not(hover) .front {
   background-color: var(--primarygreen);
   border: none;
   border-radius: 2px;
+  border-color: var(--primarygreen);
+}
+
+.boton.btn.btn-primary:focus{
+ outline:none;
+ box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active{
+  background-color: var(--secondarygreen);
 }
 
 .tarjeta {
@@ -576,67 +588,6 @@ div.input-group{
     width: calc(100% - 10rem)!important;
   }
 }
-
-/* @media (max-width:950px ) {
-  .modalProducto{
-    display: block;
-
-  }
-
-  .modalImagen{
-    width: 85%;
-    margin: auto;
-  }
-
-  .modalInfo{
-    width: 73%;
-    margin: auto;
-  }
-  
-}
-
-@media (max-width:800px) {
-  
-  .mdCantidadComprar{
-    display: block!important;
-  }
-
-  .modalImagen img {
-    object-fit: contain;
-  }
-
-  .modalProducto{
-    padding: 0;
-  }
-
-  .modalInfo{
-    padding: 0 4rem!important;
-  }
-
-}
-
-@media (max-width: 600px) {
-    .modalInfo{
-      padding: 0 4rem 4rem;
-      margin-top: -3rem!important;
-    }
-}
-
-@media (max-width: 550px) {
-    .modalInfo{
-      padding: 0!important;
-    }
-}
-
-@media (max-width: 400px) {
-    .modalInfo{
-      padding: 0!important;
-    }
-
-    .modalImagen img{
-      width: 75%!important;
-    }
-} */
 
 .modal-header{
   border-bottom: none!important;
