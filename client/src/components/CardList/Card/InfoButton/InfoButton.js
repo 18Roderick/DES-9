@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, ModalBody } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import ModalPrueba from '../../../ModalProducto/ModalProducto';
 
@@ -31,7 +31,7 @@ function InfoButton({ price }) {
 
 
 
-      <Modal  size='xl' show={show} onHide={handleClose}>
+      <Modal size='xl' show={show} onHide={handleClose} scrollable={true}>
         <Modal.Header closeButton>
           {/* <Modal.Title>Modal heading</Modal.Title> */}
         </Modal.Header>
@@ -45,7 +45,10 @@ function InfoButton({ price }) {
           </Button>
         </Modal.Footer>
         */}
-        <ModalPrueba/> 
+        <Modal.Body >
+          <ModalPrueba />
+        </Modal.Body>
+
       </Modal>
     </>
   );

@@ -6,9 +6,8 @@ import Banner2 from '../../assets/img/333.jpg';
 //const logonombre = require('./../../../assets/img/LogoNombre.png');
 
 const Noticias = () => (
-  <Container fluid>
-    <Carousel>
-      <Carousel.Item>
+    <Carousel className = 'caruselPersolizado '>
+      <Carousel.Item >
         <img className="d-block w-100 img-fluid" src={Banner} alt="First slide" />
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -16,7 +15,7 @@ const Noticias = () => (
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100 img-fluid" src={Banner1} alt="Second slide" />
+        <img className="d-block w-100 img-fluid " src={Banner1} alt="Second slide" />
 
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -32,7 +31,6 @@ const Noticias = () => (
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  </Container>
 );
 
 export default Noticias;
