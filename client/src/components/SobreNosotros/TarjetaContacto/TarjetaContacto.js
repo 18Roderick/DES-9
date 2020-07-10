@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenPerfil from '../../../assets/img/loli.png';
+import imagenPerfil from '../../../assets/img/roderick.jpg';
 
 const TarjetaContacto = () => (
   <div class="carta col-md-6 col-sm-12 col-xl-4">
