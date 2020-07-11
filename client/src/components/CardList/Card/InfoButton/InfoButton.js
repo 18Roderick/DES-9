@@ -12,9 +12,13 @@ function InfoButton({ price }) {
   return (
     <>
       <div className="info adopt-terms">
-        <button className="boton btn btn-primary  mr-1">
+        {/* <button className="boton btn btn-primary  mr-1">
           Ver producto
-      </button>
+      </button> */}
+
+        <Button className="boton btn btn-primary  mr-1" variant="primary" onClick={handleShow}>
+          Ver producto
+      </Button>
 
         <div className="price">
           <i className="fas fa-dollar-sign"></i>
