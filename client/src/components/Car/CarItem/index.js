@@ -39,7 +39,9 @@ const CarItem = () => {
               </div>
               <div className="col-md-1 col-sm-12">
                 <p className="font-weight-bold text-right">Precio</p>
-                <p className="text-danger font-weight-bold text-right">88.96</p>
+                <p className="text-danger font-weight-bold text-right">
+                  <span>$</span>88.96
+                </p>
               </div>
             </div>
           </div>

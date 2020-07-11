@@ -6,7 +6,7 @@ const apiRouter = require('./api');
 router.get('/', (req, res) => {
   res.status(200).json({
     success: true,
-    message: 'Bienvenido a SEEDS'
+    message: 'Bienvenido a SEEDS '
   });
 });
 

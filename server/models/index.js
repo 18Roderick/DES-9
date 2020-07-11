@@ -4,5 +4,7 @@ module.exports = {
   Metas: require('./Metas'),
   Noticias: require('./Noticias'),
   Productos: require('./Productos'),
-  Recompensas: require('./Recompensa')
+  Recompensa: require('./Recompensa'),
+  Usuario: require('./Usuario'),
+  Compras: require('./Compras')
 };

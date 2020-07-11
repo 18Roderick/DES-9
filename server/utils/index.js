@@ -1,4 +1,5 @@
 module.exports = {
-	token: require('./token'),
-	extractToken: require('./extractToken'),
+  token: require('./token'),
+  extractToken: require('./extractToken'),
+  crypto: require('./crytping')
 };
