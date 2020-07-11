@@ -490,6 +490,7 @@ li.menu_list:first-child:not(hover) .front {
 .boton.btn.btn-primary:focus{
  outline:none;
  box-shadow: none;
+ border-color: var(--primarygreen);
 }
 
 .btn-primary:not(:disabled):not(.disabled):active{
