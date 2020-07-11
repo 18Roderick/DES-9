@@ -26,6 +26,8 @@ textarea {
   font-family: 'Poppins', sans-serif;
 }
 
+
+
 body {
   background-color: #ffffff;
 }
@@ -606,6 +608,7 @@ div.input-group {
   }
 }
 
+
 /* @media (max-width:950px ) {
   .modalProducto{
     display: block;
@@ -669,6 +672,7 @@ div.input-group {
 
 .modal-header {
   border-bottom: none !important;
+
 }
 
 .modalImagen {

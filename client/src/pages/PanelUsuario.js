@@ -21,8 +21,8 @@ import DireccionesUsuario from '../components/DireccionesUsuario/DireccionesUsua
 const PanelUsuario = () => {
   return (
     <React.Fragment>
-        <PerfilUsuario />
-        {/* <DireccionesUsuario/> */}
+      <PerfilUsuario />
+      <DireccionesUsuario />
     </React.Fragment>
   );
 };
