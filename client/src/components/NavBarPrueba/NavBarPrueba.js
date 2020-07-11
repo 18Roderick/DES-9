@@ -84,7 +84,7 @@ const NavbBarPrueba = () => {
 
       <li className="menu_list">
         <LinkWrapper route="/panelusuario">
-          <span className="front fas fa-shopping-cart"></span>
+          <span className="front fas fa-user"></span>
           <Link to="/car" className="side">
             Carrito
           </Link>

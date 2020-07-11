@@ -10,6 +10,7 @@ import {
   PanelUsuario,
   RegistroUsuario,
   RecuperarContrasena,
+  Goals,
   Car,
 } from './../../pages';
 
@@ -25,6 +26,7 @@ export default function Switcher() {
       <Route path="/RegistroUsuario" exact component={RegistroUsuario}></Route>
       <Route path="/RecuperarContrasena" exact component={RecuperarContrasena}></Route>
       <Route path="/noticias" exact component={News}></Route>
+      <Route path="/metas" exact component={Goals}></Route>
       <Route path="/car" component={Car} />
       <Route
         component={() => <h1 className="mt-5 text-center text-capitalize">Error 404</h1>}

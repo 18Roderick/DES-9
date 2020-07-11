@@ -7,4 +7,5 @@ export { default as Login } from './Login';
 export { default as PanelUsuario } from './PanelUsuario';
 export { default as RegistroUsuario } from './RegistroUsuario';
 export { default as RecuperarContrasena } from './RecuperarContrasena';
+export { default as Goals } from './Goals';
 export { default as Car } from './Car';
