@@ -12,12 +12,9 @@ function InfoButton({ price }) {
   return (
     <>
       <div className="info adopt-terms">
-        {/* <button className="boton btn btn-primary  mr-1">
+        <button className="boton btn btn-primary  mr-1">
           Ver producto
-      </button> */}
-        <button className="boton btn btn-pimary" onClick={handleShow}>
-          Ver producto
-        </button>
+      </button>
 
         <div className="price">
           <i className="fas fa-dollar-sign"></i>
@@ -46,18 +43,3 @@ function InfoButton({ price }) {
 }
 
 export default InfoButton;
-
-// class InfoButton extends Component {
-
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-//     const { price } = this.props;
-//     const { cardData } = this.props;
-//     return (
-
-//     );
-//   }
-// }

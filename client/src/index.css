@@ -1329,10 +1329,11 @@ a {
 
 
 .carrito-container-item {
+  padding: 0.5rem;
   margin-top: 0.25rem;
   border-width: 1px 0px 1px 0px;
   border-style: solid solid solid solid;
-  border-color: var(--primarygreen) #ffffff #ffffff #ffffff;
+  border-color: rgba(36, 106, 64, .4) #ffffff #ffffff #ffffff;
 }
 
 .carrito-image {

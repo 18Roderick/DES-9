@@ -1,13 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const authRouter = require('./auth');
 
-router.use('/', (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: 'Bienvenido a SEEDS Api'
-  });
-});
-
-//router.use('/api', api);
+router.use('/auth', authRouter);
 
 module.exports = router;

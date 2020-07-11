@@ -15,7 +15,7 @@ const CardInfo = ({ cardData: { name, type, description, info } }) => (
       <h3 className="title">{description}</h3>
       <p className="text">
         {`${utils.truncateText(info, 55)}`}
-        <a href="#" className="leermas">
+        <a href="javascript:void(0);" className="leermas">
           Leer mas...
         </a>
       </p>
