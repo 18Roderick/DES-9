@@ -3,7 +3,6 @@ import { Button, Modal, ModalBody } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import ModalPrueba from '../../../ModalProducto/ModalProducto';
 
-
 function InfoButton({ price }) {
   const [show, setShow] = useState(false);
 
@@ -12,15 +11,13 @@ function InfoButton({ price }) {
 
   return (
     <>
-
       <div className="info adopt-terms">
         {/* <button className="boton btn btn-primary  mr-1">
           Ver producto
       </button> */}
-
-        <Button className="boton btn btn-primary  mr-1" variant="primary" onClick={handleShow}>
+        <button className="boton boton-verde" onClick={handleShow}>
           Ver producto
-      </Button>
+        </button>
 
         <div className="price">
           <i className="fas fa-dollar-sign"></i>
@@ -28,13 +25,8 @@ function InfoButton({ price }) {
         </div>
       </div>
 
-
-
-
-      <Modal size='xl' show={show} onHide={handleClose} scrollable={true}>
-        <Modal.Header closeButton>
-          {/* <Modal.Title>Modal heading</Modal.Title> */}
-        </Modal.Header>
+      <Modal size="xl" show={show} onHide={handleClose} scrollable={true}>
+        <Modal.Header closeButton>{/* <Modal.Title>Modal heading</Modal.Title> */}</Modal.Header>
         {/* <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -45,17 +37,15 @@ function InfoButton({ price }) {
           </Button>
         </Modal.Footer>
         */}
-        <Modal.Body >
+        <Modal.Body>
           <ModalPrueba />
         </Modal.Body>
-
       </Modal>
     </>
   );
 }
 
 export default InfoButton;
-
 
 // class InfoButton extends Component {
 
@@ -68,10 +58,6 @@ export default InfoButton;
 //     const { cardData } = this.props;
 //     return (
 
-
-
 //     );
 //   }
 // }
-
-
