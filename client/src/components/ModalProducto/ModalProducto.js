@@ -1,5 +1,5 @@
 import React, {Container} from 'react'
-import imgproducto from '../../assets/img/ORH82L0.jpg';
+import imgproducto from '../../assets/img/OrangeSweater.png';
 import ReactTooltip from "react-tooltip";
 
 

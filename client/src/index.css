@@ -668,8 +668,12 @@ div.input-group{
 /*----------Metas----------*/
 .metasContenedor{
   display: flex;
-  flex-direction: column;
   width: 90%;
+  margin: auto;
+}
+
+.row.metasContenedor{
+  flex-wrap: nowrap;
 }
 
 .singleGoals{
@@ -685,7 +689,8 @@ div.input-group{
 }
 
 .metasDescripcion{
-
+  width: auto;
+  word-wrap: break-word;
 }
 
 
