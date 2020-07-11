@@ -516,11 +516,6 @@ li.menu_list:first-child:not(hover) .front {
   margin: 0;
 }
 
-/*   
-.tarjeta-list li{
-    width: 33.3%;
-    padding-bottom: 2rem;
-  } */
 
   /*----------Modal Producto----------*/
 
@@ -786,21 +781,6 @@ div.input-group{
   }
 }
 
-/*
-* .buttom {
-  background-color: #246a40;
-  padding: 0.5rem 5rem;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Oswald', sans-serif;
-  text-decoration: none;
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  display: block;
-  border: 2px solid;
-  margin: 2rem auto 0;
-}*/
 
 .buttom {
   background-color: #246a40;
@@ -1329,12 +1309,6 @@ a {
   border-color: var(--primarygreen) #ffffff #ffffff #ffffff;
 }
 
-/* .carrito-container-item:first-child {
-  border-width: 1px 0px 1px 0px;
-  border-style: solid solid solid solid;
-  border-color: #000000 #ffffff #000000 #ffffff;
-} */
-
 .carrito-image {
   width: 13vw;
   /* height: 13vw; */
@@ -1378,13 +1352,6 @@ a {
 
 }
 
-/* .seeds-select-input:hover {
-  cursor: pointer;
-  background-color: var(--primarygreen);
-  color: white;
-}
- */
-
 
 .seeds-select-input:focus {
   outline: thin;
@@ -1398,13 +1365,6 @@ a {
 .seeds-select-input option {
   font-weight: normal;
 }
-
-/* .seeds-select-input option:hover {
-  background-color: var(--primarygreen);
-
-} */
-
-/*  */
 
 /*----------Carruzel----------*/
 .caruselPersolizado{
