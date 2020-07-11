@@ -15,7 +15,7 @@ function InfoButton({ price }) {
         {/* <button className="boton btn btn-primary  mr-1">
           Ver producto
       </button> */}
-        <button className="boton boton-verde" onClick={handleShow}>
+        <button className="btn btn-secondary" onClick={handleShow}>
           Ver producto
         </button>
 
