@@ -1,5 +1,7 @@
 const mongoConfig = require('./dbConfig');
+const emailConfig = require('./emailConfig');
 
 module.exports = {
-  mongoConfig
+  mongoConfig,
+  emailConfig
 };
