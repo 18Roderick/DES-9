@@ -487,6 +487,10 @@ li.menu_list:first-child:not(hover) .front {
   border-color: var(--primarygreen);
 }
 
+.boton.btn.btn-primary:hover{
+  background-color: var(--secondarygreen);
+}
+
 .boton.btn.btn-primary:focus{
  outline:none;
  box-shadow: none;
@@ -668,24 +672,125 @@ div.input-group{
 /*----------Metas----------*/
 .metasContenedor{
   display: flex;
-  flex-direction: column;
   width: 90%;
+  margin: auto;
 }
 
+.row.metasContenedor{
+  /* flex-wrap: nowrap; */
+}
+
+/*----------Meta Card----------*/
+
 .singleGoals{
-  background-color: var(--primarygreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 80vh;
   padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 100px 0 100px rgba(0, 0, 0, 0),
+  0 100px 139px rgba(0, 0, 0, 0),
+  0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
+.contenedorMetas{
+  /* position: absolute; */
+}
+
+.fondoMeta{
+  position: fixed;
+  z-index: -1;
+  height: 75.9vh;
+  opacity: 0.2;
+  object-fit: cover;
+  margin: auto;
+  width: inherit;
+}
+
+
 .metasTitulo{
+  padding-top: 10px;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 45px;
+
+}
+
+.metaTituloSello{
+  display: flex;
+  margin-bottom:-40px;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.sMeta.sellosRecompensas{
+  border: none;
+  width: 100px;
+  height: 85px;
+}
+
+.sMeta.sellosRecompensas img{
+  object-fit: cover;
+  border: 0;
+  position: relative;
+}
+
+@media (max-width: 450px) {
+  .sMeta.sellosRecompensas img{
+    display: none;
+  }
+}
+
+.metaInicial{
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 .metasDescripcion{
+  width: auto;
+  text-align: justify;
+  vertical-align: auto;
+  margin: auto;
+  padding: 0 15px;
+  border-top: 1px solid #dadada ;
+  border-bottom: 1px solid #dadada ;
+}
 
+.sgContenedor{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  height: 65vh;
+  z-index: 1;
+}
+
+.barraMeta{
+  padding: 10px 20px 0;
+}
+
+.sgBarraProgreso{
+  flex-basis: 50%;
+  margin-top: -35px;
+  padding: 0 15px;
+}
+
+.btnMetas{
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 400px) {
+  .singleGoals{
+    height: 90vh;  
+  }
+  .metaTituloSello{
+    margin-bottom: 0!important;
+  }
+  .sgBarraProgreso{
+    margin-top: 0;
+  }
 }
 
 
