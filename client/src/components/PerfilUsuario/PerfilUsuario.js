@@ -37,7 +37,7 @@ const PerfilUsuario = () => (
       <div className="perfilusuario-contenedor">
         <div className="pu-contenedorinfo">
           <div className="perfilusuario-labels">
-            <label className="pulNombre">{`${infoUsuario.userNombre.nombre} ${infoUsuario.userNombreapellido}`}</label>
+            <label className="pulNombre">{`${infoUsuario.userNombre.nombre} ${infoUsuario.userNombre.apellido}`}</label>
             <label className="pulPais">{infoUsuario.userPais}</label>
             <ul className="pu-ul">
               <li>{infoUsuario.userDireccion.provincia}</li>
