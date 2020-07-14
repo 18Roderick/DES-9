@@ -5,7 +5,7 @@ import CarTotal from './CarTotal';
 const Car = () => {
   return (
     <div className="container-fluid">
-      {'seeds-material-card'}
+      {/*'seeds-material-card'*/}
       <div className=" p-2">
         <div className="row">
           <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
