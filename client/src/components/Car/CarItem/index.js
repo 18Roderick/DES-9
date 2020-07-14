@@ -32,7 +32,7 @@ const CarItem = () => {
                 </div>
               </div>
               <div className="col-md-3 col-sm-12">
-                <div>
+                <div className="pr-2">
                   <p className="font-weight-bold text-right">Precio</p>
                   <p className="text-danger font-weight-bold text-right">
                     <span>$</span>
