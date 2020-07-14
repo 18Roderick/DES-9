@@ -5,7 +5,8 @@ import CarTotal from './CarTotal';
 const Car = () => {
   return (
     <div className="container-fluid">
-      <div className="seeds-material-card p-2">
+      {'seeds-material-card'}
+      <div className=" p-2">
         <div className="row">
           <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
             <div className="container-productos custom-scroll">
