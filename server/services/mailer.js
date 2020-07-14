@@ -66,6 +66,7 @@ class Mailer {
         text: mensaje
       };
       const mail = await this.transporter.sendMail(mailOptions);
+      console.log(mail);
       if (!mail) {
         return false;
       } else {
@@ -78,7 +79,12 @@ class Mailer {
 }
 
 const mailer = new Mailer(emailConfig);
-console.log(mailer.transporter);
 
-module.exports.mailer = new Mailer(emailConfig);
+async function main() {
+  await mailer.sendMail('esucre@outlook.es', 'Emilio es cueco', 'emilio maricón');
+}
+
+main();
+/* module.exports.mailer = new Mailer(emailConfig);
 module.exports.Mailer = Mailer;
+ */

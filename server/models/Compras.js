@@ -7,6 +7,10 @@ const Compras = new Schema({
     required: true,
     default: Date.now()
   },
+  meta: {
+    type: Schema.Types.ObjectId,
+    ref: 'metas'
+  },
   articulos: [
     {
       type: Schema.Types.ObjectId,

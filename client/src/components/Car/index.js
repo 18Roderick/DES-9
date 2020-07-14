@@ -4,18 +4,25 @@ import CarTotal from './CarTotal';
 
 const Car = () => {
   return (
-    <div>
-      {/* <h1 className="text-center">SEEDS</h1> */}
-      <div className="container-fluid">
+    <div className="container-fluid">
+      {/*'seeds-material-card'*/}
+      <div className=" p-2">
         <div className="row">
-          <div className="col-md-6 col-sm-12">
-            <CarItem />
-            <CarItem />
-            <CarItem />
-            <CarItem />
+          <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+            <div className="container-productos custom-scroll">
+              <div className="row ">
+                <CarItem />
+                <CarItem />
+                <CarItem />
+                <CarItem />
+                <CarItem />
+              </div>
+            </div>
           </div>
-          <div className="col-md-6 col-sm-12">
-            <CarTotal></CarTotal>
+          <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+            <div className="container-productos overflow-auto custom-scroll">
+              <CarTotal></CarTotal>
+            </div>
           </div>
         </div>
       </div>

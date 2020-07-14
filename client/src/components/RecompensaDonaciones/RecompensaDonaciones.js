@@ -1,7 +1,7 @@
 import React from 'react';
-import loli from '../../assets/img/loli.png';
+//import loli from '../../assets/img/loli.png';
 import sello from '../../assets/img/SelloRecompensa.png';
-import arbol from '../../assets/img/333.jpg';
+import arbol from '../../assets/img/333.png';
 import producto from '../../assets/img/12737.jpg';
 
 const RecompensaDonaciones = () => (
@@ -20,8 +20,13 @@ const RecompensaDonaciones = () => (
         <div className="sellosRecompensas">
           <img src={sello} />
         </div>
-        <div className="sellosRecompensas"> <img src={loli} /></div>
-        <div className="sellosRecompensas"><img src={arbol} /></div>
+        <div className="sellosRecompensas">
+          {' '}
+          <img src={sello} />
+        </div>
+        <div className="sellosRecompensas">
+          <img src={arbol} />
+        </div>
       </div>
     </div>
 
