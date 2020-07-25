@@ -7,7 +7,7 @@ module.exports.crearUsuario = async (req, res) => {
     const { nombre, apellido, correo, password1, password2 } = req.body;
     const errors = validationResult(req);
 
-    console.log(errors);
+    console.log('/crear usuario');
     if (!errors.isEmpty()) {
       res.json({
         success: false,
