@@ -1,7 +1,7 @@
 import { userTypes } from './types';
 
 const INITIAL_STATE = {
-  isUserData: false,
+  isFetchingUser: true,
   usuario: {
     nombre: '',
     apellido: '',
