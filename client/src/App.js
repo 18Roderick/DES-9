@@ -1,18 +1,12 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-
-import Header from './components/Hero/Hero';
-
-import NavBar from './components/NavBar/NavBar';
 
 import Switcher from './components/Switch';
-
+import NavBarPrueba from './components/NavBarPrueba/NavBarPrueba';
 
 function App() {
   return (
     <Fragment>
-      <Header></Header>
-      <NavBar></NavBar>
+      <NavBarPrueba />
       <Switcher></Switcher>
     </Fragment>
   );

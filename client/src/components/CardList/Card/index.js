@@ -29,7 +29,7 @@ class Card extends Component {
         <div className="tarjeta col-12 ">
           <CardImage image={image} />
           <CardInfo cardData={cardData} />
-          <InfoButton price={price} />
+          <InfoButton price={price} cardData={cardData} />
         </div>
       </div>
     );

@@ -1,46 +1,45 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Form, Button, Col, Row, Container } from 'react-bootstrap';
+import Separador from './../Separador/Separador';
+const logonombre = require('../../assets/img/separador.png');
 
-import { Form } from 'react-bootstrap';
+const Contact = () => (
+  <React.Fragment>
+    <Container>
+      <Row>
+        <Col sm={12} md={12}>
+          <Form className="justify-content-md-center shadow p-4">
+            <h3 class="card-title text-center ">Contacto</h3>
+            <Separador></Separador>
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Nombre</Form.Label>
+                <Form.Control type="Nombre" placeholder="Nombre" />
+              </Form.Group>
+              <Form.Group as={Col}>
+                <Form.Label>Apellido</Form.Label>
+                <Form.Control type="Apellido" placeholder="Apellido" />
+              </Form.Group>
+            </Form.Row>
 
-import './index.css';
+            <Form.Group>
+              <Form.Label>Telefono</Form.Label>
+              <Form.Control placeholder="Telefono" />
+            </Form.Group>
 
-const Contact = () => {
-  return (
-    <div className="font-size-test row">
-      <div className = 'col-lg-12'>
-        <Form>
-          <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="name@example.com" />
-          </Form.Group>
-          <Form.Group controlId="exampleForm.ControlSelect1">
-            <Form.Label>Example select</Form.Label>
-            <Form.Control as="select">
-              <option>1</option>  
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </Form.Control>
-          </Form.Group>
-          <Form.Group controlId="exampleForm.ControlSelect2">
-            <Form.Label>Example multiple select</Form.Label>
-            <Form.Control as="select" multiple>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </Form.Control>
-          </Form.Group>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Example textarea</Form.Label>
-            <Form.Control as="textarea" rows="3" />
-          </Form.Group>
-        </Form>
-      </div>
-    </div>
-  );
-};
-
+            <Form.Group>
+              <Form.Label>Email</Form.Label>
+              <Form.Control placeholder="Email" />
+            </Form.Group>
+            <div class="form-group">
+              <label for="Contacto">Mensaje</label>
+              <textarea class="form-control" id="Contacto" rows="3"></textarea>
+            </div>
+            <button className="buttom hollow">Enviar</button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  </React.Fragment>
+);
 export default Contact;
