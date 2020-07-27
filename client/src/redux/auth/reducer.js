@@ -24,8 +24,6 @@ const authReducer = (currentState = INITIAL_STATE, action) => {
         ...currentState,
         isSignin: false,
         token: payload.token,
-
-        //firebase: payload.firebase,
         isLoged: true,
       };
 
@@ -39,7 +37,6 @@ const authReducer = (currentState = INITIAL_STATE, action) => {
       return {
         ...currentState,
         isSignUp: true,
-        //firebase: payload.firebase
       };
 
     case authTypes.USER_SIGNUP_SUCCESS:

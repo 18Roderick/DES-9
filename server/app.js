@@ -24,12 +24,13 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const PUBLIC_FILES = path.join(__dirname, 'public');
 
-//const GALERIA_PATH = path.join(__dirname, 'galeria');
+const GALERIA_PATH = path.join(__dirname, 'images');
 // configuraciones
 app.set('port', PORT);
 
 //direcciones estáticas
 app.use('/public', express.static(PUBLIC_FILES));
+app.use('/images', express.static(GALERIA_PATH));
 app.use(favicon(path.join(PUBLIC_FILES, 'images', 'favicon.ico')));
 
 app.use(compression());
