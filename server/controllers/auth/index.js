@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator/check');
 const { Usuario } = require('../../models');
 const { crypto, token } = require('../../utils');
+const { db_user } = require('../../config/dbConfig');
 
 module.exports.crearUsuario = async (req, res) => {
   try {
@@ -20,7 +21,7 @@ module.exports.crearUsuario = async (req, res) => {
       const user = await Usuario.create({ nombre, apellido, correo, password: newPass });
 
       const payload = {
-        correo,
+        id: user._id,
         nombre,
         apellido
       };
@@ -51,7 +52,7 @@ module.exports.iniciarSesion = async (req, res) => {
       if (user) {
         const isValid = await crypto.compare(password, user.password);
         const payload = {
-          correo,
+          id:user._id,
           nombre: user.nombre,
           apellido: user.apellido
         };

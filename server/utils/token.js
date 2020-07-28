@@ -2,9 +2,9 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 
-const TOKEN_ALGORITHM = process.env.TOKEN_ALGORITHM || 'SH256';
+const TOKEN_ALGORITHM = process.env.TOKEN_ALGORITHM || 'RS256';
 const PRIVATE_KEY = fs.readFileSync('./token_private.key', 'utf8'); // keys privados del token
-//const PUBLIC_KEY = fs.readFileSync('./token_public.key', 'utf8'); //keys públicos del token
+const PUBLIC_KEY = fs.readFileSync('./token_public.key', 'utf8'); //keys públicos del token
 
 //configuración del token
 const tokenConfig = {
@@ -26,11 +26,10 @@ async function create(data) {
 //verificación del token
 async function verify(token) {
   try {
-    const verified = jwt.decode(token, { complete: true });
-
+    const verified = await jwt.verify(token, PUBLIC_KEY);
     return {
       success: true,
-      data: verified.payload.data
+      data: verified.data
     };
   } catch (error) {
     let newError = new Error();
