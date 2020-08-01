@@ -52,7 +52,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({
     title: err.message,
-    message: err.message
+    message: 'error con el api'
   });
 });
 
