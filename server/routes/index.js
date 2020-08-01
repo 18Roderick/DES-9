@@ -10,6 +10,11 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/robots.txt', function(req, res) {
+  res.type('text/plain');
+  res.send('User-agent: *\nDisallow: /');
+});
+
 router.use('/api', apiRouter);
 
 module.exports = router;

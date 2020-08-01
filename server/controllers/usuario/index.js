@@ -1,4 +1,6 @@
 const { Usuario } = require('../../models');
+const {fileUpload} = require('../../utils')
+
 
 module.exports.getUsuario = async (req, res) => {
   try {
@@ -30,5 +32,14 @@ module.exports.getUsuario = async (req, res) => {
       success: false,
       message: 'Intente mas tarde'
     });
+  }
+};
+
+
+module.exports.uploadImage = async (req, res) => {
+  try {
+    
+  } catch (error) {
+    
   }
 };

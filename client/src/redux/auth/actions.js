@@ -1,9 +1,9 @@
 import { authTypes } from './types';
+import * as authApi from '../../api/auth';
 
 //proceso de iniciar sesion
-export const userSignInStart = (dto) => ({
+export const userSignInStart = () => ({
   type: authTypes.USER_SIGNIN_START,
-  payload: dto,
 });
 
 export const userSignInSuccess = (user) => ({
@@ -14,6 +14,26 @@ export const userSignInSuccess = (user) => ({
 export const userSignInFailed = (error) => ({
   type: authTypes.USER_SIGNING_FAILED,
   payload: error,
+});
+
+export const userSignin = (payload) => {
+  return (dispatch) => {
+    dispatch(userSignInStart());
+    authApi
+      .iniciarSesion(payload)
+      .then((data) => {
+        if ('token' in data) {
+          dispatch(userSignInSuccess(data.token));
+        } else {
+          dispatch(userSignInFailed(data.message));
+        }
+      })
+      .catch((error) => dispatch(userSignInFailed(error.message)));
+  };
+};
+
+export const clearErrorMessage = () => ({
+  type: authTypes.CLEAR_ERROR_SIGNIN,
 });
 
 //proceso de crear usuario

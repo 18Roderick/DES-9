@@ -23,7 +23,7 @@ const authReducer = (currentState = INITIAL_STATE, action) => {
       return {
         ...currentState,
         isSignin: false,
-        token: payload.token,
+        token: payload,
         isLoged: true,
       };
 
@@ -31,8 +31,13 @@ const authReducer = (currentState = INITIAL_STATE, action) => {
       return {
         ...currentState,
         isSignin: false,
-        errorMessageSignin: payload.message,
+        errorMessageSignin: payload,
       };
+    case authTypes.CLEAR_ERROR_SIGNIN:
+        return{
+          ...currentState,
+          errorMessageSignin: ''
+        }
     case authTypes.USER_SIGNUP_START:
       return {
         ...currentState,
