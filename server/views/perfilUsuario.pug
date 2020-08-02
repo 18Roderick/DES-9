@@ -4,13 +4,13 @@ block content
         .perfilusuario-banner
             img(src='/img/smite.png')
         .perfilusuario-info
-            img.pu-imagenPerfil(src='/img/roderick.jpg')
+            img.pu-imagenPerfil(src='https://ui-avatars.com/api/?name=roderick+romero&size=256&rounded=true&background=246a40&color=ffffff&font-size=0.55?bold=true')
             button.buttom-perfil.mr-1.mt-1
                 i.fas.fa-sign-out-alt(aria-hidden='true')
             .perfilusuario-contenedor
                 .pu-contenedorinfo
                     .perfilusuario-labels
-                        label.pulNombre Roderick Romero
+                        label.pulNombre.text-capitalize #{usuario.nombre} #{usuario.apellido}
                         label.pulPais Panam&aacute;
                         ul.pu-ul
                             li Panam&aacute;
