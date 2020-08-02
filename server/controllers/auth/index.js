@@ -53,7 +53,7 @@ module.exports.vistaRegistroUsuario = (req, res) => {
 module.exports.iniciarSesion = async (req, res) => {
   try {
     const { password, correo } = req.body;
-    console.log('Iniciar sesión', req);
+    
     if (req.session.user) {
       res.redirect('/mercancia');
     }
