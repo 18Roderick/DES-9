@@ -1,28 +1,10 @@
 const { extractToken, token } = require('../utils');
 
 const isAuthenticated = async (req, res, next) => {
-  try {
-    const newError = new Error();
-    if (!req.headers.authorization) {
-      newError.name = 'Sin Acceso';
-      newError.message = 'No Tienes Acceso, token vació';
-      throw newError;
-    }
-
-    const tmpToken = extractToken(req.headers.authorization);
-    const verifyToken = await token.verify(tmpToken);
-
-    req.user = { ...verifyToken.data };
-    console.log('Usuario verificado', verifyToken, req.user);
+  if (req.session.user) {
     next();
-  } catch (error) {
-    console.log('catch de is authenticated', error);
-    //next(error);
-    res.status(401).json({
-      success: false,
-      title: 'Sin Autorización',
-      message: error.message
-    });
+  } else {
+    res.send('No tienes acceso a esto');
   }
 };
 

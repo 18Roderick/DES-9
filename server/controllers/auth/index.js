@@ -1,7 +1,6 @@
 const { validationResult } = require('express-validator/check');
 const { Usuario } = require('../../models');
-const { crypto, token } = require('../../utils');
-const { db_user } = require('../../config/dbConfig');
+const { crypto } = require('../../utils');
 
 module.exports.crearUsuario = async (req, res) => {
   try {
@@ -25,20 +24,13 @@ module.exports.crearUsuario = async (req, res) => {
         nombre,
         apellido
       };
-      const newToken = await token.create(payload);
-      res.json({
-        success: true,
-        message: 'Hola Bienvenido',
-        token: newToken
-      });
+      req.session.user = payload;
+      res.redirect('/');
     }
   } catch (error) {
     console.log(error);
 
-    res.json({
-      success: false,
-      message: error.message
-    });
+    res.redirect('/registro-usuario');
   }
 };
 
@@ -52,18 +44,15 @@ module.exports.iniciarSesion = async (req, res) => {
       if (user) {
         const isValid = await crypto.compare(password, user.password);
         const payload = {
-          id:user._id,
+          id: user._id,
           nombre: user.nombre,
           apellido: user.apellido
         };
-        const newToken = await token.create(payload);
+
+        req.session.user = payload;
 
         if (isValid) {
-          res.json({
-            success: true,
-            message: `Hola Bienvenido ${user.nombre}`,
-            token: newToken
-          });
+          res.redirect('/');
         } else {
           res.json({
             success: false,
@@ -71,16 +60,12 @@ module.exports.iniciarSesion = async (req, res) => {
           });
         }
       } else {
-        res.json({
-          success: false,
-          message: 'Este usuario no existe'
-        });
+        req.flash('registro', 'Este usuario no existe');
+        res.redirect('/iniciar-sesion');
       }
     } else {
-      res.json({
-        success: false,
-        message: 'Correo o contraseña vacíos'
-      });
+      req.flash('registro', 'usuario y contraseña requeridos');
+      res.redirect('/iniciar-sesion');
     }
   } catch (error) {
     res.json({
@@ -89,5 +74,10 @@ module.exports.iniciarSesion = async (req, res) => {
     });
   }
 };
+
+module.exports.logOut = (req, res) => {
+  req.session.destroy();
+  req.redirect('/');
+}
 module.exports.recuperarContrasena = async (req, res) => {};
 module.exports.refreshToken = async (req, res) => {};
