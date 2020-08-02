@@ -352,7 +352,7 @@ li.menu_list:first-child:not(hover) .front {
   margin-top: -10px;
   text-transform: capitalize;
   text-align: left;
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 .name,
@@ -547,6 +547,33 @@ li.menu_list:first-child:not(hover) .front {
   }
 }
 
+.cantidadTexto{
+ margin: auto 0;
+ background-color: var(--primarygreen)!important;
+}
+
+.cantidad{
+  font-size: 11px;
+  text-align: right;
+  margin: auto 0;
+}
+
+.cantidadProductos{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.input-group-text.cantidadDisponible{
+  padding: 0.3rem 1.8rem!important ;
+}
+
+.form-control.cantidadComprar{
+  margin-top: 5px;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
 
 .modalProducto {
   display: flex;
@@ -663,6 +690,11 @@ div.input-group {
   transition: .5s;
   display: block;
   text-align: center;
+  border: none;
+}
+
+.agregarCarrito:focus{
+  outline:none;
 }
 
 .tpFondo {
@@ -1038,6 +1070,14 @@ div.input-group {
   height: 80%;
   position: absolute;
   z-index: -1;
+}
+
+.buttom-perfil.mr-1.mt-1{
+  color: red;
+}
+
+.buttom-perfil.mr-1.mt-1:focus{
+  outline:none;
 }
 
 @supports(object-fit: cover) {
