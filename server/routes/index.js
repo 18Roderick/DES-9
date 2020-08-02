@@ -7,8 +7,6 @@ const mercanciaRouter = require('./mercancia');
 const apiRouter = require('./api');
 
 router.get('/', (req, res) => {
-  console.log(req.session);
-  req.session.user ? req.session.user : (req.session.user = Math.random(10));
   res.render('index', { title: 'SEEDS' });
 });
 

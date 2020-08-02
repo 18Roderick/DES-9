@@ -4,7 +4,7 @@ const isAuthenticated = async (req, res, next) => {
   if (req.session.user) {
     next();
   } else {
-    res.send('No tienes acceso a esto');
+    res.redirect('/auth/iniciar-sesion');
   }
 };
 

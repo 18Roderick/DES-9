@@ -1,5 +1,11 @@
 extends layout
 block content
+    if(!errors)
+       -var errors = {};
+    
+    if(!form)
+       -var form = {};
+
     .iniciosesion
         .iniciosesion-imagen
         .iniciosesion-formulario
@@ -7,10 +13,10 @@ block content
                 .fieldset
                     img(src='' alt='')
                     label.iniciosesion-label(for='email') Correo
-                    input#email.iniciosesion-input(type='email' name='correo' ,placeholder='seeds@ejemplo.com')
-                    label.iniciosesion-label(for='password') Contrase&ntilde;a
-                    input#password.iniciosesion-input(type='password' name='password' placeholder='*******' autocomplete='true')
+                    input#email.iniciosesion-input(type='email' name='correo' ,placeholder='seeds@ejemplo.com' class='' value ='')
+                    label.iniciosesion-label(for='password') Contraseña
+                    input#password.iniciosesion-input(type='password' name='password' placeholder='*******' autocomplete='true' class='' value ='')
                     button.buttom.hollow(type = 'submit') Iniciar
                     .flex
-                        a.iniciosesion-link(href='/RecuperarContrasena') Olvido su contrase&ntilde;a?
+                        //a.iniciosesion-link(href='/RecuperarContrasena') Olvido su contraseña?
                         a.iniciosesion-link(href='/auth/registro-usuario') Registrarse
