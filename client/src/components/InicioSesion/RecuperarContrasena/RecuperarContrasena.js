@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { Form, Button, Col, Row, Container } from 'react-bootstrap';
+import React from 'react';
+import { Form, Col, Row, Container } from 'react-bootstrap';
 const logonombre = require('./../../../assets/img/LogoNombre.png');
 
 const RecuperarConstrasena = () => (

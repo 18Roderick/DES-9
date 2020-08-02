@@ -1,3 +1,8 @@
+const { isAdmin, isAuthenticated } = require('./isAuthenticated');
+const registroValidator = require('./registroValidator');
+
 module.exports = {
-    flashConfig: require('./flashConfig'),
-}
+  isAdmin,
+  isAuthenticated,
+  registroValidator
+};

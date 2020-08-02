@@ -1,0 +1,16 @@
+extends layout
+block content
+    .iniciosesion
+        .iniciosesion-imagen
+        .iniciosesion-formulario
+            form.iniciosesion-form(action='/auth/iniciar-sesion', method='POST')
+                .fieldset
+                    img(src='' alt='')
+                    label.iniciosesion-label(for='email') Correo
+                    input#email.iniciosesion-input(type='email' name='correo' ,placeholder='seeds@ejemplo.com')
+                    label.iniciosesion-label(for='password') Contrase&ntilde;a
+                    input#password.iniciosesion-input(type='password' name='password' placeholder='*******' autocomplete='true')
+                    button.buttom.hollow(type = 'submit') Iniciar
+                    .flex
+                        a.iniciosesion-link(href='/RecuperarContrasena') Olvido su contrase&ntilde;a?
+                        a.iniciosesion-link(href='/auth/registro-usuario') Registrarse

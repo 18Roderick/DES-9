@@ -1,33 +1,90 @@
-import React from 'react';
-import { Col, Row, Form, Container, Button } from 'react-bootstrap';
-
-import loginimg from '../../assets/img/Login.jpg';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useFormik } from 'formik';
+
+import * as autApi from '../../api/auth';
+
+import { userSignin, clearErrorMessage } from '../../redux/auth/actions';
+import formikConfig from './formikConfig';
+
 const logonombre = require('./../../assets/img/LogoNombre.png');
 
-const InicioSesion = () => (
-  <div className="iniciosesion">
-    <div className="iniciosesion-imagen"></div>
+const InicioSesion = () => {
+  const dispatch = useDispatch();
 
-    <div className="iniciosesion-formulario">
-      <form className = 'iniciosesion-form'>
-        <div className = 'fieldset'>
-          <img src={logonombre} />
-          <label htmlFor = 'email' className="iniciosesion-label">Correo</label>
-          <input id = 'email' className = 'iniciosesion-input ' type='email' autoFocus  placeholder='seeds@ejemplo.com'></input>
+  const { token, errorMessageSignin } = useSelector((state) => state.auth);
 
-          <label htmlFor = 'password' className="iniciosesion-label">Contraseña</label>
-          <input id = 'password' className = 'iniciosesion-input' type='password' placeholder='*******'></input>
+  const onSubmit = useCallback(
+    (data) => {
+      console.log(data);
+      dispatch(userSignin(data));
+    },
+    [dispatch]
+  );
 
-          <button className = 'buttom hollow'>Iniciar</button>
-          <div className = 'flex'>
-              <Link to = "/RecuperarContrasena" className = 'iniciosesion-link'><a href = '#'>¿Olvido su contraseña?</a></Link>
-              <Link to = "/RegistroUsuario" className = 'iniciosesion-link'><a href = '#'>Registrarse</a></Link>
+  useEffect(() => {
+    if (token.length) {
+      alert('Usuario logueado con éxito');
+    } else if (errorMessageSignin) {
+      alert(errorMessageSignin);
+      dispatch(clearErrorMessage());
+    }
+  }, [token, errorMessageSignin, dispatch]);
+
+  formikConfig.onSubmit = onSubmit;
+  const formik = useFormik(formikConfig);
+
+  const passwordError = formik.errors.password ? <div>{formik.errors.password}</div> : null;
+  const correoError = formik.errors.correo ? <div>{formik.errors.correo}</div> : null;
+
+  return (
+    <div className="iniciosesion">
+      <div className="iniciosesion-imagen"></div>
+
+      <div className="iniciosesion-formulario">
+        <form className="iniciosesion-form" onSubmit={formik.handleSubmit}>
+          <div className="fieldset">
+            <img src={logonombre} alt="" />
+            <label htmlFor="email" className="iniciosesion-label">
+              Correo
+            </label>
+            <input
+              id="email"
+              className="iniciosesion-input "
+              type="email"
+              placeholder="seeds@ejemplo.com"
+              {...formik.getFieldProps('correo')}
+            ></input>
+            {correoError}
+            <label htmlFor="password" className="iniciosesion-label">
+              Contraseña
+            </label>
+            <input
+              id="password"
+              className="iniciosesion-input"
+              type="password"
+              placeholder="*******"
+              autoComplete="true"
+              {...formik.getFieldProps('password')}
+            ></input>
+            {passwordError}
+            <button type="submit" className="buttom hollow">
+              Iniciar
+            </button>
+            <div className="flex">
+              <Link to="/RecuperarContrasena" className="iniciosesion-link">
+                Olvido su contraseña?
+              </Link>
+              <Link to="/RegistroUsuario" className="iniciosesion-link">
+                Registrarse
+              </Link>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default InicioSesion;
