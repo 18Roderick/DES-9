@@ -72,7 +72,7 @@ app.use(error404);
 //captura de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).render('error', { title: 'Error' });
+  res.render('error', { title: 'Error' , status: 500, error:err});
 });
 
 connect()

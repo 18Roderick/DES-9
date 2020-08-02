@@ -1,25 +1,48 @@
 extends layout
 block content
+
+    if(!errors)
+        -var errors = {nombre:'No puede ser vacio'};
+    
+    if(!form)
+        -var form = {}
+    
+    -var isValidNombre = (errors.nombre  || form.nombre ) ? 'isValid' : '';
+    -var isValidApellido = '';
+    -var isValidCorreo = '';
+    -var isValidPassword = '';
+
+
     .container
+        h2=errors
         .row
             .col-md-12.col-sm-12
-                form.justify-content-md-center.shadow.p-4
+                form.justify-content-md-center.shadow.p-4(action='/auth/registro-usuario', method='POST')
                     .recuperarContrasena-formulario
                         img(src='/img/LogoNombre.png')
                     .form-row
                         .form-group.col
                             label.form-label Nombre
-                            input.form-control(placeholder='Nombre' type='Nombre')
+                            input.form-control(type='text', placeholder='Nombre', name='nombre',  class=isValidNombre, value=form.nombre ? form.nombre : '')
+                            if(errors.nombre)
+                                .invalid-feedback=errors.nombre
+                            if(form.nombre)
+                                .valid-feedback
                         .form-group.col
                             label.form-label Apellido
-                            input.form-control(placeholder='Apellido' type='Apellido')
+                            input.form-control( type='text', placeholder='Apellido', name='apellido'  class=isValidApellido, value=form.apellido ? form.apellido : '')
+                            if(errors.apellido)
+                                .invalid-feedback=errors.apellido
+                            elseif(form.Apellido)
+                                .valid-feedback
+
                     .form-group
                         label.form-label Email
-                        input.form-control(placeholder='Email')
+                        input.form-control(type='email',placeholder='Email', name='correo', class=isValidCorreo , value=form.correo ? form.correo :  '')
                     .form-group
-                        label.form-label Contrasena
-                        input.form-control(placeholder='Contrasena')
+                        label.form-label Contraseña
+                        input.form-control(type='password',autocomplete='on', placeholder='Contraseña', class=isValidPassword, value=form.password ? form.password : '')
                     .form-group
-                        label.form-label Repetir Contrasena
-                        input.form-control(placeholder='Repetir Contrasena')
+                        label.form-label Repetir Contraseña
+                        input.form-control(type='password',autocomplete='on', placeholder='Repetir Contraseña', class=isValidPassword, value=form.password ? form.password : '')
                     button.buttom.hollow Registrar

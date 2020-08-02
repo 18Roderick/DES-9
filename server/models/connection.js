@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { mongoConfig } = require('../config');
 
-let url = mongoConfig.mongo_url();
+let url = mongoConfig.mongoAtlas();
 
 /* if (process.env.NODE_ENV === 'production') {
   url = mongoConfig.mongo_url(); //url de db local o mongo atlas
@@ -16,7 +16,7 @@ const options = {
   useCreateIndex: true
 };
 
-console.log(mongoConfig.mongo_url(), url);
+console.log( url, process.env.MONGO_ATLAS);
 
 const connect = () => mongoose.connect(url, options);
 
