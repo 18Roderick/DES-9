@@ -8,9 +8,5 @@ const isAuthenticated = async (req, res, next) => {
   }
 };
 
-const isAdmin = (req, res, next) => {
-  console.log(extractToken(req.headers.authorization));
-  next();
-};
 
-module.exports = { isAuthenticated, isAdmin };
+module.exports = { isAuthenticated };

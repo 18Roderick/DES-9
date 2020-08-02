@@ -39,9 +39,13 @@ app.use(compression());
 app.use(helmet());
 app.use(cors());
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-
+app.post('*', (req, res, next) => {
+  console.log('Vamoi a ver que xuxa', req.body, req.query, req.params);
+  next();
+});
 app.use(
   session({
     secret: process.env.SESSION_SECRET || 'njknadkjajkdb224',
@@ -72,7 +76,7 @@ app.use(error404);
 //captura de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.render('error', { title: 'Error' , status: 500, error:err});
+  res.render('error', { title: 'Error', status: 500, error: err, user: req.session.user || null });
 });
 
 connect()

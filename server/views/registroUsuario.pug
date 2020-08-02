@@ -2,19 +2,34 @@ extends layout
 block content
 
     if(!errors)
-        -var errors = {nombre:'No puede ser vacio'};
+        -var errors = {};
     
     if(!form)
-        -var form = {}
+        -var form = {};
+
+    if(errors.nombre)
+        -var isValidNombre =  'is-invalid' ;
+    -else if(!errors.nombre && form.nombre)
+        -var isValidNombre =  'is-valid' ;
     
-    -var isValidNombre = (errors.nombre  || form.nombre ) ? 'isValid' : '';
-    -var isValidApellido = '';
-    -var isValidCorreo = '';
-    -var isValidPassword = '';
+    if(errors.apellido)
+        -var isValidApellido = 'is-invalid';
+    -else if(!errors.apellido && form.apellido)
+        -var isValidApellido =  'is-valid' ;
+    
+    if(errors.correo)
+        -var isValidCorreo =  'is-invalid' ;
+    -else if(!errors.correo && form.correo)
+        -var isValidCorreo = 'is-valid';
+    
+    if(errors.password1)
+        -var isValidPassword = 'is-invalid';
+    -else if(!errors.password1 && form.password1)
+        -var isValidPassword = 'is-valid' ;
+    
 
 
     .container
-        h2=errors
         .row
             .col-md-12.col-sm-12
                 form.justify-content-md-center.shadow.p-4(action='/auth/registro-usuario', method='POST')
@@ -22,8 +37,8 @@ block content
                         img(src='/img/LogoNombre.png')
                     .form-row
                         .form-group.col
-                            label.form-label Nombre
-                            input.form-control(type='text', placeholder='Nombre', name='nombre',  class=isValidNombre, value=form.nombre ? form.nombre : '')
+                            label.form-label(for='nombre') Nombre
+                            input.form-control(type='text', placeholder='Nombre', id='nombre' name='nombre',  class=isValidNombre, value=form.nombre ? form.nombre : '')
                             if(errors.nombre)
                                 .invalid-feedback=errors.nombre
                             if(form.nombre)
@@ -33,16 +48,24 @@ block content
                             input.form-control( type='text', placeholder='Apellido', name='apellido'  class=isValidApellido, value=form.apellido ? form.apellido : '')
                             if(errors.apellido)
                                 .invalid-feedback=errors.apellido
-                            elseif(form.Apellido)
+                            -else if(form.apellido)
                                 .valid-feedback
 
                     .form-group
                         label.form-label Email
                         input.form-control(type='email',placeholder='Email', name='correo', class=isValidCorreo , value=form.correo ? form.correo :  '')
+                        if(errors.correo)
+                            .invalid-feedback=errors.correo
+                        -else if(form.correo)
+                            .valid-feedback
                     .form-group
                         label.form-label Contraseña
-                        input.form-control(type='password',autocomplete='on', placeholder='Contraseña', class=isValidPassword, value=form.password ? form.password : '')
+                        input.form-control(type='password',autocomplete='on', name='password1' placeholder='Contraseña', class=isValidPassword, value=form.password ? form.password : '')
+                        if(errors.password1)
+                            .invalid-feedback=errors.password1
+                        -else if(form.password1)
+                            .valid-feedback
                     .form-group
                         label.form-label Repetir Contraseña
-                        input.form-control(type='password',autocomplete='on', placeholder='Repetir Contraseña', class=isValidPassword, value=form.password ? form.password : '')
-                    button.buttom.hollow Registrar
+                        input.form-control(type='password',autocomplete='on', name='password2' ,placeholder='Repetir Contraseña', class=isValidPassword, value=form.password ? form.password : '')
+                    button.buttom.hollow(type='submit') Registrar
