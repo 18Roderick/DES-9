@@ -6,17 +6,22 @@ module.exports.crearUsuario = async (req, res) => {
   try {
     const { nombre, apellido, correo, password1, password2 } = req.body;
     const errors = validationResult(req);
-
+    if(req.session.user){
+      res.redirect('/mercancia')
+    }
     console.log('/crear usuario');
     if (!errors.isEmpty()) {
-      res.json({
-        success: false,
-        message: 'Se encontraron algunos errores',
-        errors: errors.array()
-      });
+      let errores = {};
+      console.log(errors.array())
+      errors.array().forEach(err => {
+        errores = {...errores, [err.param]: err.msg}
+      })
+      console.log(errores, req.body, req.params, req.query);
+      res.render('registroUsuario', { title: 'Registro de Usuario', errors:errores, form:req.body });
+    
     } else {
       const newPass = await crypto.encrypt(password1);
-
+      console.log(req.body);
       const user = await Usuario.create({ nombre, apellido, correo, password: newPass });
 
       const payload = {
@@ -29,19 +34,26 @@ module.exports.crearUsuario = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-
-    res.redirect('/registro-usuario');
+    
+    res.redirect('/auth/registro-usuario');
   }
 };
 
-module.exports.vistaRegistroUsuario = (req,res) => {
-  res.render('registroUsuario', {title: 'Registro de Usuario'})
-}
+module.exports.vistaRegistroUsuario = (req, res) => {
+  console.log('Errores ',req.errors )
+  if(req.session.user){
+    res.redirect('/mercancia')
+  }
+  res.render('registroUsuario', { title: 'Registro de Usuario' });
+};
 
 module.exports.iniciarSesion = async (req, res) => {
   try {
     const { password, correo } = req.body;
-
+    console.log('Iniciar sesión', req);
+    if(req.session.user){
+      res.redirect('/mercancia')
+    }
     if (password != '' && correo != '') {
       const user = await Usuario.findOne({ correo });
 
@@ -79,13 +91,16 @@ module.exports.iniciarSesion = async (req, res) => {
   }
 };
 
-module.exports.vistaInciarSesion = (req,res) => {
-  res.render('login', {title: 'Login'})
-}
+module.exports.vistaInciarSesion = (req, res) => {
+  if(req.session.user){
+    res.redirect('/mercancia')
+  }
+  res.render('login', { title: 'Login' });
+};
 
 module.exports.logOut = (req, res) => {
   req.session.destroy();
   req.redirect('/');
-}
+};
 module.exports.recuperarContrasena = async (req, res) => {};
 module.exports.refreshToken = async (req, res) => {};

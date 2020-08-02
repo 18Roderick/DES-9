@@ -22,7 +22,7 @@ router.use('/auth', authRouter);
 router.use('/usuario', userRouter);
 router.use('/mercancia', mercanciaRouter);
 router.get('/nosotros', (req,res) => {
-  res.render('sobrenosotros', {title: 'Sobre Nosotros'})
+  res.render('sobrenosotros', {title: 'Sobre Nosotros',user: req.session.user || null})
 })
 
 module.exports = router;
