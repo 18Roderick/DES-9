@@ -3,14 +3,15 @@ const { fileUpload } = require('../../utils');
 
 module.exports.getUsuario = async (req, res) => {
   try {
-    let user = await Usuario.findById(user.id);
+    let user = req.session.user;
+    user = await Usuario.findById(user.id);
     res.render('perfilUsuario', {
       title: 'Usuario',
       user: req.session.user || null,
       usuario: user
     });
   } catch (error) {
-    throw error
+    throw error;
   }
 };
 
