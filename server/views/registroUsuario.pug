@@ -1,0 +1,25 @@
+extends layout
+block content
+    .container
+        .row
+            .col-md-12.col-sm-12
+                form.justify-content-md-center.shadow.p-4
+                    .recuperarContrasena-formulario
+                        img(src='/img/LogoNombre.png')
+                    .form-row
+                        .form-group.col
+                            label.form-label Nombre
+                            input.form-control(placeholder='Nombre' type='Nombre')
+                        .form-group.col
+                            label.form-label Apellido
+                            input.form-control(placeholder='Apellido' type='Apellido')
+                    .form-group
+                        label.form-label Email
+                        input.form-control(placeholder='Email')
+                    .form-group
+                        label.form-label Contrasena
+                        input.form-control(placeholder='Contrasena')
+                    .form-group
+                        label.form-label Repetir Contrasena
+                        input.form-control(placeholder='Repetir Contrasena')
+                    button.buttom.hollow Registrar

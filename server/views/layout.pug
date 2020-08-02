@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/index.css')
+  body
+    ul.menu
+      li.menu_list
+        a.enlace(href='/')
+          span.front
+            img.logo(alt='' src='/img/LogoNombre.png')
+      li.menu_list
+        div
+        a.enlace(href="/login")
+            span.front.fas.fa-user-astronaut(aria-hidden='true')
+            a.side(href='/login')
+              | Inicio
+              | sesi&oacute;n
+      li.menu_list
+        div
+          a.enlace(href="/sobrenosotros")
+            span.front.fas.fa-users(aria-hidden='true')
+            a.side(href='/sobrenosotros') Nosotros
+      li.menu_list
+        div
+          a.enlace(href="/noticias")
+            span.front.fas.fa-newspaper(aria-hidden='true')
+            a.side(href='/noticias') Noticias
+      li.menu_list
+        div
+          a.enlace(href="/mercancia")
+            span.front.fas.fa-briefcase(aria-hidden='true')
+            a.side(href='/mercancia') Mercanc&iacute;a
+      li.menu_list
+        div
+          a.enlace(href="/metas")
+            span.front.fas.fa-flag(aria-hidden='true')
+            a.side(href='/metas') Metas
+      li.menu_list
+        div
+          a.enlace(href="/carrito")
+            span.front.fas.fa-shopping-cart(aria-hidden='true')
+            a.side(href='/carrito') Carrito
+      li.menu_list
+        div
+          a.enlace(href="/perfilusuario")
+            span.front.fas.fa-user(aria-hidden='true')
+            a.side(href='/perfilusuario') Perfil usuario
+    block content
+  //- script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=' crossorigin='anonymous')
+  script(src='https://kit.fontawesome.com/a81368914c.js')
+  script(src='/js/bootstrap.min.js')
