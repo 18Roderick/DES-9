@@ -11,18 +11,19 @@ html
         a.enlace(href='/')
           span.front
             img.logo(alt='' src='/img/LogoNombre.png')
+      if(!user)
+        li.menu_list
+          div
+          a.enlace(href="/auth/iniciar-sesion")
+              span.front.fas.fa-user-astronaut(aria-hidden='true')
+              a.side(href='/auth/iniciar-sesion')
+                | Inicio
+                | sesi&oacute;n
       li.menu_list
         div
-        a.enlace(href="/login")
-            span.front.fas.fa-user-astronaut(aria-hidden='true')
-            a.side(href='/login')
-              | Inicio
-              | sesi&oacute;n
-      li.menu_list
-        div
-          a.enlace(href="/sobrenosotros")
+          a.enlace(href="/nosotros")
             span.front.fas.fa-users(aria-hidden='true')
-            a.side(href='/sobrenosotros') Nosotros
+            a.side(href='/nosotros') Nosotros
       li.menu_list
         div
           a.enlace(href="/noticias")
@@ -43,11 +44,12 @@ html
           a.enlace(href="/carrito")
             span.front.fas.fa-shopping-cart(aria-hidden='true')
             a.side(href='/carrito') Carrito
-      li.menu_list
-        div
-          a.enlace(href="/perfilusuario")
-            span.front.fas.fa-user(aria-hidden='true')
-            a.side(href='/perfilusuario') Perfil usuario
+      if(user)
+        li.menu_list
+          div
+            a.enlace(href="/perfilusuario")
+              span.front.fas.fa-user(aria-hidden='true')
+              a.side(href='/perfilusuario') Perfil usuario
     block content
   //- script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=' crossorigin='anonymous')
   script(src='https://kit.fontawesome.com/a81368914c.js')

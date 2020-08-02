@@ -1,19 +1,23 @@
-.col-md-6.col-sm-12.col-xl-4.p-0.m-0
-  .tarjeta.col-12
-    .background
-      img.petImage(src='/img/ORH82L0.png' alt='Images')
-    .info
-      .name
-        div
-          h1.big Producto
-        h3.small Producto
-      .description
-        h3.title Producto
-        p.text
-          | Lorem Ipsum is simply dummy text of the printing and ty
-          a.leermas(href='javascript:void(0);') Leer mas...
-    .info.adopt-terms
-      button.boton.btn.btn-primary.mr-1.btn.btn-primary(type='button') Ver producto
-      .price
-        i.fas.fa-dollar-sign(aria-hidden='true')
-        h1 300.00
+if(productos.length)
+  each producto in productos
+    .col-md-6.col-sm-12.col-xl-4.p-0.m-0
+      .tarjeta.col-12
+        .background
+          img.petImage(src=producto.imagen[0] alt='Images')
+        .info
+          .name
+            div
+              h1.big=producto.titulo
+            h3.small Disponibles #{producto.stock}
+          .description
+            h3.title=producto.categoria
+            p.text
+              | #{producto.descripcion.length > 55 ? producto.descripcion.slice(0, 55) : producto.descripcion}#{' '}
+              a.leermas(href='javascript:void(0);' data-id=producto._id ) Leer mas...
+        .info.adopt-terms
+          button.boton.btn.btn-primary.mr-1.btn.btn-primary(type='button' data-producto=JSON.stringify(producto) onclick='productoModal(this)' ) Ver producto
+          .price
+            i.fas.fa-dollar-sign(aria-hidden='true')
+            h1 #{producto.precio.toFixed(2)}
+else
+  h3 No hay Productos Disponibles

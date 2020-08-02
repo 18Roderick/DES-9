@@ -34,6 +34,10 @@ module.exports.crearUsuario = async (req, res) => {
   }
 };
 
+module.exports.vistaRegistroUsuario = (req,res) => {
+  res.render('registroUsuario', {title: 'Registro de Usuario'})
+}
+
 module.exports.iniciarSesion = async (req, res) => {
   try {
     const { password, correo } = req.body;
@@ -74,6 +78,10 @@ module.exports.iniciarSesion = async (req, res) => {
     });
   }
 };
+
+module.exports.vistaInciarSesion = (req,res) => {
+  res.render('login', {title: 'Login'})
+}
 
 module.exports.logOut = (req, res) => {
   req.session.destroy();

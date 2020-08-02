@@ -29,9 +29,11 @@ const PORT = process.env.PORT || 3001;
 const PUBLIC_FILES = path.join(__dirname, 'public');
 const VIEWS = path.join(__dirname, 'views');
 const GALERIA_PATH = path.join(__dirname, 'images');
-
+const FAVICON = path.join(PUBLIC_FILES, '/img/favicon/GreenLogo.ico');
 // configuraciones
 app.set('port', PORT);
+app.set('views', VIEWS);
+app.set('view engine', 'pug');
 
 app.use(compression());
 app.use(helmet());
@@ -56,7 +58,8 @@ app.use(morgan('dev'));
 //direcciones estáticas
 app.use(express.static(PUBLIC_FILES));
 app.use('/images', express.static(GALERIA_PATH));
-app.use(favicon(path.join(PUBLIC_FILES, 'images', 'favicon.ico')));
+
+app.use(favicon(FAVICON));
 
 app.use(flashConfig);
 
@@ -69,15 +72,12 @@ app.use(error404);
 //captura de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({
-    title: err.message,
-    message: 'error con el api'
-  });
+  res.status(500).render('error', { title: 'Error' });
 });
 
 connect()
   .then(() => {
-    require("./data/migrations");
+    //require('./data/migrations');
     app.listen(PORT, () => console.log(`server ready on http://localhost:${PORT}`));
   })
   .catch(e => {
