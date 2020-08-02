@@ -1,0 +1,47 @@
+extends layout
+block content
+    .perfilusuario
+        .perfilusuario-banner
+            img(src='/img/smite.png')
+        .perfilusuario-info
+            img.pu-imagenPerfil(src='/img/roderick.jpg')
+            button.buttom-perfil.mr-1.mt-1
+                i.fas.fa-sign-out-alt(aria-hidden='true')
+            .perfilusuario-contenedor
+                .pu-contenedorinfo
+                    .perfilusuario-labels
+                        label.pulNombre Roderick Romero
+                        label.pulPais Panam&aacute;
+                        ul.pu-ul
+                            li Panam&aacute;
+                            li San Miguelito
+                            li Samaria
+                        label soymanco@roderick.com
+                        label 6458-7896
+                .pu-contenedorRecompensas
+                    .rdContenedor
+                        .rdInformacion
+                            .rdInformacionDescripcion
+                                .descripcionTitulo
+                                    div Semilla de arbol de manzano
+                                .informacionDescripcion
+                                    p Semilla de arbol de manzado para iniciar la reforestacion de x lugar
+                            .rdInformacionSellos
+                                .sellosRecompensas
+                                    img(src='/img/SelloRecompensa.png')
+                                .sellosRecompensas
+                                    img(src='/img/SelloRecompensa.png')
+                                .sellosRecompensas
+                                    img(src='/img/333.png')
+                        .rdProducto
+                            img(src='/img/12737.jpg')
+    .direccionesUsuarios
+        div
+            label.pulNombre Direccion de envio
+            ul.dirUsuario
+                li Soy
+                li Manco
+                li En
+                li Smite
+        div
+            button.buttom-direcciones.hollow Editar

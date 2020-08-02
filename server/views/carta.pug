@@ -8,16 +8,48 @@ if(productos.length)
           .name
             div
               h1.big=producto.titulo
-            h3.small Disponibles #{producto.stock}
+            h3.small Disponibles: #{producto.stock}
           .description
             h3.title=producto.categoria
             p.text
-              | #{producto.descripcion.length > 55 ? producto.descripcion.slice(0, 55) : producto.descripcion}#{' '}
+              | #{producto.descripcion.length > 55 ? producto.descripcion.slice(0, 57) : producto.descripcion}#{' '}
               a.leermas(href='javascript:void(0);' data-id=producto._id ) Leer mas...
         .info.adopt-terms
-          button.boton.btn.btn-primary.mr-1.btn.btn-primary(type='button' data-producto=JSON.stringify(producto) onclick='productoModal(this)' ) Ver producto
+          button.boton.btn.btn-primary.mr-1.btn.btn-primary(type='button' data-producto=JSON.stringify(producto) onclick='productoModal(this)' data-toggle='modal' data-target='#modalproducto') Ver producto
           .price
             i.fas.fa-dollar-sign(aria-hidden='true')
             h1 #{producto.precio.toFixed(2)}
+  #modalproducto.modal.fade.text-left(tabindex='-1' role='dialog' aria-hidden='true')
+    .modal-dialog.modal-xl.modal-ancho
+      .modal-dialog-scrollable.modal-content
+        .modal-header
+          button.close(type='button' data-dismiss="modal")
+            span(aria-hidden='true') &times;
+            span.sr-only Close
+        .modal-body
+          .modalProducto
+            .modalImagen
+              img.imagenProducto(src='')
+            .modalInfo
+              div
+                div
+                  div
+                    h1.mdTituloProducto Producto
+                .mdDescripcionProducto
+                  h3.categoria Producto
+                  p.descripcion Producto
+                .mdCantidadComprar
+                  button.agregarCarrito(href='#') Agregar al carrito
+                  .input-group.mb-3
+                    .input-group-prepend
+                      span.input-group-text $
+                      span.input-group-text.precio 20
+                    input.form-control(type='number' aria-label='Amount (to the nearest dollar)')
+                .cantidadProductos
+                  input.form-control.cantidadComprar(type='number' min='1' max value='1' id='CantidadProductosComprar')   
+                h3.cantidad    
 else
   h3 No hay Productos Disponibles
+
+
+  
