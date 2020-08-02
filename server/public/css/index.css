@@ -1073,11 +1073,15 @@ div.input-group {
 }
 
 .buttom-perfil.mr-1.mt-1{
-  color: red;
+  color: var(--primarygreen);
 }
 
 .buttom-perfil.mr-1.mt-1:focus{
   outline:none;
+}
+
+.buttom-perfil.mr-1.mt-1:hover{
+  color: red;
 }
 
 @supports(object-fit: cover) {
