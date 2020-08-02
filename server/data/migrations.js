@@ -3,10 +3,11 @@ const productos = require('./productos');
 
 async function loadDb() {
   try {
-    await models.Productos.insertMany(productos);
+   data =  await models.Productos.insertMany(productos);
+   console.log('datos insertados')
   } catch (error) {
     console.log(error);
   }
 }
 
-loadDb();
+module.exports = loadDb;

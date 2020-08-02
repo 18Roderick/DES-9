@@ -1,7 +1,8 @@
 const { extractToken, token } = require('../utils');
 
 const isAuthenticated = async (req, res, next) => {
-  if (req.session.user) {
+  console.log(req.session);
+  if ('id' in req.session.user) {
     next();
   } else {
     res.send('No tienes acceso a esto');

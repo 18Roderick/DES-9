@@ -5,7 +5,7 @@ const {fileUpload} = require('../../utils')
 module.exports.getUsuario = async (req, res) => {
   try {
     console.log('Llegue a buscar usuario')
-    let user = req.user;
+    let user = req.session.user;
 
     if (user.id) {
       user = await Usuario.findById(user.id, '-rol -activo -password ');
