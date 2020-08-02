@@ -1,36 +1,37 @@
 PORT = 8080
-
+ 
 //credenciales de base de datos Mongo
 MONGO_DB_USER = "seeds_user"
 MONGO_PASSWORD = "0oidjj983j98ej9ndn198398sm<opp23j9033"
 MONGO_DB_NAME = "seeds"
 MONGO_PORT = 27017
 MONGO_HOST = 127.0.0.1
-
+ 
 //local db
 
 
-
+ 
 //CRYTPO SECRET 
-
+ 
 CRYPTO_SECRET_KEY ='n8uyhr8672gr6g098723r-rd2jr9823h89ey1/22gygyu-2#840d@23'
 CRYPTO_ALGORITHM = 'aes-192-cbc'
 CRYPTO_SALT = 'ikfmnoi2nu93h2r78hderoioi2nh89-@%dw23wss'
-
-
+ 
+//SESSION
+SESSION_SECRET = 'fkijnn287ohbuifb87342qh7rbfuiyabiuwr3h987ofcbnuifhnbodagc0783hxd0783nhx0h<nq-wcdeo42ch'
 //jwt configs
-
+ 
 TOKEN_SECRET = "VN4I3N872TH873HFNBKJAQNROIU2HG987RHG982R2WR1524R22RUIHUI$##1!/%#$#R33#"
 TOKEN_ALGORITHM = "RS256"
-
+ 
 //Cloudinary credenciales
-
+ 
 CLOUDINARY_NAME = 'dzkuwmvfi',
 CLOUDINARY_API_KEY = '422261723294542',
 CLOUDINARY_API_SECRET = '2kHNooxsZbEK3XT62eyoSJ9sAsM'
-
+ 
 ///gmail seeds
-
+ 
 EMAIL = "seedsbegreen@gmail.com"
 EMAIL_SERVICE = "gmail"
 EMAIL_PASSWORD = "seeds2020"

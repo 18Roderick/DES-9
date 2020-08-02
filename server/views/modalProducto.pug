@@ -1,0 +1,23 @@
+    .modalProducto
+      .modalImagen
+        img(src='/static/media/ORH82L0.18081e14.png')
+      .modalInfo
+        div
+          div
+            div
+              h1.mdTituloProducto Producto
+            h3 Producto
+          .mdDescripcionProducto
+            h3 Producto
+            p
+              | &apos;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen,
+          .mdCantidadComprar
+            a.agregarCarrito(href='#') Agregar al carrito
+            .input-group.mb-3
+              .input-group-prepend
+                span.input-group-text $
+                span.input-group-text 700.00
+              input.form-control(type='text' aria-label='Amount (to the nearest dollar)')
+            p.tpAyuda(data-tip='true' data-for='tpPrecio' currentitem='false')
+              i.fas.fa-info-circle(aria-hidden='true')
+           
