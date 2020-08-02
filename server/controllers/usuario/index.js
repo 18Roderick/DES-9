@@ -1,25 +1,20 @@
 const { Usuario } = require('../../models');
-const {fileUpload} = require('../../utils')
-
+const { fileUpload } = require('../../utils');
 
 module.exports.getUsuario = async (req, res) => {
   try {
-
-    res.render('perfilUsuario')
-   
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Intente mas tarde'
+    let user = await Usuario.findById(user.id);
+    res.render('perfilUsuario', {
+      title: 'Usuario',
+      user: req.session.user || null,
+      usuario: user
     });
+  } catch (error) {
+    throw error
   }
 };
 
-
 module.exports.uploadImage = async (req, res) => {
   try {
-    
-  } catch (error) {
-    
-  }
+  } catch (error) {}
 };

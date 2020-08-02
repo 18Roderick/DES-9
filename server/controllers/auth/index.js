@@ -71,20 +71,18 @@ module.exports.iniciarSesion = async (req, res) => {
         req.session.user = payload;
 
         if (isValid) {
-          res.redirect('/');
+          res.redirect('/usuario');
         } else {
-          res.json({
-            success: false,
-            message: `Correo o contraseña no coinciden`
-          });
+          res.render('login', { title: 'Login', message: `Correo o contraseña no coinciden`, form:req.body });
         }
       } else {
         req.flash('registro', 'Este usuario no existe');
-        res.redirect('/iniciar-sesion');
+
+        res.render('login', { title: 'Login', message: 'Este usuario no existe',form:req.body });
       }
     } else {
       req.flash('registro', 'usuario y contraseña requeridos');
-      res.redirect('/iniciar-sesion');
+      res.render('login', { title: 'Login', message: 'usuario y contraseña requeridos',form:req.body });
     }
   } catch (error) {
     res.json({

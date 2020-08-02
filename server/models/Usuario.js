@@ -34,6 +34,11 @@ const Usuario = new Schema({
     type: Boolean,
     default: false
   },
+  recompensas: {
+    type: Schema.Types.ObjectId,
+    ref: 'recompensas'
+    
+  },
   direcciones: [
     {
       pais: String,

@@ -9,6 +9,10 @@ const Recompensa = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'productos'
   },
+  usuario: {
+    type: Schema.Types.ObjectId,
+    ref: 'usuario'
+  },
   fecha_expiracion: {
     type: Date,
     required: true
