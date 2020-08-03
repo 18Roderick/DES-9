@@ -1,13 +1,23 @@
 .direccionesUsuarios
+    if(usuario.direcciones.length)
+        each direccion in usuario.direcciones
+            div
+                label.pulNombre Direccion #{direccion.nombre}
+                ul.dirUsuario
+                    li=direccion.nombre
+                    li=direccion.telefono
+                    li=direccion.direccion
+
+            div
+                button.buttom-direcciones.hollow(type='button' data-toggle='modal' data-target='#modaldirecciones') Editar
+    -else
         div
-            label.pulNombre Direccion de envio
+            label.pulNombre No hay direcciones de envió
             ul.dirUsuario
-                li Soy
-                li Manco
-                li En
-                li Smite
-        div
-            button.buttom-direcciones.hollow(type='button' data-toggle='modal' data-target='#modaldirecciones') Editar
+                li No hay direcciones
+        div.text-right
+            button.buttom-direcciones.hollow(type='button') Eliminar
+            button.buttom-direcciones.hollow(type='button' data-toggle='modal' data-target='#modaldirecciones') Crear
 #modaldirecciones.modal.fade.text-left(tabindex='-1' role='dialog' aria-hidden='true')
     .modal-dialog.modal-md.modal-ancho
       .modal-dialog-scrollable.modal-content
@@ -19,34 +29,22 @@
             .justify-content-md-center
                 .row
                     .col-md-12.col-sm-12
-                        form.justify-content-md-center.shadow.p-4
-                            h3.card-title.text-center Direccion
+                        form.justify-content-md-center.shadow.p-4(action='/usuario/direccion', method='POST')
+                            h3.card-title.text-center Dirección
                             div
                             img.separador(src='/img/separador.png' alt='Separator')
                             .form-group
-                            label(for='inputState') Pais o Region
-                            select#inputState.form-control
-                                option Panama
-                                option Estados Unidos
-                                option China
-                                option Mexico
-                                option Japon
+                                label(for='inputState', name='pais') Pais o Region
+                                select#inputState.form-control
+                                    option(select) Panama
+                                    option Colombia
                             .form-group
-                            label(for='NombreCompleto') Nombre Completo
-                            input#NombreCompleto.form-control(type='text')
+                                label(for='NombreCompleto') Nombre Completo
+                                input#NombreCompleto.form-control(type='text', name='nombre')
                             .form-group
-                            label(for='Direccion1') Linea de Direccion 1
-                            input#Direccion1.form-control(type='text' placeholder='Direccion, Apartado Postal, Nombre Empresa')
+                                label(for='Direccion1', ) Dirección 
+                                textarea.form-control(name="direccion", cols="30", rows="5" placeholder='Direccion, Apartado Postal, Nombre Empresa')
                             .form-group
-                            label(for='Direccion2') Linea de Direccion 2
-                            input#Direccion2.form-control(type='text' placeholder='Direccion, Suit, Edificio, Piso')
-                            .form-group
-                            label(for='Ciudad') Ciudad
-                            input#Ciudad.form-control(type='text')
-                            .form-group
-                            label(for='Estado') Estado/ Provincia / Region
-                            input#Estado.form-control(type='text')
-                            .form-group
-                            label(for='Telefono') Numero de Telefono
-                            input#Telefono.form-control(type='text')
-                            button.buttom.hollow Agregar
+                                label(for='Telefono') Numero de Contacto
+                                input#Telefono.form-control(type='text', name='telefono')
+                            button.buttom.hollow(type='submit') Agregar

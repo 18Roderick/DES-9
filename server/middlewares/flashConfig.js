@@ -4,6 +4,9 @@ module.exports = (req, res, next) => {
     res.locals.welcome = req.flash('welcome');
     res.locals.errors = req.flash('errors');
     res.locals.user = req.user || null;
+    if(req.session){
+      req.session.carrito = [];
+    }
     next();
   };
   
