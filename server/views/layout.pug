@@ -46,9 +46,15 @@ html
             a.side(href='/metas') Metas
       li.menu_list
         div
-          a.enlace(href="/carrito")
+          a.enlace(href="/usuario/carrito")
             span.front.fas.fa-shopping-cart(aria-hidden='true')
-            a.side(href='/carrito') Carrito
+            a.side(href='/usuario/carrito') Carrito
+      if(user)
+        li.menu_list
+          div
+            a.enlace(href="/usuario")
+              span.front.fas.fa-user(aria-hidden='true')
+              a.side(href='/usuario') Perfil usuario
     block content
 
   script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=' crossorigin='anonymous')

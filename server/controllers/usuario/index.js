@@ -21,7 +21,7 @@ module.exports.agregarDireccion = async (req, res) => {
     let user = req.session.user;
     user = await Usuario.findById(user.id);
 
-    if (user.direcciones.length < 3) {
+    if (user.direcciones.length < 2) {
       user.direcciones.push({ pais, nombre, direccion, telefono });
     }
     await user.save();
@@ -39,11 +39,14 @@ module.exports.verCarrito = async (req, res) => {
       const { pais, nombre, direccion, telefono } = req.body;
       let user = req.session.user;
       user = await Usuario.findById(user.id);
-
+      if(!user.carrito.length){
+        user.carrito = req.session.carrito || [];
+      }
       console.log(user);
       res.render('carrito', { title: 'Carrito', user: req.session.user || null, usuario: user, carrito:user.carrito });
     }else{
-      res.render
+      console.log(req.session);
+      res.render('carrito', {title: 'Carrito', user: req.session.user || null})
     }
   } catch (error) {
     throw error;
