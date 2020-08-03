@@ -1,22 +1,22 @@
 .direccionesUsuarios
     if(usuario.direcciones.length)
-        each direccion in usuario.direcciones
+        
             div
-                label.pulNombre Direccion #{direccion.nombre}
-                ul.dirUsuario
-                    li=direccion.nombre
-                    li=direccion.telefono
-                    li=direccion.direccion
+                each direccion in usuario.direcciones
+                    label.pulNombre Direccion #{direccion.nombre}
+                    ul.dirUsuario
+                        li=direccion.nombre
+                        li=direccion.telefono
+                        li=direccion.direccion
 
             div
-                button.buttom-direcciones.hollow(type='button' data-toggle='modal' data-target='#modaldirecciones') Editar
+                button.buttom-direcciones.hollow(type='button' data-toggle='modal' data-target='#modaldirecciones') AGREGAR
     -else
         div
             label.pulNombre No hay direcciones de envió
             ul.dirUsuario
                 li No hay direcciones
         div.text-right
-            button.buttom-direcciones.hollow(type='button') Eliminar
             button.buttom-direcciones.hollow(type='button' data-toggle='modal' data-target='#modaldirecciones') Crear
 #modaldirecciones.modal.fade.text-left(tabindex='-1' role='dialog' aria-hidden='true')
     .modal-dialog.modal-md.modal-ancho

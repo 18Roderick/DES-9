@@ -25,5 +25,8 @@ router.get('/nosotros', (req,res) => {
   console.log(req.session)
   res.render('sobrenosotros', {title: 'Sobre Nosotros',user: req.session.user || null})
 })
+router.get('/noticias', (req,res) => {
+  res.render('noticias', {title: 'Noticias',user: req.session.user || null})
+})
 
 module.exports = router;

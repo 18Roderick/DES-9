@@ -81,7 +81,7 @@ app.use((err, req, res, next) => {
 
 connect()
   .then(() => {
-    //require('./data/migrations');
+    // require('./data/migrations');
     app.listen(PORT, () => console.log(`server ready on http://localhost:${PORT}`));
   })
   .catch(e => {
