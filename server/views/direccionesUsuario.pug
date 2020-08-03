@@ -1,13 +1,12 @@
 .direccionesUsuarios
     if(usuario.direcciones.length)
-        
+        each direccion in usuario.direcciones
             div
-                each direccion in usuario.direcciones
-                    label.pulNombre Direccion #{direccion.nombre}
-                    ul.dirUsuario
-                        li=direccion.nombre
-                        li=direccion.telefono
-                        li=direccion.direccion
+                label.pulNombre Direccion #{direccion.nombre}
+                ul.dirUsuario
+                    li=direccion.nombre
+                    li=direccion.telefono
+                    li=direccion.direccion
 
             div
                 button.buttom-direcciones.hollow(type='button' data-toggle='modal' data-target='#modaldirecciones') AGREGAR

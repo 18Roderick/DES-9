@@ -1678,6 +1678,66 @@ a {
   width: 25%;
 }
 
+.creditCardForm #expiration-date select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.creditCardForm #expiration-date select::-ms-expand {
+  display: none;
+}
+
+.creditCardForm #expiration-date{
+	max-width: 250px;
+	position: relative;
+}
+ 
+.creditCardForm #expiration-date select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: white;
+	/* color: #7b7b7b; */
+	font-size: 1em;
+	/* color: #999; */
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+ 
+.creditCardForm #expiration-date select:hover{
+	background: white;
+}
+
+.expiration-date-form{
+  display: flex;
+}
+ 
+.content-select i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 13px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:4px solid #2AC176;
+	border-bottom:4px solid #2AC176;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+ 
+.content-select:hover i{
+	margin-top: 3px;
+}
 
 
 /*----------Carruzel----------*/
