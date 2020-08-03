@@ -15,6 +15,41 @@ module.exports.getUsuario = async (req, res) => {
   }
 };
 
+module.exports.agregarDireccion = async (req, res) => {
+  try {
+    const { pais, nombre, direccion, telefono } = req.body;
+    let user = req.session.user;
+    user = await Usuario.findById(user.id);
+
+    if (user.direcciones.length < 3) {
+      user.direcciones.push({ pais, nombre, direccion, telefono });
+    }
+    await user.save();
+
+    console.log(user);
+    res.redirect('/usuario');
+  } catch (error) {
+    throw error;
+  }
+};
+
+module.exports.verCarrito = async (req, res) => {
+  try {
+    if (req.session.user) {
+      const { pais, nombre, direccion, telefono } = req.body;
+      let user = req.session.user;
+      user = await Usuario.findById(user.id);
+
+      console.log(user);
+      res.render('carrito', { title: 'Carrito', user: req.session.user || null, usuario: user, carrito:user.carrito });
+    }else{
+      res.render
+    }
+  } catch (error) {
+    throw error;
+  }
+};
+
 module.exports.uploadImage = async (req, res) => {
   try {
   } catch (error) {}

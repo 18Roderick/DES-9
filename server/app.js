@@ -42,8 +42,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.post('*', (req, res, next) => {
-  console.log('Vamoi a ver que xuxa', req.body, req.query, req.params);
+app.use('*', (req, res, next) => {
+  console.log('a ver que pasa', req.session);
   next();
 });
 app.use(

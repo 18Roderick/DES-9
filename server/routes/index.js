@@ -7,7 +7,7 @@ const mercanciaRouter = require('./mercancia');
 const apiRouter = require('./api');
 
 router.get('/', (req, res) => {
-  res.render('index', { title: 'SEEDS' });
+  res.render('index', { title: 'SEEDS',user: req.session.user || null });
 });
 
 router.get('/robots.txt', function(req, res) {
@@ -20,6 +20,7 @@ router.use('/auth', authRouter);
 router.use('/usuario', userRouter);
 router.use('/mercancia', mercanciaRouter);
 router.get('/nosotros', (req,res) => {
+  console.log(req.session)
   res.render('sobrenosotros', {title: 'Sobre Nosotros',user: req.session.user || null})
 })
 router.get('/noticias', (req,res) => {

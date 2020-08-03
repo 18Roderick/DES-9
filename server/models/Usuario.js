@@ -39,15 +39,15 @@ const Usuario = new Schema({
     ref: 'recompensas'
     
   },
+  carrito:[{
+    cantidad:Number,
+    producto:{},
+  }],
   direcciones: [
     {
+      nombre: String,
       pais: String,
-      provincia: String,
-      ciudad: String,
-      distrito: String,
-      corregimiento: String,
-      detalles: String,
-      barriada: String,
+      direccion:String,
       telefono: String
     }
   ]

@@ -53,7 +53,7 @@ module.exports.vistaRegistroUsuario = (req, res) => {
 module.exports.iniciarSesion = async (req, res) => {
   try {
     const { password, correo } = req.body;
-    
+
     if (req.session.user) {
       res.redirect('/mercancia');
     }
@@ -73,16 +73,24 @@ module.exports.iniciarSesion = async (req, res) => {
         if (isValid) {
           res.redirect('/usuario');
         } else {
-          res.render('login', { title: 'Login', message: `Correo o contraseña no coinciden`, form:req.body });
+          res.render('login', {
+            title: 'Login',
+            message: `Correo o contraseña no coinciden`,
+            form: req.body
+          });
         }
       } else {
         req.flash('registro', 'Este usuario no existe');
 
-        res.render('login', { title: 'Login', message: 'Este usuario no existe',form:req.body });
+        res.render('login', { title: 'Login', message: 'Este usuario no existe', form: req.body });
       }
     } else {
       req.flash('registro', 'usuario y contraseña requeridos');
-      res.render('login', { title: 'Login', message: 'usuario y contraseña requeridos',form:req.body });
+      res.render('login', {
+        title: 'Login',
+        message: 'usuario y contraseña requeridos',
+        form: req.body
+      });
     }
   } catch (error) {
     res.json({
@@ -101,8 +109,9 @@ module.exports.vistaInciarSesion = (req, res) => {
 };
 
 module.exports.logOut = (req, res) => {
-  req.session.destroy();
-  req.redirect('/');
+  req.session.destroy(function(err) {
+    res.redirect('/');
+  });
 };
 module.exports.recuperarContrasena = async (req, res) => {};
 module.exports.refreshToken = async (req, res) => {};

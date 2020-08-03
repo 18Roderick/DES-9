@@ -7,5 +7,5 @@ router.post('/registro-usuario', registroValidator, auth.crearUsuario);
 router.get('/registro-usuario', auth.vistaRegistroUsuario)
 router.post('/iniciar-sesion', auth.iniciarSesion);
 router.get('/iniciar-sesion', auth.vistaInciarSesion);
-
+router.get('/cerrar-sesion', auth.logOut)
 module.exports = router;
