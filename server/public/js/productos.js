@@ -11,4 +11,25 @@ function productoModal(data) {
   $('#CantidadProductosComprar').prop('max', producto.stock);
   $('id demodal').modal('show');
 
+  $('.agregarCarrito').on('click', function(e){
+    e.preventDefault();
+    $target = $(e.target);
+    $.ajax({
+      type: '',
+      url: '',
+      data:
+      {
+        precio:$('#precio').val(), 
+        cantidadComprar:$('#cantidadComprar').val(),
+      },
+      success: function (res){
+      alert('Producto agregado al carrito');
+      },
+      error: function(err){
+      console.error(err);
+      }   
+    });
+
+  });
+
 }

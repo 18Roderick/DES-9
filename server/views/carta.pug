@@ -43,10 +43,10 @@ if(productos.length)
                   .input-group.mb-3
                     .input-group-prepend
                       span.input-group-text $
-                      span.input-group-text.precio 20
+                      span#precio.input-group-text.precio
                     input.form-control(type='number' aria-label='Amount (to the nearest dollar)')
                 .cantidadProductos
-                  input.form-control.cantidadComprar(type='number' min='1' max value='1' id='CantidadProductosComprar')   
+                  input#cantidadComprar.form-control.cantidadComprar(type='number' min='1' max value='1')   
                 h3.cantidad    
 else
   h3 No hay Productos Disponibles
