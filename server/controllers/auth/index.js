@@ -71,7 +71,8 @@ module.exports.iniciarSesion = async (req, res) => {
         req.session.user = payload;
 
         if (isValid) {
-          res.redirect('/usuario');
+          console.log('Llego al redirect de usuario 2');
+          res.redirect('/mercancia');
         } else {
           res.render('login', {
             title: 'Login',

@@ -5,11 +5,17 @@ module.exports.getUsuario = async (req, res) => {
   try {
     let user = req.session.user;
     user = await Usuario.findById(user.id);
-    res.render('perfilUsuario', {
-      title: 'Usuario',
-      user: req.session.user || null,
-      usuario: user
-    });
+    if(user){
+      console.log('Llego a Usuario',user, req.session)
+      res.render('perfilUsuario', {
+        title: 'Usuario',
+        user: req.session.user || null,
+        usuario: user
+      });
+    }else{
+      
+      res.redirect('/mercancia')
+    }
   } catch (error) {
     throw error;
   }

@@ -11,7 +11,7 @@ block content
             .perfilusuario-contenedor
                 .pu-contenedorinfo
                     .perfilusuario-labels
-                        label.pulNombre.text-capitalize #{usuario.nombre} #{usuario.apellido}
+                        label.pulNombre.text-capitalize #{usuario.nombre? usuario.nombre : ''} #{usuario.apellido ? usuario.apellido : ''}
                         label.pulPais Panamá;
                         //- ul.pu-ul
                         //-     li Panam&aacute;
