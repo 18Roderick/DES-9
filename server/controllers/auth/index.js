@@ -33,7 +33,7 @@ module.exports.crearUsuario = async (req, res) => {
         apellido
       };
       req.session.user = payload;
-      res.redirect('/');
+      res.redirect('/usuario');
     }
   } catch (error) {
     console.log(error);

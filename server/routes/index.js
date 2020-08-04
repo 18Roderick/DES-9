@@ -7,14 +7,16 @@ const pagoRouter = require('./pagos')
 
 const apiRouter = require('./api');
 
-router.get('/', (req, res) => {
-  res.render('index', { title: 'SEEDS',user: req.session.user || null });
-});
 
 router.get('/robots.txt', function(req, res) {
   res.type('text/plain');
   res.send('User-agent: *\nDisallow: /');
 });
+
+router.get('/', (req, res) => {
+  res.render('index', { title: 'SEEDS',user: req.session.user || null });
+});
+
 
 router.use('/api', apiRouter);
 router.use('/auth', authRouter);
