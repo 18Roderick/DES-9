@@ -55,6 +55,15 @@
                     p.text-right $0.00
               .col-sm-12
                 .text-center
-                  button.boton.btn.btn-primary
+                  button.boton.btn.btn-primary(type='button' data-toggle='modal' data-target='#modalformapago')
                     | Finalizar
                     | Pedido
+  #modalformapago.modal.fade.text-left(tabindex='-1' role='dialog' aria-hidden='true')
+      .modal-dialog.modal-xl.modal-ancho
+        .modal-dialog-scrollable.modal-content
+          .modal-header
+            button.close(type='button' data-dismiss="modal")
+              span(aria-hidden='true') &times;
+              span.sr-only Close
+          .modal-body
+            include ./formularioPago.pug

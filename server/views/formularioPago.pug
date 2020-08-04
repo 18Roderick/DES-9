@@ -17,29 +17,32 @@
                         input#cardNumber.form-control(type='text')
                     #expiration-date.form-group
                         label Fecha de vencimiento
-                        select
-                            option(value='01') Enero
-                            option(value='02') Febrero 
-                            option(value='03') Marzo
-                            option(value='04') Abril
-                            option(value='05') Mayo
-                            option(value='06') Junio
-                            option(value='07') Julio
-                            option(value='08') Agosto
-                            option(value='09') Septiembre
-                            option(value='10') Octubre
-                            option(value='11') Noviembre
-                            option(value='12') Diciembre
-                        select
-                            option(value='20')  2020
-                            option(value='21')  2021
-                            option(value='22')  2022
-                            option(value='23')  2023
-                            option(value='24')  2024
-                            option(value='25')  2025
+                        .expiration-date-form
+                            select
+                                option(value='01') Enero
+                                option(value='02') Febrero 
+                                option(value='03') Marzo
+                                option(value='04') Abril
+                                option(value='05') Mayo
+                                option(value='06') Junio
+                                option(value='07') Julio
+                                option(value='08') Agosto
+                                option(value='09') Septiembre
+                                option(value='10') Octubre
+                                option(value='11') Noviembre
+                                option(value='12') Diciembre
+                            select
+                                option(value='20')  2020
+                                option(value='21')  2021
+                                option(value='22')  2022
+                                option(value='23')  2023
+                                option(value='24')  2024
+                                option(value='25')  2025
                     #credit_cards.form-group
-                        img#visa(src='/img/visa-logo.png')
-                        img#mastercard(src='/img/mastercard-logo.png')
+                        a(href="https://www.visa.com.pa/" target='_blank')
+                            img#visa(src='/img/visa-logo.png')
+                        a(href="https://centroamerica.mastercard.com/es-region-cam.html" target='_blank')
+                            img#mastercard(src='/img/mastercard-logo.png')
                     .form-group.owner
                         label(for='owner') Numero de telefono
                         input#owner.form-control(type='tel')
