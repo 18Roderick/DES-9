@@ -4,7 +4,7 @@ block content
         .perfilusuario-banner
             img(src='/img/background.jpg')
         .perfilusuario-info
-            img.pu-imagenPerfil(src='https://ui-avatars.com/api/?name=roderick+romero&size=256&rounded=true&background=246a40&color=ffffff&font-size=0.55?bold=true')
+            img.pu-imagenPerfil(src='https://ui-avatars.com/api/?name='+usuario.nombre+'+'+usuario.apellido+'&size=256&rounded=true&background=246a40&color=ffffff&font-size=0.55?bold=true')
             button.buttom-perfil.mr-1.mt-1
                 a(href='/auth/cerrar-sesion' style='text-decoration:none')
                     i.fas.fa-sign-out-alt(aria-hidden='true')
