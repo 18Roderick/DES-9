@@ -69,6 +69,7 @@ app.use(flashConfig);
 
 //rutas
 
+
 app.use(routes);
 
 app.use(error404);
